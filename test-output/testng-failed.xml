@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="0" name="Failed suite [BSB_Functional_TestCases_Suite]" parallel="tests">
+  <parameter name="selenium.port" value="4444"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="selenium.browser" value="chrome"/>
+  <parameter name="selenium.url" value=""/>
+  <listeners>
+    <listener class-name="com.automation.utility.BSB_TestListener"/>
+  </listeners>
+  <test thread-count="1" verbose="0" name="BSB_Login_Module_TestCases(failed)" parallel="tests">
+    <classes>
+      <class name="com.automation.index.Steps">
+        <methods>
+          <include name="setUp"/>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="tearDown"/>
+          <include name="Signin_TestCase_01"/>
+          <include name="zipfileupdate"/>
+        </methods>
+      </class> <!-- com.automation.index.Steps -->
+    </classes>
+  </test> <!-- BSB_Login_Module_TestCases(failed) -->
+</suite> <!-- Failed suite [BSB_Functional_TestCases_Suite] -->

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="BSB_Functional_TestCases_Suite" duration-ms="169074" started-at="2020-03-17T09:16:13Z" finished-at="2020-03-17T09:19:02Z">
+    <groups>
+    </groups>
+    <test name="BSB_Login_Module_TestCases" duration-ms="169074" started-at="2020-03-17T09:16:13Z" finished-at="2020-03-17T09:19:02Z">
+      <class name="com.automation.index.Steps">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@3b088d51]" name="fetchSuiteConfiguration" is-config="true" duration-ms="12" started-at="2020-03-17T09:16:13Z" finished-at="2020-03-17T09:16:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@a74868d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchSuiteConfiguration -->
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@3b088d51]" name="fetchSuiteConfiguration" is-config="true" duration-ms="0" started-at="2020-03-17T09:16:13Z" finished-at="2020-03-17T09:16:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@a74868d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchSuiteConfiguration -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@3b088d51]" name="setUp" is-config="true" duration-ms="10436" started-at="2020-03-17T09:16:13Z" finished-at="2020-03-17T09:16:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.index.Steps.Signin_TestCase_01()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@a74868d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Signin_TestCase_01()[pri:0, instance:com.automation.index.Steps@3b088d51]" name="Signin_TestCase_01" duration-ms="147861" started-at="2020-03-17T09:16:23Z" finished-at="2020-03-17T09:18:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Signin_TestCase_01 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.Steps@3b088d51]" name="tearDown" is-config="true" duration-ms="10764" started-at="2020-03-17T09:18:51Z" finished-at="2020-03-17T09:19:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Signin_TestCase_01 status=SUCCESS method=Steps.Signin_TestCase_01()[pri:0, instance:com.automation.index.Steps@3b088d51] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.Steps@3b088d51]" name="zipfileupdate" is-config="true" duration-ms="80" started-at="2020-03-17T09:19:02Z" finished-at="2020-03-17T09:19:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- zipfileupdate -->
+      </class> <!-- com.automation.index.Steps -->
+    </test> <!-- BSB_Login_Module_TestCases -->
+  </suite> <!-- BSB_Functional_TestCases_Suite -->
+</testng-results>
