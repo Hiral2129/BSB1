@@ -53,6 +53,9 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.loginstaging_ayso();
 		veri.homepageverify();
 		veri = logic.login();
+		
+
+		
 	}// End of Signin_TestCase_01.
 
 	
