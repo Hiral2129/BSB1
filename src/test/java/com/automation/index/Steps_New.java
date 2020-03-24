@@ -13,7 +13,7 @@ import com.automation.init.BSB_SeleniumInit;
 import com.automation.indexpage.Logic;
 
 
-public class Steps extends BSB_SeleniumInit {
+public class Steps_New extends BSB_SeleniumInit {
 
 	
 	public static int step, numberOfFailure = 1;
@@ -35,38 +35,36 @@ public class Steps extends BSB_SeleniumInit {
 //Login Module Test Cases , dependsOnMethods = { "Signin_TestCase_02" }
 	@Test(priority = 0, enabled = true)
 	public void Signin_TestCase_01() {
-
 		step = 1;
 		String report_msg;// String for the log in the Report		
 		report_msg = "To verify that user is able to login with valid credentials";
 		LogClass.logExtent(report_msg);
 		//report_msg ="Step " + (step++) + ":Open : Below URL";
 		//LogClass.logExtent(report_msg);
-		veri = logic.tshq_staging();
-		veri.homepageverify();
-		veri = logic.login_as_admin();
 		
-		veri = logic.sports_staging();
-		veri.homepageverify();
-		veri = logic.login_as_admin();
+		veri_new = logic_new.tshq_staging();
+		veri_new.homepageverify();
+		veri_new = logic_new.login_as_admin();
 		
-		veri = logic.ayso_staging();
-		veri.homepageverify();
-		veri = logic.login_as_admin();
+		veri_new = logic_new.sports_staging();
+		veri_new.homepageverify();
+		veri_new = logic_new.login_as_admin();
 		
-		veri = logic.tshq_staging();
-		veri.homepageverify();
+		//veri_new = logic_new.ayso_staging();
+		//veri_new.homepageverify();
+		//veri_new = logic_new.login_as_admin();
+		
+		veri_new = logic_new.tshq_staging();
+		veri_new.homepageverify();
 		veri = logic.login_as_host();
 		
-		veri = logic.sports_staging();
-		veri.homepageverify();
+		veri_new = logic_new.sports_staging();
+		veri_new.homepageverify();
 		veri = logic.login_as_host();
 		
-		veri = logic.ayso_staging();
-		veri.homepageverify();
-		veri = logic.login_as_host();
-		
-
+		//veri_new = logic_new.loginstaging_ayso();
+		//veri_new.homepageverify();
+		//veri_new = logic_new.login_as_host();
 		
 	}// End of Signin_TestCase_01.
 

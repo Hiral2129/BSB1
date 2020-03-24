@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="BSB_Functional_TestCases_Suite" verbose="10"
+	parallel="tests" thread-count="1">
+
+	<!-- Put IP of localhost/Grid Hub machine -->
+	<parameter name="selenium.host" value="localhost" />
+
+	<!-- Put Port of localhost RC/Grid Hub machine -->
+	<parameter name="selenium.port" value="4444" />
+
+	<!-- Put target browser name as below: 1) Firefox : firefox 2) chrome : 
+		chrome 3) IExplorer : ie8 / ie9 -->
+	<parameter name="selenium.browser" value="chrome" />
+	<!-- <parameter name="selenium.browser" value="chrome" /> -->
+	<!-- <parameter name="selenium.browser" value="m-headless" /> -->
+	<!-- <parameter name="selenium.browser" value="firefox" /> -->
+	<!-- <parameter name="selenium.browser" value="ie11" /> -->
+	<!-- <parameter name="selenium.browser" value="Android_Chrome" /> -->
+	<!-- <parameter name="selenium.browser" value="ie11" /> -->
+	<!-- <parameter name="selenium.browser" value="browserstack" /> -->
+	<parameter name="selenium.url"
+		value="" />
+
+	<listeners>		
+		<listener
+			class-name="com.automation.utility.BSB_TestListener" />
+		<!-- <listener class-name="com.automation.utility.CalcuQuote_AnnotationTransformer" 
+			/> -->
+
+		<!-- <listener class-name="com.automation.utility.CalcuQuote_RetryListenerClass" 
+			/> -->  <!-- for the Retry Class to run the fail test 2 times -->
+	</listeners>
+		
+		
+	<!-- Methods for Login -->	
+	<test name="BSB_Login_Module_TestCases">
+		<classes>
+			<class name="com.automation.index.Steps_New">
+				<methods>					
+					<include name="Signin_TestCase_01" />
+				</methods>
+			</class>
+		</classes>
+	</test>		
+</suite>
+ 

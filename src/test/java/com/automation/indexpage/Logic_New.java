@@ -21,10 +21,11 @@ import com.automation.utility.funcs;
 import com.sun.corba.se.spi.orbutil.fsm.Action;
 
 import com.automation.verification.Verify;
+import com.automation.verification.Verify_New;
 
-public class Logic extends BSB_AbstractPage {
+public class Logic_New extends BSB_AbstractPage {
 	String testUrl;
-	public Logic(WebDriver driver) {
+	public Logic_New(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
@@ -41,31 +42,31 @@ public class Logic extends BSB_AbstractPage {
 		return new Verify(driver);
 	}
 */
-	public Verify tshq_staging() {
+	public Verify_New tshq_staging() {
 		// TODO Auto-generated method stub
-		testUrl = BSB_TestData.getURL(1,1);		
+		testUrl = BSB_TestData.getURL(1,3);		
 		driver.get("http://stagingtshq.bsbtest.com/default.aspx?portalid="+testUrl);		
 		funcs.waitforseconds(5);
 		LogClass.logExtent("Step 1 : "+driver.getCurrentUrl());
-		return new Verify(driver);
+		return new Verify_New(driver);
 	}
 	
-	public Verify sports_staging() {
+	public Verify_New sports_staging() {
 		// TODO Auto-generated method stub
-		testUrl = BSB_TestData.getURL(2,1);		
+		testUrl = BSB_TestData.getURL(2,3);		
 		driver.get("https://stagingsports.bsbtest.com/Default.aspx?portalid="+testUrl);		
 		funcs.waitforseconds(5);
 		LogClass.logExtent("Step 1 : "+driver.getCurrentUrl());
-		return new Verify(driver);
+		return new Verify_New(driver);
 	}
 
-	public Verify ayso_staging() {
+	public Verify_New ayso_staging() {
 		// TODO Auto-generated method stub
-		testUrl = BSB_TestData.getURL(3,1);
+		testUrl = BSB_TestData.getURL(3,3);
 		driver.get("https://stagingayso.bsbtest.com/Default.aspx?portalid="+testUrl);
 		funcs.waitforseconds(5);
 		LogClass.logExtent("Step 1 : "+driver.getCurrentUrl());
-		return new Verify(driver);
+		return new Verify_New(driver);
 	}	
 	
 	@FindBy(xpath="//a[@id='dnn_dnnLOGIN_cmdLogin']")private static WebElement home_login;
@@ -73,7 +74,7 @@ public class Logic extends BSB_AbstractPage {
 	@FindBy(xpath="//input[contains(@id,'Password')]")private static WebElement password;
 	@FindBy(xpath="//a[contains(@id,'SingInButton')]")private static WebElement login;
 	
-	public Verify login_as_admin() {
+	public Verify_New login_as_admin() {
 		// TODO Auto-generated method stub
 		funcs.clickon_element(driver, home_login);
 		funcs.waitforseconds(4);
@@ -84,10 +85,10 @@ public class Logic extends BSB_AbstractPage {
 		funcs.clickon_element(driver, login);
 		LogClass.logExtent("==> Click on login button ");
 		funcs.waitforseconds(5);
-		return new Verify(driver);
+		return new Verify_New(driver);
 	}	
 	
-	public Verify login_as_host() {
+	public Verify_New login_as_host() {
 		// TODO Auto-generated method stub
 		funcs.clickon_element(driver, home_login);
 		funcs.waitforseconds(4);
@@ -98,6 +99,6 @@ public class Logic extends BSB_AbstractPage {
 		funcs.clickon_element(driver, login);
 		LogClass.logExtent("==> Click on login button ");
 		funcs.waitforseconds(5);
-		return new Verify(driver);
+		return new Verify_New(driver);
 	}	
 }

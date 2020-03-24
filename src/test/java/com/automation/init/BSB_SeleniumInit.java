@@ -33,7 +33,9 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.internal.Utils;
 import com.automation.indexpage.Logic;
+import com.automation.indexpage.Logic_New;
 import com.automation.verification.Verify;
+import com.automation.verification.Verify_New;
 import com.automation.utility.BSB_Common;
 import com.automation.utility.BSB_TestData;
 import com.automation.utility.LogClass;
@@ -73,7 +75,9 @@ public class BSB_SeleniumInit extends BSB_ExtentManager {
 		
 	public static Verify veri;
 	public static Logic logic;
-			
+	
+	public static Verify_New veri_new;
+	public static Logic_New logic_new;
 	//For Extent Report
 	
 	//private static ExtentReports extent;
@@ -209,6 +213,9 @@ public class BSB_SeleniumInit extends BSB_ExtentManager {
 		
 		veri = new Verify(driver);
 		logic = new Logic(driver);		
+		
+		veri_new = new Verify_New(driver);
+		logic_new = new Logic_New(driver);		
 	}
 
 

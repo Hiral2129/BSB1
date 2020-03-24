@@ -169,12 +169,12 @@ public class BSB_TestData {
 
 	}
 
-	public static String getURL(int rowno) {
+	public static String getURL(int rowno,int col) {
 		String testUrl;
 		System.out.println("Call getURL.......");				
 		//return getExcelSheet(0).getRow(rowno).getCell(1).getStringCellValue();
 		getExcelSheet(0).getRow(rowno).getCell(1).setCellType(Cell.CELL_TYPE_STRING);
-		return getExcelSheet(0).getRow(rowno).getCell(1).getStringCellValue();
+		return getExcelSheet(0).getRow(rowno).getCell(col).getStringCellValue();
 		
 	}
 
