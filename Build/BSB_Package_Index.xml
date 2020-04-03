@@ -37,7 +37,7 @@
 		<classes>
 			<class name="com.automation.index.Steps">
 				<methods>					
-					<include name="Signin_TestCase_01" />
+				<include name="Signin_TestCase_01" />
 				</methods>
 			</class>
 		</classes>

@@ -41,11 +41,16 @@ public class Logic extends BSB_AbstractPage {
 		return new Verify(driver);
 	}
 */
+	/*
+	 * ===============
+	 * Login functions
+	 * ===============
+	 */
 	public Verify tshq_staging() {
 		// TODO Auto-generated method stub
 		testUrl = BSB_TestData.getURL(1,1);		
 		driver.get("http://stagingtshq.bsbtest.com/default.aspx?portalid="+testUrl);		
-		funcs.waitforseconds(5);
+		funcs.waitforseconds(2);
 		LogClass.logExtent("Step 1 : "+driver.getCurrentUrl());
 		return new Verify(driver);
 	}
@@ -78,10 +83,20 @@ public class Logic extends BSB_AbstractPage {
 		funcs.clickon_element(driver, home_login);
 		funcs.waitforseconds(4);
 		LogClass.logExtent("==> Click on home Login Button to process login");
-		funcs.senddata(driver, username, "bsbadmin"+testUrl);
-		LogClass.logExtent("==> Enter User Name");
-		funcs.senddata(driver, password, "St4ckSp0rts@");
-		funcs.clickon_element(driver, login);
+		
+		if(testUrl.equalsIgnoreCase("24904")) {
+			funcs.senddata(driver, username, "vipul"+testUrl);
+			LogClass.logExtent("==> Enter User Name");
+			funcs.senddata(driver, password, "St4ckSp0rts@");
+			funcs.clickon_element(driver, login);
+		}
+		else {
+			funcs.senddata(driver, username, "bsbadmin"+testUrl);
+			LogClass.logExtent("==> Enter User Name");
+			funcs.senddata(driver, password, "St4ckSp0rts@");
+			funcs.clickon_element(driver, login);
+		}
+		
 		LogClass.logExtent("==> Click on login button ");
 		funcs.waitforseconds(5);
 		return new Verify(driver);
@@ -100,4 +115,27 @@ public class Logic extends BSB_AbstractPage {
 		funcs.waitforseconds(5);
 		return new Verify(driver);
 	}	
+	
+	/*
+	 * =================
+	 * Program functions
+	 * =================
+	 */
+	@FindBy(xpath="//span[text()='+']")private static WebElement new_program_plus;
+	public Verify click_new_program_plus_sign() {
+		// TODO Auto-generated method stub
+		funcs.clickon_element(driver, new_program_plus);
+		LogClass.logExtent("==> Click on New Program Plus Icon ");
+		return new Verify(driver);
+	}	
+	
+	@FindBy(xpath="//a[text()='Create a Non-Tryout/Rec Program']")private static WebElement create_non_tryout_rec_pro;
+	public Verify click_Create_Non_Tryout_Rec_Program() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(1);
+		funcs.clickon_element(driver, create_non_tryout_rec_pro);
+		LogClass.logExtent("==> Click on New Program Plus Icon ");
+		return new Verify(driver);
+	}	
+	
 }

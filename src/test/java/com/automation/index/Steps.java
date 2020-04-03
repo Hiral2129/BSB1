@@ -31,40 +31,21 @@ public class Steps extends BSB_SeleniumInit {
 		extent_report_log = test;
 		System.out.println("GetTest Method called");
 	}
-
+// ===> Program Creation Mudule Test Cases
 //Login Module Test Cases , dependsOnMethods = { "Signin_TestCase_02" }
-	@Test(priority = 0, enabled = true)
+	@Test(priority = 0, enabled = true, groups ="program")
 	public void Signin_TestCase_01() {
 
 		step = 1;
 		String report_msg;// String for the log in the Report		
 		report_msg = "To verify that user is able to login with valid credentials";
 		LogClass.logExtent(report_msg);
-		//report_msg ="Step " + (step++) + ":Open : Below URL";
-		//LogClass.logExtent(report_msg);
-		veri = logic.tshq_staging();
-		veri.homepageverify();
-		veri = logic.login_as_admin();
-		
-		veri = logic.sports_staging();
-		veri.homepageverify();
-		veri = logic.login_as_admin();
-		
-		veri = logic.ayso_staging();
-		veri.homepageverify();
-		veri = logic.login_as_admin();
 		
 		veri = logic.tshq_staging();
 		veri.homepageverify();
-		veri = logic.login_as_host();
+		veri = logic.login_as_admin();
 		
-		veri = logic.sports_staging();
-		veri.homepageverify();
-		veri = logic.login_as_host();
 		
-		veri = logic.ayso_staging();
-		veri.homepageverify();
-		veri = logic.login_as_host();
 		
 
 		
