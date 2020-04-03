@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="BSB_Functional_TestCases_Suite" duration-ms="152263" started-at="2020-04-03T04:50:09Z" finished-at="2020-04-03T04:52:41Z">
+  <suite name="BSB_Functional_TestCases_Suite" duration-ms="149626" started-at="2020-04-03T13:12:48Z" finished-at="2020-04-03T13:15:17Z">
     <groups>
       <group name="program">
-        <method signature="Steps.Signin_TestCase_01()[pri:0, instance:com.automation.index.Steps@74650e52]" name="Signin_TestCase_01" class="com.automation.index.Steps"/>
+        <method signature="Steps.Program_TestCase_03()[pri:0, instance:com.automation.index.Steps@74650e52]" name="Program_TestCase_03" class="com.automation.index.Steps"/>
       </group> <!-- program -->
     </groups>
-    <test name="BSB_Login_Module_TestCases" duration-ms="152263" started-at="2020-04-03T04:50:09Z" finished-at="2020-04-03T04:52:41Z">
+    <test name="BSB_Login_Module_TestCases" duration-ms="149626" started-at="2020-04-03T13:12:48Z" finished-at="2020-04-03T13:15:17Z">
       <class name="com.automation.index.Steps">
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="fetchSuiteConfiguration" is-config="true" duration-ms="13" started-at="2020-04-03T04:50:09Z" finished-at="2020-04-03T04:50:09Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="fetchSuiteConfiguration" is-config="true" duration-ms="11" started-at="2020-04-03T13:12:48Z" finished-at="2020-04-03T13:12:48Z">
           <params>
             <param index="0">
               <value>
@@ -21,7 +21,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="fetchSuiteConfiguration" is-config="true" duration-ms="1" started-at="2020-04-03T04:50:09Z" finished-at="2020-04-03T04:50:09Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="fetchSuiteConfiguration" is-config="true" duration-ms="0" started-at="2020-04-03T13:12:48Z" finished-at="2020-04-03T13:12:48Z">
           <params>
             <param index="0">
               <value>
@@ -32,11 +32,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="setUp" is-config="true" duration-ms="11541" started-at="2020-04-03T04:50:09Z" finished-at="2020-04-03T04:50:21Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="setUp" is-config="true" duration-ms="10265" started-at="2020-04-03T13:12:48Z" finished-at="2020-04-03T13:12:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.automation.index.Steps.Signin_TestCase_01()]]>
+                <![CDATA[public void com.automation.index.Steps.Program_TestCase_03()]]>
               </value>
             </param>
             <param index="1">
@@ -48,22 +48,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Signin_TestCase_01()[pri:0, instance:com.automation.index.Steps@74650e52]" name="Signin_TestCase_01" duration-ms="130013" started-at="2020-04-03T04:50:21Z" finished-at="2020-04-03T04:52:31Z">
+        <test-method status="PASS" signature="Program_TestCase_03()[pri:0, instance:com.automation.index.Steps@74650e52]" name="Program_TestCase_03" duration-ms="128479" started-at="2020-04-03T13:12:58Z" finished-at="2020-04-03T13:15:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Signin_TestCase_01 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.Steps@74650e52]" name="tearDown" is-config="true" duration-ms="10690" started-at="2020-04-03T04:52:31Z" finished-at="2020-04-03T04:52:41Z">
+        </test-method> <!-- Program_TestCase_03 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.Steps@74650e52]" name="tearDown" is-config="true" duration-ms="10869" started-at="2020-04-03T13:15:07Z" finished-at="2020-04-03T13:15:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Signin_TestCase_01 status=SUCCESS method=Steps.Signin_TestCase_01()[pri:0, instance:com.automation.index.Steps@74650e52] output={null}]]]>
+                <![CDATA[[TestResult name=Program_TestCase_03 status=SUCCESS method=Steps.Program_TestCase_03()[pri:0, instance:com.automation.index.Steps@74650e52] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.Steps@74650e52]" name="zipfileupdate" is-config="true" duration-ms="77" started-at="2020-04-03T04:52:42Z" finished-at="2020-04-03T04:52:42Z">
+        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.Steps@74650e52]" name="zipfileupdate" is-config="true" duration-ms="82" started-at="2020-04-03T13:15:18Z" finished-at="2020-04-03T13:15:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- zipfileupdate -->

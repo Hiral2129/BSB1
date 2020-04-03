@@ -119,7 +119,7 @@ public class funcs {
 	
 	// Function to Enter Data in the TextFields
 	public static void senddata(WebDriver driver, WebElement element, String data) {
-		//waitforelementvisible(driver, element);
+		waitforelementvisible(driver, element);
 		element.click();
 		element.clear();
 		element.sendKeys(data);

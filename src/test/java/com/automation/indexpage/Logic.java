@@ -87,12 +87,16 @@ public class Logic extends BSB_AbstractPage {
 		if(testUrl.equalsIgnoreCase("24904")) {
 			funcs.senddata(driver, username, "vipul"+testUrl);
 			LogClass.logExtent("==> Enter User Name");
+			funcs.waitforseconds(1);
+			LogClass.logExtent("==> Enter Password");
 			funcs.senddata(driver, password, "St4ckSp0rts@");
 			funcs.clickon_element(driver, login);
 		}
 		else {
 			funcs.senddata(driver, username, "bsbadmin"+testUrl);
 			LogClass.logExtent("==> Enter User Name");
+			funcs.waitforseconds(1);
+			LogClass.logExtent("==> Enter Password");
 			funcs.senddata(driver, password, "St4ckSp0rts@");
 			funcs.clickon_element(driver, login);
 		}
@@ -134,8 +138,141 @@ public class Logic extends BSB_AbstractPage {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(1);
 		funcs.clickon_element(driver, create_non_tryout_rec_pro);
-		LogClass.logExtent("==> Click on New Program Plus Icon ");
+		LogClass.logExtent("==> Click on Create a Non-Tryout/Rec Program");
 		return new Verify(driver);
 	}	
 	
+	@FindBy(xpath="//input[contains(@id,'txtProgramName')]")private static WebElement program_name;
+	public Verify enter_program_name() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(1);
+		funcs.senddata(driver, program_name, BSB_TestData.Non_tryout_program_name(4));
+		LogClass.logExtent("==> Enter Program Name");
+		return new Verify(driver);
+	}	
+	
+	//@FindBy(xpath="//select[contains(@id,'ActivityType')]")private static WebElement select_activity_type;
+	
+	@FindBy(xpath="//span[text()='--Select--']")private static WebElement click_select_activity_type;
+	public Verify select_activity_type(String activitytype) {
+		// TODO Auto-generated method stub
+		//funcs.clickon_element(driver, click_select_activity_type)
+		funcs.waitforseconds(1);
+		click_select_activity_type.click();
+		LogClass.logExtent("==> Activity Type dropdown list open");
+		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
+		ele.click();
+		LogClass.logExtent("==> Activity Type Selected");
+		return new Verify(driver);
+	}	
+	
+	public Verify select_national_affilation(String activitytype) {
+		// TODO Auto-generated method stub
+		//funcs.clickon_element(driver, click_select_activity_type)
+		funcs.waitforseconds(1);
+		click_select_activity_type.click();
+		LogClass.logExtent("==> National Affiliation dropdown list open");
+		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
+		ele.click();
+		LogClass.logExtent("==> National Affiliation Selected");
+		return new Verify(driver);
+	}	
+	
+	public Verify select_state_affilation(String activitytype) {
+		// TODO Auto-generated method stub
+		//funcs.clickon_element(driver, click_select_activity_type)
+		funcs.waitforseconds(1);
+		click_select_activity_type.click();
+		LogClass.logExtent("==> State Affiliation dropdown list open");
+		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
+		ele.click();
+		LogClass.logExtent("==> State Affiliation Selected");
+		return new Verify(driver);
+	}	
+	
+	public Verify select_Organization(String activitytype) {
+		// TODO Auto-generated method stub
+		//funcs.clickon_element(driver, click_select_activity_type)
+		funcs.waitforseconds(1);
+		click_select_activity_type.click();
+		LogClass.logExtent("==> Organization dropdown list open");
+		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
+		ele.click();
+		LogClass.logExtent("==> Organization Selected");
+		return new Verify(driver);
+	}
+	
+	public Verify select_club(String activitytype) {
+		// TODO Auto-generated method stub
+		//funcs.clickon_element(driver, click_select_activity_type)
+		funcs.waitforseconds(1);
+		click_select_activity_type.click();
+		LogClass.logExtent("==> Clubs dropdown list open");
+		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
+		ele.click();
+		LogClass.logExtent("==> Clubs Selected");
+		return new Verify(driver);
+	}
+	
+	public Verify select_Season(String activitytype) {
+		// TODO Auto-generated method stub
+		//funcs.clickon_element(driver, click_select_activity_type)
+		funcs.waitforseconds(4);
+		//WebElement season = driver.findElement(By.xpath("//span[text()='--Select--']"));
+		//season.click();
+		click_select_activity_type.click();
+		funcs.jsClick(driver, click_select_activity_type);
+		LogClass.logExtent("==> Season dropdown list open");
+		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
+		ele.click();
+		LogClass.logExtent("==> Season Selected");
+		return new Verify(driver);
+	}
+	
+	public Verify select_play_Level(String activitytype) {
+		// TODO Auto-generated method stub
+		//funcs.clickon_element(driver, click_select_activity_type)
+		funcs.waitforseconds(1);
+		click_select_activity_type.click();
+		LogClass.logExtent("==> Play Level dropdown list open");
+		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
+		ele.click();
+		LogClass.logExtent("==> Play Level Selected");
+		return new Verify(driver);
+	} 
+	public Verify select_Region(String activitytype) {
+		// TODO Auto-generated method stub
+		//funcs.clickon_element(driver, click_select_activity_type)
+		funcs.waitforseconds(1);
+		click_select_activity_type.click();
+		LogClass.logExtent("==> Region dropdown list open");
+		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
+		ele.click();
+		LogClass.logExtent("==> Region Selected");
+		return new Verify(driver);
+	}  
+	public Verify select_League(String activitytype) {
+		// TODO Auto-generated method stub
+		//funcs.clickon_element(driver, click_select_activity_type)
+		funcs.waitforseconds(1);
+		click_select_activity_type.click();
+		LogClass.logExtent("==> League dropdown list open");
+		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
+		ele.click();
+		LogClass.logExtent("==> League Selected");
+		return new Verify(driver);
+	}  
+	
+	public Verify select_Association(String activitytype) {
+		// TODO Auto-generated method stub
+		//funcs.clickon_element(driver, click_select_activity_type)
+		funcs.waitforseconds(5);
+		click_select_activity_type.click();
+		funcs.jsClick(driver, click_select_activity_type);
+		LogClass.logExtent("==> Association dropdown list open");
+		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
+		ele.click();
+		LogClass.logExtent("==> Association Selected");
+		return new Verify(driver);
+	}  
 }

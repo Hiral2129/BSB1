@@ -34,22 +34,62 @@ public class Steps extends BSB_SeleniumInit {
 // ===> Program Creation Mudule Test Cases
 //Login Module Test Cases , dependsOnMethods = { "Signin_TestCase_02" }
 	@Test(priority = 0, enabled = true, groups ="program")
-	public void Signin_TestCase_01() {
-
+	public void Program_TestCase_01() {
 		step = 1;
 		String report_msg;// String for the log in the Report		
-		report_msg = "To verify that user is able to login with valid credentials";
+		report_msg = "To verify that user is able to create the NGB program[Soccer | US Youth Soccer]";
 		LogClass.logExtent(report_msg);
-		
 		veri = logic.tshq_staging();
 		veri.homepageverify();
 		veri = logic.login_as_admin();
-		
-		
-		
+		veri = logic.click_new_program_plus_sign();
+		veri = logic.click_Create_Non_Tryout_Rec_Program();
+		veri = logic.enter_program_name();
+		veri = logic.select_activity_type("Soccer");
+		veri = logic.select_national_affilation("US Youth Soccer");
+		veri = logic.select_state_affilation("Blue Sombrero Integration"); 
+		veri = logic.select_Organization("BSB United");
+		veri = logic.select_club("BSB UTD - 01");
+		veri = logic.select_Season("Spring 2020");
+		veri = logic.select_play_Level("Recreational");
+	}// End of Program_TestCase_01.
+	
+	@Test(priority = 0, enabled = true, groups ="program")
+	public void Program_TestCase_02() {
+		step = 1;
+		String report_msg;// String for the log in the Report		
+		report_msg = "To verify that user is able to create the NGB program[Football | Pop worner]";
+		LogClass.logExtent(report_msg);
+		veri = logic.tshq_staging();
+		veri.homepageverify();
+		veri = logic.login_as_admin();
+		veri = logic.click_new_program_plus_sign();
+		veri = logic.click_Create_Non_Tryout_Rec_Program();
+		veri = logic.enter_program_name();
+		veri = logic.select_activity_type("Football");
+		veri = logic.select_national_affilation("Pop Warner");
+		veri = logic.select_Region("Sports Connect Demo Region");
+		veri = logic.select_League("Demo Region League Affiliation");
+		veri = logic.select_Season("2020 Spring/Year Round");
+	}// End of Program_TestCase_02.
+	
+	@Test(priority = 0, enabled = true, groups ="program")
+	public void Program_TestCase_03() {
+		step = 1;
+		String report_msg;// String for the log in the Report		
+		report_msg = "To verify that user is able to create the NGB program[Baseball | PONY Baseball]";
+		LogClass.logExtent(report_msg);
+		veri = logic.tshq_staging();
+		veri.homepageverify();
+		veri = logic.login_as_admin();
+		veri = logic.click_new_program_plus_sign();
+		veri = logic.click_Create_Non_Tryout_Rec_Program();
+		veri = logic.enter_program_name();
+		veri = logic.select_activity_type("Baseball");
+		veri = logic.select_national_affilation("PONY Baseball");
+		veri = logic.select_Association("National City Pony");
+	}// End of Program_TestCase_03.
 
-		
-	}// End of Signin_TestCase_01.
 
 	
 }// End of Class

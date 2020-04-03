@@ -37,10 +37,21 @@
 		<classes>
 			<class name="com.automation.index.Steps">
 				<methods>					
-				<include name="Signin_TestCase_01" />
+				<include name="Program_TestCase_03" />
 				</methods>
 			</class>
 		</classes>
 	</test>		
+	<!-- <test name="BSB_Program_Module_TestCases">
+	<classes>
+		<class name="com.automation.index.Steps">
+			<groups>
+				<run>
+					<include name="program" />
+				</run>
+			</groups>
+		</class>
+	</classes>
+</test>		 -->
 </suite>
  

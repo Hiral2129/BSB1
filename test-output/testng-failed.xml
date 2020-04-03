@@ -15,8 +15,8 @@
           <include name="setUp"/>
           <include name="fetchSuiteConfiguration"/>
           <include name="tearDown"/>
-          <include name="Signin_TestCase_01"/>
           <include name="zipfileupdate"/>
+          <include name="Program_TestCase_03"/>
         </methods>
       </class> <!-- com.automation.index.Steps -->
     </classes>
