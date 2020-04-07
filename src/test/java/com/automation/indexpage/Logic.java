@@ -142,6 +142,15 @@ public class Logic extends BSB_AbstractPage {
 		return new Verify(driver);
 	}	
 	
+	@FindBy(xpath="//a[text()='Create a Tryout/Competitive Program']")private static WebElement create_tryout_Competitive_pro;
+	public Verify click_Create_Tryout_Competitive_Program() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(1);
+		funcs.clickon_element(driver, create_tryout_Competitive_pro);
+		LogClass.logExtent("==> Click on Create a Tryout/Competitive Program");
+		return new Verify(driver);
+	}	
+	
 	@FindBy(xpath="//input[contains(@id,'txtProgramName')]")private static WebElement program_name;
 	public Verify enter_program_name() {
 		// TODO Auto-generated method stub

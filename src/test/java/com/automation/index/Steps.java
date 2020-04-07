@@ -94,7 +94,7 @@ public class Steps extends BSB_SeleniumInit {
 	public void Program_TestCase_04() {
 		step = 1;
 		String report_msg;// String for the log in the Report		
-		report_msg = "To verify that user is able to create the NGB program[Baseball | Little League]";
+		report_msg = "To verify that user is able to create program[Baseball | Little League]";
 		LogClass.logExtent(report_msg);
 		veri = logic.tshq_staging();
 		veri.homepageverify();
@@ -106,5 +106,25 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.select_national_affilation("Little League Baseball");
 		funcs.waitforseconds(5);
 	}// End of Program_TestCase_04.
+	
+	@Test(priority = 0, enabled = true, groups ="program")
+	public void Program_TestCase_05() {
+		step = 1;
+		String report_msg;// String for the log in the Report		
+		report_msg = "To verify that user is able to create Tryout Program";
+		LogClass.logExtent(report_msg);
+		veri = logic.tshq_staging();
+		veri.homepageverify();
+		veri = logic.login_as_admin();
+		veri = logic.click_new_program_plus_sign();
+		veri = logic.click_Create_Tryout_Competitive_Program();
+		veri = logic.enter_program_name();
+		veri = logic.select_activity_type("Baseball");
+		veri = logic.select_national_affilation("American Legion Baseball");
+		funcs.waitforseconds(5);
+	}// End of Program_TestCase_05.
+	
+	
+	
 	
 }// End of Class
