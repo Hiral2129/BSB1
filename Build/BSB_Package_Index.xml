@@ -37,7 +37,7 @@
 		<classes>
 			<class name="com.automation.index.Steps">
 				<methods>					
-				<include name="Program_TestCase_03" />
+				<include name="Program_TestCase_04" />
 				</methods>
 			</class>
 		</classes>
