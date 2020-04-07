@@ -1,197 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="5" total="6" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="BSB_Functional_TestCases_Suite" duration-ms="585205" started-at="2020-04-07T12:33:11Z" finished-at="2020-04-07T12:42:56Z">
+  <suite name="BSB_Functional_TestCases_Suite" duration-ms="117049" started-at="2020-04-07T12:56:38Z" finished-at="2020-04-07T12:58:35Z">
     <groups>
       <group name="program">
-        <method signature="Steps.Program_TestCase_01()[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="Program_TestCase_01" class="com.automation.index.Steps"/>
-        <method signature="Steps.Program_TestCase_02()[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="Program_TestCase_02" class="com.automation.index.Steps"/>
-        <method signature="Steps.Program_TestCase_03()[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="Program_TestCase_03" class="com.automation.index.Steps"/>
-        <method signature="Steps.Program_TestCase_04()[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="Program_TestCase_04" class="com.automation.index.Steps"/>
-        <method signature="Steps.Program_TestCase_05()[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="Program_TestCase_05" class="com.automation.index.Steps"/>
+        <method signature="Steps.Program_TestCase_06()[pri:0, instance:com.automation.index.Steps@74650e52]" name="Program_TestCase_06" class="com.automation.index.Steps"/>
       </group> <!-- program -->
     </groups>
-    <test name="BSB_Program_Module_TestCases" duration-ms="585205" started-at="2020-04-07T12:33:11Z" finished-at="2020-04-07T12:42:56Z">
+    <test name="BSB_Login_Module_TestCases" duration-ms="117049" started-at="2020-04-07T12:56:38Z" finished-at="2020-04-07T12:58:35Z">
       <class name="com.automation.index.Steps">
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="fetchSuiteConfiguration" is-config="true" duration-ms="14" started-at="2020-04-07T12:33:11Z" finished-at="2020-04-07T12:33:11Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="fetchSuiteConfiguration" is-config="true" duration-ms="12" started-at="2020-04-07T12:56:38Z" finished-at="2020-04-07T12:56:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@396e2f39]]>
+                <![CDATA[org.testng.TestRunner@782663d3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="fetchSuiteConfiguration" is-config="true" duration-ms="1" started-at="2020-04-07T12:33:11Z" finished-at="2020-04-07T12:33:11Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="fetchSuiteConfiguration" is-config="true" duration-ms="0" started-at="2020-04-07T12:56:38Z" finished-at="2020-04-07T12:56:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@396e2f39]]>
+                <![CDATA[org.testng.TestRunner@782663d3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="setUp" is-config="true" duration-ms="11459" started-at="2020-04-07T12:33:11Z" finished-at="2020-04-07T12:33:23Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="setUp" is-config="true" duration-ms="10499" started-at="2020-04-07T12:56:38Z" finished-at="2020-04-07T12:56:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.automation.index.Steps.Program_TestCase_01()]]>
+                <![CDATA[public void com.automation.index.Steps.Program_TestCase_06()]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@396e2f39]]>
+                <![CDATA[org.testng.TestRunner@782663d3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Program_TestCase_01()[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="Program_TestCase_01" duration-ms="102366" started-at="2020-04-07T12:33:23Z" finished-at="2020-04-07T12:35:05Z">
+        <test-method status="PASS" signature="Program_TestCase_06()[pri:0, instance:com.automation.index.Steps@74650e52]" name="Program_TestCase_06" duration-ms="95714" started-at="2020-04-07T12:56:49Z" finished-at="2020-04-07T12:58:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Program_TestCase_01 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="tearDown" is-config="true" duration-ms="10878" started-at="2020-04-07T12:35:05Z" finished-at="2020-04-07T12:35:16Z">
+        </test-method> <!-- Program_TestCase_06 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.Steps@74650e52]" name="tearDown" is-config="true" duration-ms="10825" started-at="2020-04-07T12:58:25Z" finished-at="2020-04-07T12:58:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Program_TestCase_01 status=SUCCESS method=Steps.Program_TestCase_01()[pri:0, instance:com.automation.index.Steps@6acdbdf5] output={null}]]]>
+                <![CDATA[[TestResult name=Program_TestCase_06 status=SUCCESS method=Steps.Program_TestCase_06()[pri:0, instance:com.automation.index.Steps@74650e52] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="setUp" is-config="true" duration-ms="9867" started-at="2020-04-07T12:35:16Z" finished-at="2020-04-07T12:35:26Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.automation.index.Steps.Program_TestCase_02()]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@396e2f39]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.Steps@74650e52]" name="zipfileupdate" is-config="true" duration-ms="82" started-at="2020-04-07T12:58:36Z" finished-at="2020-04-07T12:58:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Program_TestCase_02()[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="Program_TestCase_02" duration-ms="114333" started-at="2020-04-07T12:35:26Z" finished-at="2020-04-07T12:37:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Program_TestCase_02 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="tearDown" is-config="true" duration-ms="10812" started-at="2020-04-07T12:37:20Z" finished-at="2020-04-07T12:37:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Program_TestCase_02 status=SUCCESS method=Steps.Program_TestCase_02()[pri:0, instance:com.automation.index.Steps@6acdbdf5] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="setUp" is-config="true" duration-ms="9197" started-at="2020-04-07T12:37:31Z" finished-at="2020-04-07T12:37:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.automation.index.Steps.Program_TestCase_03()]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@396e2f39]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Program_TestCase_03()[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="Program_TestCase_03" duration-ms="98498" started-at="2020-04-07T12:37:40Z" finished-at="2020-04-07T12:39:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Program_TestCase_03 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="tearDown" is-config="true" duration-ms="10838" started-at="2020-04-07T12:39:19Z" finished-at="2020-04-07T12:39:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Program_TestCase_03 status=SUCCESS method=Steps.Program_TestCase_03()[pri:0, instance:com.automation.index.Steps@6acdbdf5] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="setUp" is-config="true" duration-ms="9177" started-at="2020-04-07T12:39:29Z" finished-at="2020-04-07T12:39:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.automation.index.Steps.Program_TestCase_04()]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@396e2f39]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Program_TestCase_04()[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="Program_TestCase_04" duration-ms="91206" started-at="2020-04-07T12:39:39Z" finished-at="2020-04-07T12:41:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Program_TestCase_04 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="tearDown" is-config="true" duration-ms="10805" started-at="2020-04-07T12:41:10Z" finished-at="2020-04-07T12:41:21Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Program_TestCase_04 status=SUCCESS method=Steps.Program_TestCase_04()[pri:0, instance:com.automation.index.Steps@6acdbdf5] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="setUp" is-config="true" duration-ms="9172" started-at="2020-04-07T12:41:21Z" finished-at="2020-04-07T12:41:30Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.automation.index.Steps.Program_TestCase_05()]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@396e2f39]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Program_TestCase_05()[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="Program_TestCase_05" duration-ms="75786" started-at="2020-04-07T12:41:30Z" finished-at="2020-04-07T12:42:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Program_TestCase_05 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.Steps@6acdbdf5]" name="tearDown" is-config="true" duration-ms="10790" started-at="2020-04-07T12:42:46Z" finished-at="2020-04-07T12:42:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Program_TestCase_05 status=SUCCESS method=Steps.Program_TestCase_05()[pri:0, instance:com.automation.index.Steps@6acdbdf5] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- zipfileupdate -->
       </class> <!-- com.automation.index.Steps -->
-    </test> <!-- BSB_Program_Module_TestCases -->
+    </test> <!-- BSB_Login_Module_TestCases -->
   </suite> <!-- BSB_Functional_TestCases_Suite -->
 </testng-results>

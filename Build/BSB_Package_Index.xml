@@ -33,16 +33,16 @@
 		
 		
 	<!-- Methods for Login -->	
-	<!-- <test name="BSB_Login_Module_TestCases">
+	<test name="BSB_Login_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.Steps">
 				<methods>					
-				<include name="Program_TestCase_04" />
+				<include name="Program_TestCase_06" />
 				</methods>
 			</class>
 		</classes>
-	</test>	 -->	
-	<test name="BSB_Program_Module_TestCases">
+	</test>		
+	<!-- <test name="BSB_Program_Module_TestCases">
 	<classes>
 		<class name="com.automation.index.Steps">
 			<groups>
@@ -52,6 +52,6 @@
 			</groups>
 		</class>
 	</classes>
-</test>		
+</test>		 -->
 </suite>
  
