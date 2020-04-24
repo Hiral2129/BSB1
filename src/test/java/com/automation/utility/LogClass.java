@@ -88,6 +88,40 @@ public class LogClass {
 		Steps.extent_report_log.log(LogStatus.FAIL,"<b>Please look to the screenshot - </b>");
 		Steps.extent_report_log.log(LogStatus.FAIL,getScreenshotLink_extent(nameWithExtention, nameWithExtention));//for Extent Report
 	}
+	
+	public static void makeScreenshot_without_fail(WebDriver driver, String screenshotName) {
+		WebDriver augmentedDriver = new Augmenter().augment(driver);
+		/* Take a screenshot */
+		File screenshot = ((TakesScreenshot) augmentedDriver).getScreenshotAs(OutputType.FILE);
+		String nameWithExtention = screenshotName + ".png";
+		/* Copy screenshot to specific folder */
+		try {
+
+			//String reportFolder = "C:/Users/User/eclipse-workspace/RentCount_UK/test-output" + File.separator;
+			String reportFolder = "C:\\Users\\Admin\\eclipse-workspace\\BSB1v\\test-output" + File.separator;
+			
+			
+			String screenshotsFolder = "screenshots";
+			File screenshotFolder = new File(reportFolder + screenshotsFolder);
+			if (!screenshotFolder.getAbsoluteFile().exists()) {
+				screenshotFolder.mkdir();
+			}
+			FileUtils.copyFile(screenshot,
+					new File(screenshotFolder + File.separator + nameWithExtention).getAbsoluteFile());
+		} catch (IOException e) {
+			log("Failed to capture screenshot: " + e.getMessage());//normal reports
+			Steps.extent_report_log.log(LogStatus.FAIL, "Failed to capture screenshot: " + e.getMessage());//for Extent Report
+			
+		}
+		
+		Reporter.log("<br><b>Please look to the screenshot - </b>");
+		log(getScreenshotLink(nameWithExtention, nameWithExtention)); // add screenshot link to the report
+		
+		Steps.extent_report_log.log(LogStatus.INFO,"<b>Please look to the screenshot - </b>");
+		Steps.extent_report_log.log(LogStatus.INFO,getScreenshotLink_extent(nameWithExtention, nameWithExtention));//for Extent Report
+	}
+	
+	
 	// Function to Log given message to Reporter output. @param msg Message/Log to
 	// be reported.
 

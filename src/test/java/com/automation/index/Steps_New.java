@@ -34,7 +34,7 @@ public class Steps_New extends BSB_SeleniumInit {
 
 //Login Module Test Cases , dependsOnMethods = { "Signin_TestCase_02" }
 	@Test(priority = 0, enabled = true)
-	public void Signin_TestCase_01() {
+	public void Program_TestCase_01() {
 		step = 1;
 		String report_msg;// String for the log in the Report		
 		report_msg = "To verify that user is able to login with valid credentials";
@@ -50,9 +50,7 @@ public class Steps_New extends BSB_SeleniumInit {
 		veri_new.homepageverify();
 		veri_new = logic_new.login_as_admin();
 		
-		//veri_new = logic_new.ayso_staging();
-		//veri_new.homepageverify();
-		//veri_new = logic_new.login_as_admin();
+		
 		
 		veri_new = logic_new.tshq_staging();
 		veri_new.homepageverify();
@@ -62,9 +60,7 @@ public class Steps_New extends BSB_SeleniumInit {
 		veri_new.homepageverify();
 		veri = logic.login_as_host();
 		
-		//veri_new = logic_new.loginstaging_ayso();
-		//veri_new.homepageverify();
-		//veri_new = logic_new.login_as_host();
+		
 		
 	}// End of Signin_TestCase_01.
 

@@ -120,6 +120,33 @@ public class Logic extends BSB_AbstractPage {
 		return new Verify(driver);
 	}	
 	
+	
+	@FindBy(xpath="//a[@id='dnn_dnnLOGIN1_cmdLogin']")private static WebElement home_login1;
+	@FindBy(xpath="//input[contains(@id,'UserNameTextBox')]")private static WebElement username1;
+	@FindBy(xpath="//input[contains(@id,'Password')]")private static WebElement password1;
+	@FindBy(xpath="//a[contains(@id,'SingInButton')]")private static WebElement login1;
+	
+	public Verify production() {
+		// TODO Auto-generated method stub
+		testUrl = BSB_TestData.getURL(6,1);	
+		
+		driver.get(testUrl);		
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver, home_login1);
+		funcs.waitforseconds(4);
+		
+		LogClass.logExtent("==> Click on home Login Button to process login");
+		//funcs.senddata(driver, username, "Harshid_host");
+		funcs.senddata(driver, username, BSB_TestData.getURL(7,1));
+		LogClass.logExtent("==> Enter User Name");
+		funcs.waitforseconds(1);
+		LogClass.logExtent("==> Enter Password");
+		funcs.senddata(driver, password, BSB_TestData.getURL(8,1));
+		funcs.clickon_element(driver, login);
+			
+		return new Verify(driver);
+	}  
+	
 	/*
 	 * =================
 	 * Program functions
@@ -283,5 +310,7 @@ public class Logic extends BSB_AbstractPage {
 		ele.click();
 		LogClass.logExtent("==> Association Selected");
 		return new Verify(driver);
-	}  
+	}
+	
+
 }

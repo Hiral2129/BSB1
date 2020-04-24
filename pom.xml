@@ -121,8 +121,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>Build/BSB_Package_Index.xml</suiteXmlFile>
-						<!-- <suiteXmlFile>Build/BSB_New_Package_Index.xml</suiteXmlFile> -->
-						<!-- <suiteXmlFile>Build/CalcuQuote_RFQ_Package.xml</suiteXmlFile> -->						
+						<!-- <suiteXmlFile>Build/BSB_New_Package_Index.xml</suiteXmlFile>	 -->				
 					</suiteXmlFiles>
 					<reportsDirectory>test-output</reportsDirectory>
 					<properties>

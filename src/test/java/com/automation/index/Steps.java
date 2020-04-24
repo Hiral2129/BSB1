@@ -1,16 +1,17 @@
 package com.automation.index;
-import org.testng.Assert;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.automation.init.BSB_SeleniumInit;
 import com.automation.utility.BSB_TestData;
 import com.automation.utility.LogClass;
 import com.automation.utility.funcs;
 import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
-import com.automation.init.BSB_SeleniumInit;
-
-import com.automation.indexpage.Logic;
+import com.sun.corba.se.spi.orbutil.fsm.Action;
 
 
 public class Steps extends BSB_SeleniumInit {
@@ -109,7 +110,7 @@ public class Steps extends BSB_SeleniumInit {
 	@Test(priority = 0, enabled = true, groups ="program")
 	public void Program_TestCase_05() {
 		step = 1;
-		String report_msg;// String for the log in the Report		
+		String report_msg;// String for the log in the Report
 		report_msg = "To verify that user is able to create Tryout Program";
 		LogClass.logExtent(report_msg);
 		veri = logic.tshq_staging();
@@ -138,6 +139,101 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.select_national_affilation("American Legion Baseball");
 	}// End of Program_TestCase_06.
 	
+	@Test(priority = 0, enabled = true, groups ="program")
+	public void Program_TestCase_07() {
+		step = 1;
+		String report_msg;// String for the log in the Report		
+		report_msg = "To verify that user is able to create Portals on production Server";
+		LogClass.logExtent(report_msg);
+		veri = logic.production();
+		
+		List<WebElement> sclogo = driver.findElements(By.xpath("//img[@alt=\"Sports Connect\"]"));
+		sclogo.get(1).click();
+		System.out.println("==> Click on Sports Connect logo");
+		
+		String min = BSB_TestData.getURL(9,1);
+		String max = BSB_TestData.getURL(10,1);
+		
+		System.out.println("==> Range from "+min+" to "+max);
+		
+		
+		for(int i=Integer.valueOf(min);i<=Integer.valueOf(max);i++)
+		{
+		//driver.navigate().refresh();	
+		
+		funcs.waitforseconds(6);
+		WebElement clickonhost = driver.findElement(By.xpath("//span[text()='Host']"));
+		funcs.clickon_element(driver, clickonhost);
+		//clickonhost.click();
+		System.out.println("==> Click on Host");
+		
+		funcs.waitforseconds(3);
+		WebElement site_mmt = driver.findElement(By.xpath("//span[text()='Host']//..//li//a[text()='Site Management']"));
+		funcs.clickon_element(driver, site_mmt);
+		//site_mmt.click();
+		System.out.println("==> Click on Site Management");
+		
+		funcs.waitforseconds(6);
+		WebElement add_new_site = driver.findElement(By.xpath("//a[text()='Add New Site']"));
+		funcs.clickon_element(driver, add_new_site);
+		//add_new_site.click();
+		System.out.println("==> Click on Add New Site");
+		
+		funcs.waitforseconds(7);
+		WebElement click_on_child = driver.findElement(By.xpath("//label[text()='Child']//..//input[2]"));
+		funcs.clickon_element(driver, click_on_child);
+		//click_on_child.click();
+		System.out.println("==> Select the Child");	
+		
+		funcs.waitforseconds(7);
+		WebElement enter_site_alias = driver.findElement(By.xpath("//input[contains(@id,'Signup_txtPortalAlias')]"));
+		funcs.senddata(driver, enter_site_alias, "clubs.bluesombrero.com/"+"Demo"+i);
+		//enter_site_alias.clear();
+		//enter_site_alias.sendKeys("clubs.bluesombrero.com/"+"Demo"+i);
+		System.out.println("==> Enter Port site alias :"+"Demo"+i);
+		
+		WebElement enter_title = driver.findElement(By.xpath("//input[contains(@id,'Signup_txtPortalName')]"));
+		funcs.senddata(driver, enter_title, "Demo"+i);
+		//enter_title.sendKeys("Demo"+i);
+		System.out.println("==> Entere Title Name"+"Demo"+i);
+		
+		funcs.waitforseconds(3);
+		WebElement click_on_tem = driver.findElement(By.xpath("//input[contains(@id,'Signup_cboTemplate_Input')]"));
+		funcs.jsClick(driver, click_on_tem);
+		click_on_tem.click();
+		System.out.println("==> Click to select the Template");
+		
+		funcs.waitforseconds(3);
+		WebElement select_tem = driver.findElement(By.xpath("//li[text()='BSB-ClubHomeProfessional']"));
+		funcs.jsClick(driver, select_tem );
+		System.out.println("==> Select the Template :"+select_tem.getText());
+		
+		funcs.waitforseconds(7);
+		WebElement click_on_create_site = driver.findElement(By.xpath("//a[@title='Create Site']"));
+		funcs.clickon_element(driver, click_on_create_site);
+		//click_on_create_site.click();
+		System.out.println("==> Click on Create Site");
+		
+		System.out.println("==> Waiting for 80 seconds");
+		
+		funcs.waitforseconds(5);
+		LogClass.makeScreenshot_without_fail(driver, "Demo"+i);
+		
+		funcs.waitforseconds(85);
+		driver.navigate().refresh();
+		
+		funcs.waitforseconds(2);
+		//WebElement logo_mouse_hover = driver.findElement(By.xpath("//img[@id='dnn_dnnLOGO_imgLogo']"));
+		
+		//funcs.mousehover_on_element(driver, logo_mouse_hover);
+		//funcs.mouseHoverUsingJS(driver, logo_mouse_hover);
+		//funcs.waitforseconds(3);
+		
+		
+		
+		}//End of for loop	
+		
+	}// End of Program_TestCase_06.
 	
 	
 	
