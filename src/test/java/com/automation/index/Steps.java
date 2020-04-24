@@ -195,7 +195,7 @@ public class Steps extends BSB_SeleniumInit {
 		WebElement enter_title = driver.findElement(By.xpath("//input[contains(@id,'Signup_txtPortalName')]"));
 		funcs.senddata(driver, enter_title, "Demo"+i);
 		//enter_title.sendKeys("Demo"+i);
-		System.out.println("==> Entere Title Name"+"Demo"+i);
+		System.out.println("==> Entere Title Name :"+"Demo"+i);
 		
 		funcs.waitforseconds(3);
 		WebElement click_on_tem = driver.findElement(By.xpath("//input[contains(@id,'Signup_cboTemplate_Input')]"));
