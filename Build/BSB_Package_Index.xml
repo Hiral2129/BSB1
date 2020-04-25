@@ -37,11 +37,12 @@
 		<classes>
 			<class name="com.automation.index.Steps">
 				<methods>					
-				<include name="Program_TestCase_07" />
+				<include name="Program_TestCase_01" />
 				</methods>
 			</class>
 		</classes>
 	</test>		
+	
 <!-- <test name="BSB_Program_Module_TestCases">
 	<classes>
 		<class name="com.automation.index.Steps">
@@ -53,5 +54,6 @@
 		</class>
 	</classes>
 </test>		 -->
+
 </suite>
  

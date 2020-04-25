@@ -29,47 +29,24 @@ public class Logic_New extends BSB_AbstractPage {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
-/*
-	public static Verify CalcuQuote_Valid_Credentials() {
-		// TODO Auto-generated method stub
-		
-		LogClass.logExtent("==> Enter Username ");
-		funcs.senddata(driver, calcuquote_password, BSB_SeleniumInit.password);
 
-		LogClass.logExtent("==> Enter Password ");
-		funcs.clickon_element(driver, calcuquote_login_btn);
-		
-		return new Verify(driver);
-	}
-*/
-	public Verify_New tshq_staging() {
+	/*
+	 * ===============
+	 * Login functions
+	 * ===============
+	 */
+	
+	public Verify_New geturlfornew() {
 		// TODO Auto-generated method stub
-		testUrl = BSB_TestData.getURL(1,3);		
-		driver.get("http://stagingtshq.bsbtest.com/default.aspx?portalid="+testUrl);		
-		funcs.waitforseconds(5);
+		testUrl = BSB_TestData.getURL(1,3);	
+		driver.get(testUrl);		
+		funcs.waitforseconds(2);
 		LogClass.logExtent("Step 1 : "+driver.getCurrentUrl());
 		return new Verify_New(driver);
 	}
 	
-	public Verify_New sports_staging() {
-		// TODO Auto-generated method stub
-		testUrl = BSB_TestData.getURL(2,3);		
-		driver.get("https://stagingsports.bsbtest.com/Default.aspx?portalid="+testUrl);		
-		funcs.waitforseconds(5);
-		LogClass.logExtent("Step 1 : "+driver.getCurrentUrl());
-		return new Verify_New(driver);
-	}
-
-	public Verify_New ayso_staging() {
-		// TODO Auto-generated method stub
-		testUrl = BSB_TestData.getURL(3,3);
-		driver.get("https://stagingayso.bsbtest.com/Default.aspx?portalid="+testUrl);
-		funcs.waitforseconds(5);
-		LogClass.logExtent("Step 1 : "+driver.getCurrentUrl());
-		return new Verify_New(driver);
-	}	
 	
-	@FindBy(xpath="//a[@id='dnn_dnnLOGIN_cmdLogin']")private static WebElement home_login;
+	@FindBy(xpath="//div[@class='skLogin']//a[contains(text(),'L')]")private static WebElement home_login;
 	@FindBy(xpath="//input[contains(@id,'UserNameTextBox')]")private static WebElement username;
 	@FindBy(xpath="//input[contains(@id,'Password')]")private static WebElement password;
 	@FindBy(xpath="//a[contains(@id,'SingInButton')]")private static WebElement login;
@@ -79,10 +56,13 @@ public class Logic_New extends BSB_AbstractPage {
 		funcs.clickon_element(driver, home_login);
 		funcs.waitforseconds(4);
 		LogClass.logExtent("==> Click on home Login Button to process login");
-		funcs.senddata(driver, username, "bsbadmin"+testUrl);
+		funcs.senddata(driver, username, BSB_TestData.getURL(2, 3));
 		LogClass.logExtent("==> Enter User Name");
-		funcs.senddata(driver, password, "St4ckSp0rts@");
+		funcs.waitforseconds(1);
+		LogClass.logExtent("==> Enter Password");
+		funcs.senddata(driver, password, BSB_TestData.getURL(3, 3));
 		funcs.clickon_element(driver, login);
+
 		LogClass.logExtent("==> Click on login button ");
 		funcs.waitforseconds(5);
 		return new Verify_New(driver);
@@ -93,12 +73,30 @@ public class Logic_New extends BSB_AbstractPage {
 		funcs.clickon_element(driver, home_login);
 		funcs.waitforseconds(4);
 		LogClass.logExtent("==> Click on home Login Button to process login");
-		funcs.senddata(driver, username, "athost");
+		funcs.senddata(driver, username, BSB_TestData.getURL(2,5));
 		LogClass.logExtent("==> Enter User Name");
-		funcs.senddata(driver, password, "ITW3546ctyz10@");
+		funcs.senddata(driver, password, BSB_TestData.getURL(3,5));
 		funcs.clickon_element(driver, login);
 		LogClass.logExtent("==> Click on login button ");
 		funcs.waitforseconds(5);
 		return new Verify_New(driver);
 	}	
-}
+	
+	@FindBy(xpath="//span[text()=' Add Program ']")private static WebElement new_program_plus;
+	public Verify_New click_new_program_plus_sign() {
+		// TODO Auto-generated method stub
+		funcs.clickon_element(driver, new_program_plus);
+		LogClass.logExtent("==> Click on New Program Plus Icon ");
+		return new Verify_New(driver);
+	}	
+	
+	@FindBy(xpath="//span[text()=' Select ']")private static WebElement select_nt_program;
+	
+	public Verify_New select_non_tryout_program() {
+		// TODO Auto-generated method stub
+		funcs.clickon_element(driver, select_nt_program);
+		LogClass.logExtent("==> Select Non-Tryout/Recreational or Camp ");
+		return new Verify_New(driver);
+	}	
+	
+}//End of Class

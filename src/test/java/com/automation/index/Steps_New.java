@@ -37,28 +37,18 @@ public class Steps_New extends BSB_SeleniumInit {
 	public void Program_TestCase_01() {
 		step = 1;
 		String report_msg;// String for the log in the Report		
-		report_msg = "To verify that user is able to login with valid credentials";
+		report_msg = "To verify that user is able to create Non Tryout Program";
 		LogClass.logExtent(report_msg);
 		//report_msg ="Step " + (step++) + ":Open : Below URL";
 		//LogClass.logExtent(report_msg);
 		
-		veri_new = logic_new.tshq_staging();
+		veri_new = logic_new.geturlfornew();
 		veri_new.homepageverify();
 		veri_new = logic_new.login_as_admin();
-		
-		veri_new = logic_new.sports_staging();
-		veri_new.homepageverify();
-		veri_new = logic_new.login_as_admin();
+		veri_new = logic_new.click_new_program_plus_sign();
+		veri_new = logic_new.select_non_tryout_program();
 		
 		
-		
-		veri_new = logic_new.tshq_staging();
-		veri_new.homepageverify();
-		veri = logic.login_as_host();
-		
-		veri_new = logic_new.sports_staging();
-		veri_new.homepageverify();
-		veri = logic.login_as_host();
 		
 		
 		

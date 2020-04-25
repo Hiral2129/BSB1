@@ -24,56 +24,27 @@ import com.automation.verification.Verify;
 
 public class Logic extends BSB_AbstractPage {
 	String testUrl;
+	String testUrlportalno;
 	public Logic(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
-/*
-	public static Verify CalcuQuote_Valid_Credentials() {
-		// TODO Auto-generated method stub
-		
-		LogClass.logExtent("==> Enter Username ");
-		funcs.senddata(driver, calcuquote_password, BSB_SeleniumInit.password);
 
-		LogClass.logExtent("==> Enter Password ");
-		funcs.clickon_element(driver, calcuquote_login_btn);
-		
-		return new Verify(driver);
-	}
-*/
 	/*
 	 * ===============
 	 * Login functions
 	 * ===============
 	 */
-	public Verify tshq_staging() {
+	public Verify geturlforcore() {
 		// TODO Auto-generated method stub
-		testUrl = BSB_TestData.getURL(1,1);		
-		driver.get("http://stagingtshq.bsbtest.com/default.aspx?portalid="+testUrl);		
+		testUrl = BSB_TestData.getURL(1,1);	
+		driver.get(testUrl);		
 		funcs.waitforseconds(2);
 		LogClass.logExtent("Step 1 : "+driver.getCurrentUrl());
 		return new Verify(driver);
 	}
-	
-	public Verify sports_staging() {
-		// TODO Auto-generated method stub
-		testUrl = BSB_TestData.getURL(2,1);		
-		driver.get("https://stagingsports.bsbtest.com/Default.aspx?portalid="+testUrl);		
-		funcs.waitforseconds(5);
-		LogClass.logExtent("Step 1 : "+driver.getCurrentUrl());
-		return new Verify(driver);
-	}
-
-	public Verify ayso_staging() {
-		// TODO Auto-generated method stub
-		testUrl = BSB_TestData.getURL(3,1);
-		driver.get("https://stagingayso.bsbtest.com/Default.aspx?portalid="+testUrl);
-		funcs.waitforseconds(5);
-		LogClass.logExtent("Step 1 : "+driver.getCurrentUrl());
-		return new Verify(driver);
-	}	
-	
-	@FindBy(xpath="//a[@id='dnn_dnnLOGIN_cmdLogin']")private static WebElement home_login;
+		
+	@FindBy(xpath="//div[@class='skLogin']//a[contains(text(),'L')]")private static WebElement home_login;
 	@FindBy(xpath="//input[contains(@id,'UserNameTextBox')]")private static WebElement username;
 	@FindBy(xpath="//input[contains(@id,'Password')]")private static WebElement password;
 	@FindBy(xpath="//a[contains(@id,'SingInButton')]")private static WebElement login;
@@ -83,24 +54,12 @@ public class Logic extends BSB_AbstractPage {
 		funcs.clickon_element(driver, home_login);
 		funcs.waitforseconds(4);
 		LogClass.logExtent("==> Click on home Login Button to process login");
-		
-		if(testUrl.equalsIgnoreCase("24904")) {
-			funcs.senddata(driver, username, "vipul"+testUrl);
-			LogClass.logExtent("==> Enter User Name");
-			funcs.waitforseconds(1);
-			LogClass.logExtent("==> Enter Password");
-			funcs.senddata(driver, password, "St4ckSp0rts@");
-			funcs.clickon_element(driver, login);
-		}
-		else {
-			funcs.senddata(driver, username, "bsbadmin"+testUrl);
-			LogClass.logExtent("==> Enter User Name");
-			funcs.waitforseconds(1);
-			LogClass.logExtent("==> Enter Password");
-			funcs.senddata(driver, password, "St4ckSp0rts@");
-			funcs.clickon_element(driver, login);
-		}
-		
+		funcs.senddata(driver, username, BSB_TestData.getURL(2, 1));
+		LogClass.logExtent("==> Enter User Name");
+		funcs.waitforseconds(1);
+		funcs.senddata(driver, password, BSB_TestData.getURL(3, 1));
+		LogClass.logExtent("==> Enter Password");
+		funcs.clickon_element(driver, login);
 		LogClass.logExtent("==> Click on login button ");
 		funcs.waitforseconds(5);
 		return new Verify(driver);
@@ -111,20 +70,15 @@ public class Logic extends BSB_AbstractPage {
 		funcs.clickon_element(driver, home_login);
 		funcs.waitforseconds(4);
 		LogClass.logExtent("==> Click on home Login Button to process login");
-		funcs.senddata(driver, username, "athost");
+		funcs.senddata(driver, username, BSB_TestData.getURL(2,5));
 		LogClass.logExtent("==> Enter User Name");
-		funcs.senddata(driver, password, "ITW3546ctyz10@");
+		funcs.senddata(driver, password, BSB_TestData.getURL(3,5));
+		LogClass.logExtent("==> Enter Password");
 		funcs.clickon_element(driver, login);
 		LogClass.logExtent("==> Click on login button ");
 		funcs.waitforseconds(5);
 		return new Verify(driver);
 	}	
-	
-	
-	@FindBy(xpath="//a[@id='dnn_dnnLOGIN1_cmdLogin']")private static WebElement home_login1;
-	@FindBy(xpath="//input[contains(@id,'UserNameTextBox')]")private static WebElement username1;
-	@FindBy(xpath="//input[contains(@id,'Password')]")private static WebElement password1;
-	@FindBy(xpath="//a[contains(@id,'SingInButton')]")private static WebElement login1;
 	
 	public Verify production() {
 		// TODO Auto-generated method stub
@@ -132,9 +86,8 @@ public class Logic extends BSB_AbstractPage {
 		
 		driver.get(testUrl);		
 		funcs.waitforseconds(5);
-		funcs.clickon_element(driver, home_login1);
+		funcs.clickon_element(driver, home_login);
 		funcs.waitforseconds(4);
-		
 		LogClass.logExtent("==> Click on home Login Button to process login");
 		//funcs.senddata(driver, username, "Harshid_host");
 		funcs.senddata(driver, username, BSB_TestData.getURL(7,1));
@@ -193,7 +146,7 @@ public class Logic extends BSB_AbstractPage {
 	public Verify select_activity_type(String activitytype) {
 		// TODO Auto-generated method stub
 		//funcs.clickon_element(driver, click_select_activity_type)
-		funcs.waitforseconds(1);
+		funcs.waitforseconds(2);
 		click_select_activity_type.click();
 		LogClass.logExtent("==> Activity Type dropdown list open");
 		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
@@ -205,7 +158,7 @@ public class Logic extends BSB_AbstractPage {
 	public Verify select_national_affilation(String activitytype) {
 		// TODO Auto-generated method stub
 		//funcs.clickon_element(driver, click_select_activity_type)
-		funcs.waitforseconds(1);
+		funcs.waitforseconds(2);
 		click_select_activity_type.click();
 		LogClass.logExtent("==> National Affiliation dropdown list open");
 		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
@@ -217,7 +170,7 @@ public class Logic extends BSB_AbstractPage {
 	public Verify select_state_affilation(String activitytype) {
 		// TODO Auto-generated method stub
 		//funcs.clickon_element(driver, click_select_activity_type)
-		funcs.waitforseconds(1);
+		funcs.waitforseconds(2);
 		click_select_activity_type.click();
 		LogClass.logExtent("==> State Affiliation dropdown list open");
 		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
@@ -229,7 +182,7 @@ public class Logic extends BSB_AbstractPage {
 	public Verify select_Organization(String activitytype) {
 		// TODO Auto-generated method stub
 		//funcs.clickon_element(driver, click_select_activity_type)
-		funcs.waitforseconds(1);
+		funcs.waitforseconds(2);
 		click_select_activity_type.click();
 		LogClass.logExtent("==> Organization dropdown list open");
 		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
@@ -241,7 +194,7 @@ public class Logic extends BSB_AbstractPage {
 	public Verify select_club(String activitytype) {
 		// TODO Auto-generated method stub
 		//funcs.clickon_element(driver, click_select_activity_type)
-		funcs.waitforseconds(1);
+		funcs.waitforseconds(2);
 		click_select_activity_type.click();
 		LogClass.logExtent("==> Clubs dropdown list open");
 		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
@@ -253,7 +206,7 @@ public class Logic extends BSB_AbstractPage {
 	public Verify select_Season(String activitytype) {
 		// TODO Auto-generated method stub
 		//funcs.clickon_element(driver, click_select_activity_type)
-		funcs.waitforseconds(4);
+		funcs.waitforseconds(6);
 		//WebElement season = driver.findElement(By.xpath("//span[text()='--Select--']"));
 		//season.click();
 		click_select_activity_type.click();
@@ -268,7 +221,7 @@ public class Logic extends BSB_AbstractPage {
 	public Verify select_play_Level(String activitytype) {
 		// TODO Auto-generated method stub
 		//funcs.clickon_element(driver, click_select_activity_type)
-		funcs.waitforseconds(1);
+		funcs.waitforseconds(2);
 		click_select_activity_type.click();
 		LogClass.logExtent("==> Play Level dropdown list open");
 		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
@@ -279,7 +232,7 @@ public class Logic extends BSB_AbstractPage {
 	public Verify select_Region(String activitytype) {
 		// TODO Auto-generated method stub
 		//funcs.clickon_element(driver, click_select_activity_type)
-		funcs.waitforseconds(1);
+		funcs.waitforseconds(2);
 		click_select_activity_type.click();
 		LogClass.logExtent("==> Region dropdown list open");
 		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
@@ -290,7 +243,7 @@ public class Logic extends BSB_AbstractPage {
 	public Verify select_League(String activitytype) {
 		// TODO Auto-generated method stub
 		//funcs.clickon_element(driver, click_select_activity_type)
-		funcs.waitforseconds(1);
+		funcs.waitforseconds(2);
 		click_select_activity_type.click();
 		LogClass.logExtent("==> League dropdown list open");
 		WebElement ele = driver.findElement(By.xpath("//li[text()='"+activitytype+"']"));
@@ -302,7 +255,7 @@ public class Logic extends BSB_AbstractPage {
 	public Verify select_Association(String activitytype) {
 		// TODO Auto-generated method stub
 		//funcs.clickon_element(driver, click_select_activity_type)
-		funcs.waitforseconds(5);
+		funcs.waitforseconds(6);
 		click_select_activity_type.click();
 		funcs.jsClick(driver, click_select_activity_type);
 		LogClass.logExtent("==> Association dropdown list open");
@@ -313,4 +266,4 @@ public class Logic extends BSB_AbstractPage {
 	}
 	
 
-}
+}//End of Class

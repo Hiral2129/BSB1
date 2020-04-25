@@ -40,7 +40,7 @@ public class Steps extends BSB_SeleniumInit {
 		String report_msg;// String for the log in the Report		
 		report_msg = "To verify that user is able to create the NGB program[Soccer | US Youth Soccer]";
 		LogClass.logExtent(report_msg);
-		veri = logic.tshq_staging();
+		veri = logic.geturlforcore();
 		veri.homepageverify();
 		veri = logic.login_as_admin();
 		veri = logic.click_new_program_plus_sign();
@@ -61,7 +61,7 @@ public class Steps extends BSB_SeleniumInit {
 		String report_msg;// String for the log in the Report		
 		report_msg = "To verify that user is able to create the NGB program[Football | Pop worner]";
 		LogClass.logExtent(report_msg);
-		veri = logic.tshq_staging();
+		veri = logic.geturlforcore();
 		veri.homepageverify();
 		veri = logic.login_as_admin();
 		veri = logic.click_new_program_plus_sign();
@@ -80,7 +80,7 @@ public class Steps extends BSB_SeleniumInit {
 		String report_msg;// String for the log in the Report		
 		report_msg = "To verify that user is able to create the NGB program[Baseball | PONY Baseball]";
 		LogClass.logExtent(report_msg);
-		veri = logic.tshq_staging();
+		veri = logic.geturlforcore();
 		veri.homepageverify();
 		veri = logic.login_as_admin();
 		veri = logic.click_new_program_plus_sign();
@@ -97,7 +97,7 @@ public class Steps extends BSB_SeleniumInit {
 		String report_msg;// String for the log in the Report		
 		report_msg = "To verify that user is able to create program[Baseball | Little League]";
 		LogClass.logExtent(report_msg);
-		veri = logic.tshq_staging();
+		veri = logic.geturlforcore();
 		veri.homepageverify();
 		veri = logic.login_as_admin();
 		veri = logic.click_new_program_plus_sign();
@@ -113,7 +113,7 @@ public class Steps extends BSB_SeleniumInit {
 		String report_msg;// String for the log in the Report
 		report_msg = "To verify that user is able to create Tryout Program";
 		LogClass.logExtent(report_msg);
-		veri = logic.tshq_staging();
+		veri = logic.geturlforcore();
 		veri.homepageverify();
 		veri = logic.login_as_admin();
 		veri = logic.click_new_program_plus_sign();
@@ -129,7 +129,7 @@ public class Steps extends BSB_SeleniumInit {
 		String report_msg;// String for the log in the Report		
 		report_msg = "To verify that user is able to create Non Tryout Program";
 		LogClass.logExtent(report_msg);
-		veri = logic.tshq_staging();
+		veri = logic.geturlforcore();
 		veri.homepageverify();
 		veri = logic.login_as_admin();
 		veri = logic.click_new_program_plus_sign();
@@ -140,10 +140,10 @@ public class Steps extends BSB_SeleniumInit {
 	}// End of Program_TestCase_06.
 	
 	@Test(priority = 0, enabled = true, groups ="program")
-	public void Program_TestCase_07() {
+	public void Portal_Creation_TestCase_01() {
 		step = 1;
 		String report_msg;// String for the log in the Report		
-		report_msg = "To verify that user is able to create Portals on production Server";
+		report_msg = "To verify that user is able to create as maany Portals on Any Server";
 		LogClass.logExtent(report_msg);
 		veri = logic.production();
 		
@@ -159,42 +159,36 @@ public class Steps extends BSB_SeleniumInit {
 		
 		for(int i=Integer.valueOf(min);i<=Integer.valueOf(max);i++)
 		{
-		//driver.navigate().refresh();	
 		
 		funcs.waitforseconds(6);
 		WebElement clickonhost = driver.findElement(By.xpath("//span[text()='Host']"));
 		funcs.clickon_element(driver, clickonhost);
-		//clickonhost.click();
 		System.out.println("==> Click on Host");
 		
 		funcs.waitforseconds(3);
 		WebElement site_mmt = driver.findElement(By.xpath("//span[text()='Host']//..//li//a[text()='Site Management']"));
 		funcs.clickon_element(driver, site_mmt);
-		//site_mmt.click();
 		System.out.println("==> Click on Site Management");
 		
 		funcs.waitforseconds(6);
 		WebElement add_new_site = driver.findElement(By.xpath("//a[text()='Add New Site']"));
 		funcs.clickon_element(driver, add_new_site);
-		//add_new_site.click();
 		System.out.println("==> Click on Add New Site");
 		
 		funcs.waitforseconds(7);
 		WebElement click_on_child = driver.findElement(By.xpath("//label[text()='Child']//..//input[2]"));
 		funcs.clickon_element(driver, click_on_child);
-		//click_on_child.click();
 		System.out.println("==> Select the Child");	
 		
 		funcs.waitforseconds(7);
 		WebElement enter_site_alias = driver.findElement(By.xpath("//input[contains(@id,'Signup_txtPortalAlias')]"));
-		funcs.senddata(driver, enter_site_alias, "clubs.bluesombrero.com/"+"Demo"+i);
-		//enter_site_alias.clear();
-		//enter_site_alias.sendKeys("clubs.bluesombrero.com/"+"Demo"+i);
+		String getsitealiaslink = enter_site_alias.getAttribute("value");
+		System.out.println("Site Alias :"+getsitealiaslink);
+		funcs.senddata(driver, enter_site_alias, getsitealiaslink+BSB_TestData.getURL(11,1)+i);
 		System.out.println("==> Enter Port site alias :"+"Demo"+i);
 		
 		WebElement enter_title = driver.findElement(By.xpath("//input[contains(@id,'Signup_txtPortalName')]"));
-		funcs.senddata(driver, enter_title, "Demo"+i);
-		//enter_title.sendKeys("Demo"+i);
+		funcs.senddata(driver, enter_title, BSB_TestData.getURL(12,1)+i);
 		System.out.println("==> Entere Title Name :"+"Demo"+i);
 		
 		funcs.waitforseconds(3);
@@ -211,7 +205,6 @@ public class Steps extends BSB_SeleniumInit {
 		funcs.waitforseconds(7);
 		WebElement click_on_create_site = driver.findElement(By.xpath("//a[@title='Create Site']"));
 		funcs.clickon_element(driver, click_on_create_site);
-		//click_on_create_site.click();
 		System.out.println("==> Click on Create Site");
 		
 		System.out.println("==> Waiting for 80 seconds");
@@ -223,13 +216,6 @@ public class Steps extends BSB_SeleniumInit {
 		driver.navigate().refresh();
 		
 		funcs.waitforseconds(2);
-		//WebElement logo_mouse_hover = driver.findElement(By.xpath("//img[@id='dnn_dnnLOGO_imgLogo']"));
-		
-		//funcs.mousehover_on_element(driver, logo_mouse_hover);
-		//funcs.mouseHoverUsingJS(driver, logo_mouse_hover);
-		//funcs.waitforseconds(3);
-		
-		
 		
 		}//End of for loop	
 		
