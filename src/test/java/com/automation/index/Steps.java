@@ -45,7 +45,7 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.login_as_admin();
 		veri = logic.click_new_program_plus_sign();
 		veri = logic.click_Create_Non_Tryout_Rec_Program();
-		veri = logic.enter_program_name();
+		veri = logic.enter_program_name("NT_USYS");
 		veri = logic.select_activity_type("Soccer");
 		veri = logic.select_national_affilation("US Youth Soccer");
 		veri = logic.select_state_affilation("Blue Sombrero Integration"); 
@@ -66,11 +66,11 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.login_as_admin();
 		veri = logic.click_new_program_plus_sign();
 		veri = logic.click_Create_Non_Tryout_Rec_Program();
-		veri = logic.enter_program_name();
+		veri = logic.enter_program_name("NT_FBallPoppWorner");
 		veri = logic.select_activity_type("Football");
 		veri = logic.select_national_affilation("Pop Warner");
 		veri = logic.select_Region("Sports Connect Demo Region");
-		veri = logic.select_League("Demo Region League Affiliation");
+		veri = logic.select_League("Sports Connect Demo League");
 		veri = logic.select_Season("2020 Spring/Year Round");
 	}// End of Program_TestCase_02.
 	
@@ -85,7 +85,7 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.login_as_admin();
 		veri = logic.click_new_program_plus_sign();
 		veri = logic.click_Create_Non_Tryout_Rec_Program();
-		veri = logic.enter_program_name();
+		veri = logic.enter_program_name("NT_BBALLPONY");
 		veri = logic.select_activity_type("Baseball");
 		veri = logic.select_national_affilation("PONY Baseball");
 		veri = logic.select_Association("National City Pony");
@@ -102,7 +102,7 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.login_as_admin();
 		veri = logic.click_new_program_plus_sign();
 		veri = logic.click_Create_Non_Tryout_Rec_Program();
-		veri = logic.enter_program_name();
+		veri = logic.enter_program_name("NT_BBallLL");
 		veri = logic.select_activity_type("Baseball");
 		veri = logic.select_national_affilation("Little League Baseball");
 	}// End of Program_TestCase_04.
@@ -118,7 +118,7 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.login_as_admin();
 		veri = logic.click_new_program_plus_sign();
 		veri = logic.click_Create_Tryout_Competitive_Program();
-		veri = logic.enter_program_name();
+		veri = logic.enter_program_name("TRYOUT");
 		veri = logic.select_activity_type("Baseball");
 		veri = logic.select_national_affilation("American Legion Baseball");
 	}// End of Program_TestCase_05.
@@ -134,12 +134,16 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.login_as_admin();
 		veri = logic.click_new_program_plus_sign();
 		veri = logic.click_Create_Non_Tryout_Rec_Program();
-		veri = logic.enter_program_name();
+		veri = logic.enter_program_name("NT");
 		veri = logic.select_activity_type("Baseball");
 		veri = logic.select_national_affilation("American Legion Baseball");
+		veri = logic.click_next_btn_Program_creation();
+		veri = logic.click_add_new_question_btn_Program_creation();
+		veri = logic.Add_question_for_Program_creation();
+		funcs.waitforseconds(5);
 	}// End of Program_TestCase_06.
 	
-	@Test(priority = 0, enabled = true, groups ="program")
+	@Test(priority = 0, enabled = true, groups ="portal")
 	public void Portal_Creation_TestCase_01() {
 		step = 1;
 		String report_msg;// String for the log in the Report		
@@ -207,19 +211,19 @@ public class Steps extends BSB_SeleniumInit {
 		funcs.clickon_element(driver, click_on_create_site);
 		System.out.println("==> Click on Create Site");
 		
-		System.out.println("==> Waiting for 80 seconds");
+		System.out.println("==> Waiting for 85 seconds");
 		
 		funcs.waitforseconds(5);
 		LogClass.makeScreenshot_without_fail(driver, "Demo"+i);
 		
-		funcs.waitforseconds(85);
+		funcs.waitforseconds(60);
 		driver.navigate().refresh();
 		
 		funcs.waitforseconds(2);
 		
 		}//End of for loop	
 		
-	}// End of Program_TestCase_06.
+	}// End of Portal_Creation_TestCase_01.
 	
 	
 	

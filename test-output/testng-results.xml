@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="5" total="6" passed="1">
+<testng-results skipped="0" failed="0" ignored="6" total="7" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="BSB_Functional_TestCases_Suite" duration-ms="117049" started-at="2020-04-07T12:56:38Z" finished-at="2020-04-07T12:58:35Z">
+  <suite name="BSB_Functional_TestCases_Suite" duration-ms="160060" started-at="2020-05-21T13:03:29Z" finished-at="2020-05-21T13:06:09Z">
     <groups>
       <group name="program">
         <method signature="Steps.Program_TestCase_06()[pri:0, instance:com.automation.index.Steps@74650e52]" name="Program_TestCase_06" class="com.automation.index.Steps"/>
       </group> <!-- program -->
     </groups>
-    <test name="BSB_Login_Module_TestCases" duration-ms="117049" started-at="2020-04-07T12:56:38Z" finished-at="2020-04-07T12:58:35Z">
+    <test name="BSB_Login_Module_TestCases" duration-ms="160060" started-at="2020-05-21T13:03:29Z" finished-at="2020-05-21T13:06:09Z">
       <class name="com.automation.index.Steps">
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="fetchSuiteConfiguration" is-config="true" duration-ms="12" started-at="2020-04-07T12:56:38Z" finished-at="2020-04-07T12:56:38Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="fetchSuiteConfiguration" is-config="true" duration-ms="12" started-at="2020-05-21T13:03:29Z" finished-at="2020-05-21T13:03:29Z">
           <params>
             <param index="0">
               <value>
@@ -21,7 +21,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="fetchSuiteConfiguration" is-config="true" duration-ms="0" started-at="2020-04-07T12:56:38Z" finished-at="2020-04-07T12:56:38Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="fetchSuiteConfiguration" is-config="true" duration-ms="0" started-at="2020-05-21T13:03:29Z" finished-at="2020-05-21T13:03:29Z">
           <params>
             <param index="0">
               <value>
@@ -32,7 +32,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="setUp" is-config="true" duration-ms="10499" started-at="2020-04-07T12:56:38Z" finished-at="2020-04-07T12:56:49Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="setUp" is-config="true" duration-ms="10750" started-at="2020-05-21T13:03:29Z" finished-at="2020-05-21T13:03:39Z">
           <params>
             <param index="0">
               <value>
@@ -48,11 +48,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Program_TestCase_06()[pri:0, instance:com.automation.index.Steps@74650e52]" name="Program_TestCase_06" duration-ms="95714" started-at="2020-04-07T12:56:49Z" finished-at="2020-04-07T12:58:25Z">
+        <test-method status="PASS" signature="Program_TestCase_06()[pri:0, instance:com.automation.index.Steps@74650e52]" name="Program_TestCase_06" duration-ms="138254" started-at="2020-05-21T13:03:39Z" finished-at="2020-05-21T13:05:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Program_TestCase_06 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.Steps@74650e52]" name="tearDown" is-config="true" duration-ms="10825" started-at="2020-04-07T12:58:25Z" finished-at="2020-04-07T12:58:35Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.Steps@74650e52]" name="tearDown" is-config="true" duration-ms="11037" started-at="2020-05-21T13:05:58Z" finished-at="2020-05-21T13:06:09Z">
           <params>
             <param index="0">
               <value>
@@ -63,7 +63,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.Steps@74650e52]" name="zipfileupdate" is-config="true" duration-ms="82" started-at="2020-04-07T12:58:36Z" finished-at="2020-04-07T12:58:36Z">
+        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.Steps@74650e52]" name="zipfileupdate" is-config="true" duration-ms="8" started-at="2020-05-21T13:06:09Z" finished-at="2020-05-21T13:06:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- zipfileupdate -->

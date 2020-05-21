@@ -132,10 +132,10 @@ public class Logic extends BSB_AbstractPage {
 	}	
 	
 	@FindBy(xpath="//input[contains(@id,'txtProgramName')]")private static WebElement program_name;
-	public Verify enter_program_name() {
+	public Verify enter_program_name(String name) {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(1);
-		funcs.senddata(driver, program_name, BSB_TestData.Non_tryout_program_name(4));
+		funcs.senddata(driver, program_name, BSB_TestData.Non_tryout_program_name(name,3));
 		LogClass.logExtent("==> Enter Program Name");
 		return new Verify(driver);
 	}	
@@ -206,7 +206,7 @@ public class Logic extends BSB_AbstractPage {
 	public Verify select_Season(String activitytype) {
 		// TODO Auto-generated method stub
 		//funcs.clickon_element(driver, click_select_activity_type)
-		funcs.waitforseconds(6);
+		funcs.waitforseconds(8);
 		//WebElement season = driver.findElement(By.xpath("//span[text()='--Select--']"));
 		//season.click();
 		click_select_activity_type.click();
@@ -265,5 +265,105 @@ public class Logic extends BSB_AbstractPage {
 		return new Verify(driver);
 	}
 	
+	@FindBy(xpath="//span[text()='Next']")private static WebElement next_btn;
+	public Verify click_next_btn_Program_creation() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(1);
+		funcs.clickon_element(driver, next_btn);
+		LogClass.logExtent("==> Click on Next Button Program Creation");
+		return new Verify(driver);
+	}	
+	
+	@FindBy(xpath="//span[text()='Add New Question']")private static WebElement add_new_question_btn;
+	public Verify click_add_new_question_btn_Program_creation() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(1);
+		funcs.clickon_element(driver, add_new_question_btn);
+		LogClass.logExtent("==> Click on Add New Question Button Program Creation");
+		return new Verify(driver);
+	}	
 
+	@FindBy(xpath="//span[text()='Add']")private static List<WebElement> add_btn;
+	@FindBy(xpath="//input[@class='BSBInput full-width']")private static List<WebElement> Text_or_Multi_line_text;
+	@FindBy(xpath="//span[text()='Save Changes']")private static List<WebElement> save_change_btn;
+	@FindBy(xpath="//span[text()='Add New']")private static List<WebElement> add_new_btn;
+	@FindBy(xpath="//a[text()='Select All']")private static WebElement select_all;
+	@FindBy(xpath="//label[contains(text(),'Waiver Text')]//..//textarea")private static WebElement textarea;
+	
+	public Verify Add_question_for_Program_creation() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(1);
+		funcs.clickon_element(driver, add_btn.get(1));
+		LogClass.logExtent("==> Click on Add Button ");
+		funcs.senddata(driver, Text_or_Multi_line_text.get(0), "Text or Multi-line text");
+		funcs.waitforseconds(3);
+		save_change_btn.get(0).click();
+		LogClass.logExtent("==> Click on Save Change Button to save question");
+		
+		funcs.waitforseconds(1);
+		click_add_new_question_btn_Program_creation();
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver, add_btn.get(2));
+		LogClass.logExtent("==> Click on Add Button ");
+		funcs.senddata(driver, Text_or_Multi_line_text.get(12), "Drop-down List");
+		funcs.senddata(driver, Text_or_Multi_line_text.get(13), "Drop-down List1");
+		save_change_btn.get(3).click();
+		LogClass.logExtent("==> Click on Save Change Button to save question");
+		
+		funcs.waitforseconds(1);
+		click_add_new_question_btn_Program_creation();
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver, add_btn.get(3));
+		LogClass.logExtent("==> Click on Add Button ");
+		funcs.senddata(driver, Text_or_Multi_line_text.get(4), "Check Box");
+		funcs.senddata(driver, Text_or_Multi_line_text.get(5), "Check Box1");
+		save_change_btn.get(1).click();
+		LogClass.logExtent("==> Click on Save Change Button to save question");
+		
+		funcs.waitforseconds(1);
+		click_add_new_question_btn_Program_creation();
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver, add_btn.get(4));
+		LogClass.logExtent("==> Click on Add Button ");
+		funcs.senddata(driver, Text_or_Multi_line_text.get(8), "Radio Button");
+		funcs.senddata(driver, Text_or_Multi_line_text.get(9), "Radio Button1");
+		save_change_btn.get(2).click();
+		LogClass.logExtent("==> Click on Save Change Button to save question");
+		
+		funcs.waitforseconds(1);
+		click_add_new_question_btn_Program_creation();
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver, add_btn.get(5));
+		LogClass.logExtent("==> Click on Add Button ");
+		funcs.senddata(driver, Text_or_Multi_line_text.get(25), "Uniform Selection");
+		funcs.senddata(driver, Text_or_Multi_line_text.get(26), "M");
+		save_change_btn.get(6).click();
+		LogClass.logExtent("==> Click on Save Change Button to save question");
+		
+		funcs.waitforseconds(1);
+		click_add_new_question_btn_Program_creation();
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver, add_btn.get(7));
+		LogClass.logExtent("==> Click on Add Button ");
+		funcs.senddata(driver, Text_or_Multi_line_text.get(38), "Player File/Document Upload");
+		select_all.click();
+		funcs.waitforseconds(1);
+		save_change_btn.get(13).click();
+		LogClass.logExtent("==> Click on Save Change Button to save question");
+		
+		funcs.waitforseconds(1);
+		click_add_new_question_btn_Program_creation();
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver, add_btn.get(8));
+		LogClass.logExtent("==> Click on Add Button ");
+		funcs.senddata(driver, Text_or_Multi_line_text.get(24), "Waiver");
+		textarea.sendKeys("Waiver");
+		save_change_btn.get(7).click();
+		LogClass.logExtent("==> Click on Save Change Button to save question");
+		
+		
+		
+		return new Verify(driver);
+	}	
+	
 }//End of Class

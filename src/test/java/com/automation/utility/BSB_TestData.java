@@ -3,6 +3,7 @@ package com.automation.utility;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -381,13 +382,18 @@ public class BSB_TestData {
 		return builder.toString();
 	}
 
-	public static String Non_tryout_program_name(int count) {
+	public static String Non_tryout_program_name(String str,int count) {
 		StringBuilder builder = new StringBuilder();
 		while (count-- != 0) {
 			int character = (int) (Math.random() * ALPHA_NUMERIC_STRING.length());
 			builder.append(ALPHA_NUMERIC_STRING.charAt(character));
 		}
-		return "Nontryout_"+builder.toString();
+		
+		DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+	    Date dateobj = new Date();
+	    System.out.println(df.format(dateobj));
+
+		return str+"_"+builder.toString()+"_"+df.format(dateobj);
 	}
 	
 	private static final String ALPHA_STRING = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";

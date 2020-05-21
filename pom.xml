@@ -120,8 +120,8 @@
 				<version>3.0.0-M1</version>
 				<configuration>
 					<suiteXmlFiles>
-						<!-- <suiteXmlFile>Build/BSB_Package_Index.xml</suiteXmlFile> -->
-						<suiteXmlFile>Build/BSB_New_Package_Index.xml</suiteXmlFile>					
+						<suiteXmlFile>Build/BSB_Package_Index.xml</suiteXmlFile>
+						<!-- <suiteXmlFile>Build/BSB_New_Package_Index.xml</suiteXmlFile> -->					
 					</suiteXmlFiles>
 					<reportsDirectory>test-output</reportsDirectory>
 					<properties>

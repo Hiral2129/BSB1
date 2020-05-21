@@ -13,10 +13,10 @@
       <class name="com.automation.index.Steps">
         <methods>
           <include name="setUp"/>
+          <include name="Program_TestCase_06"/>
           <include name="fetchSuiteConfiguration"/>
           <include name="tearDown"/>
           <include name="zipfileupdate"/>
-          <include name="Program_TestCase_03"/>
         </methods>
       </class> <!-- com.automation.index.Steps -->
     </classes>
