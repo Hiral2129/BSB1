@@ -289,9 +289,22 @@ public class Logic extends BSB_AbstractPage {
 	@FindBy(xpath="//span[text()='Add New']")private static List<WebElement> add_new_btn;
 	@FindBy(xpath="//a[text()='Select All']")private static WebElement select_all;
 	@FindBy(xpath="//label[contains(text(),'Waiver Text')]//..//textarea")private static WebElement textarea;
+	@FindBy(xpath="//span[text()='Choose...']//..//div//b")private static WebElement select_questions_from_list;
+	@FindBy(xpath="//li[text()='Years of Experience?']")private static WebElement exp_ques;
 	
 	public Verify Add_question_for_Program_creation() {
 		// TODO Auto-generated method stub
+		funcs.waitforseconds(1);
+		funcs.clickon_element(driver, select_questions_from_list);
+		select_questions_from_list.click();
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver, exp_ques);
+		exp_ques.click();
+		funcs.waitforseconds(1);
+		funcs.clickon_element(driver, add_btn.get(0));
+		
+		funcs.waitforseconds(1);
+		click_add_new_question_btn_Program_creation();
 		funcs.waitforseconds(1);
 		funcs.clickon_element(driver, add_btn.get(1));
 		LogClass.logExtent("==> Click on Add Button ");
@@ -361,9 +374,58 @@ public class Logic extends BSB_AbstractPage {
 		save_change_btn.get(7).click();
 		LogClass.logExtent("==> Click on Save Change Button to save question");
 		
+		return new Verify(driver);
+	}
+
+	
+	@FindBy(xpath="//span[text()='Save Settings']")private static WebElement save_setting;
+	public Verify click_on_save_setting() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(2);
+		funcs.clickon_element(driver, save_setting);
+		return new Verify(driver);
+	}	
+	
+	@FindBy(xpath="//input[@class='BSBInput full-width priceInput']")private static List<WebElement> feesanddiscount;
+	@FindBy(xpath="//input[@class=\"BSBInput full-width priceInput\"]//..//input")private static List<WebElement> feesanddiscount1;
+	public Verify Add_Special_Discount_or_Fee() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(2);
+		feesanddiscount.get(0).sendKeys("10");
+		feesanddiscount.get(1).sendKeys("15");
+		feesanddiscount.get(2).sendKeys("20");
+		feesanddiscount.get(3).sendKeys("25");
 		
+		feesanddiscount1.get(6).sendKeys("6");
+		feesanddiscount1.get(7).sendKeys("11");
+		feesanddiscount1.get(8).sendKeys("16");
+		feesanddiscount1.get(9).sendKeys("21");
+		
+		click_on_save_setting();
 		
 		return new Verify(driver);
 	}	
+	
+	@FindBy(xpath="//span[text()='Add Team Staff']")private static WebElement add_custom_team_staff;
+	@FindBy(xpath="//input[contains(@name,'txtVolunteerRole')]")private static WebElement custom_team_staff_role_name;
+	public Verify add_Custom_Team_Staff() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(2);
+		funcs.senddata(driver, custom_team_staff_role_name, "VP"+BSB_TestData.randomAlpha(3));
+		funcs.clickon_element(driver, add_custom_team_staff);
+		return new Verify(driver);
+	}
+
+	@FindBy(xpath="//span[text()='No']")private static List<WebElement> select_team_staff_roles;
+	public Verify add_Team_Staff() {
+		// TODO Auto-generated method stub
+		add_Custom_Team_Staff();
+		funcs.waitforseconds(8);
+		select_team_staff_roles.get(1).click();
+		select_team_staff_roles.get(2).click();
+		click_on_save_setting();
+		return new Verify(driver);
+	}	
+	
 	
 }//End of Class
