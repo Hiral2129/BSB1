@@ -23,8 +23,8 @@
 
 	<listeners>		
 		<listener class-name="com.automation.utility.BSB_TestListener" />
-	    <listener class-name="com.automation.utility.CalcuQuote_AnnotationTransformer" />
-        <listener class-name="com.automation.utility.CalcuQuote_RetryListenerClass" />  <!-- for the Retry Class to run the fail test 2 times -->
+	    <listener class-name="com.automation.utility.BSB_AnnotationTransformer" />
+        <listener class-name="com.automation.utility.BSB_RetryListenerClass" />  <!-- for the Retry Class to run the fail test 2 times -->
 	</listeners>
 		
 		

@@ -1,38 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="6" total="7" passed="1">
+<testng-results skipped="1" failed="0" ignored="6" total="8" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[<br><b>Please look to the screenshot - </b>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;<br><Strong><font color=#FF0000>--Failed</font></strong></br>]]>
+    </line>
+    <line>
+      <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;<a href='screenshots/0526190544592Program_TestCase_06.png' target='_new'>0526190544592Program_TestCase_06.png</a></br>]]>
+    </line>
   </reporter-output>
-  <suite name="BSB_Functional_TestCases_Suite" duration-ms="233106" started-at="2020-05-26T13:01:51Z" finished-at="2020-05-26T13:05:45Z">
+  <suite name="BSB_Functional_TestCases_Suite" duration-ms="628464" started-at="2020-05-26T13:29:37Z" finished-at="2020-05-26T13:40:06Z">
     <groups>
       <group name="program">
-        <method signature="Steps.Program_TestCase_06()[pri:0, instance:com.automation.index.Steps@74650e52]" name="Program_TestCase_06" class="com.automation.index.Steps"/>
+        <method signature="Steps.Program_TestCase_06()[pri:0, instance:com.automation.index.Steps@1e965684]" name="Program_TestCase_06" class="com.automation.index.Steps"/>
       </group> <!-- program -->
     </groups>
-    <test name="BSB_Login_Module_TestCases" duration-ms="233106" started-at="2020-05-26T13:01:51Z" finished-at="2020-05-26T13:05:45Z">
+    <test name="BSB_Login_Module_TestCases" duration-ms="628464" started-at="2020-05-26T13:29:37Z" finished-at="2020-05-26T13:40:06Z">
       <class name="com.automation.index.Steps">
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="fetchSuiteConfiguration" is-config="true" duration-ms="12" started-at="2020-05-26T13:01:51Z" finished-at="2020-05-26T13:01:51Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@1e965684]" name="fetchSuiteConfiguration" is-config="true" duration-ms="12" started-at="2020-05-26T13:29:37Z" finished-at="2020-05-26T13:29:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@782663d3]]>
+                <![CDATA[org.testng.TestRunner@7e0e6aa2]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="fetchSuiteConfiguration" is-config="true" duration-ms="1" started-at="2020-05-26T13:01:51Z" finished-at="2020-05-26T13:01:51Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@1e965684]" name="fetchSuiteConfiguration" is-config="true" duration-ms="0" started-at="2020-05-26T13:29:37Z" finished-at="2020-05-26T13:29:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@782663d3]]>
+                <![CDATA[org.testng.TestRunner@7e0e6aa2]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@74650e52]" name="setUp" is-config="true" duration-ms="10362" started-at="2020-05-26T13:01:51Z" finished-at="2020-05-26T13:02:02Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@1e965684]" name="setUp" is-config="true" duration-ms="10449" started-at="2020-05-26T13:29:37Z" finished-at="2020-05-26T13:29:48Z">
           <params>
             <param index="0">
               <value>
@@ -41,29 +50,148 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@782663d3]]>
+                <![CDATA[org.testng.TestRunner@7e0e6aa2]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Program_TestCase_06()[pri:0, instance:com.automation.index.Steps@74650e52]" name="Program_TestCase_06" duration-ms="211994" started-at="2020-05-26T13:02:02Z" finished-at="2020-05-26T13:05:34Z">
+        <test-method status="SKIP" signature="Program_TestCase_06()[pri:0, instance:com.automation.index.Steps@1e965684]" name="Program_TestCase_06" duration-ms="355773" started-at="2020-05-26T13:29:48Z" finished-at="2020-05-26T13:35:43Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.xpath: //input[contains(@name,'txtVolunteerRole')]' (tried for 5 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.xpath: //input[contains(@name,'txtVolunteerRole')]' (tried for 5 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
+at com.automation.utility.funcs.waitforelementvisible(funcs.java:46)
+at com.automation.utility.funcs.senddata(funcs.java:122)
+at com.automation.indexpage.Logic.add_Custom_Team_Staff(Logic.java:414)
+at com.automation.indexpage.Logic.add_Team_Staff(Logic.java:422)
+at com.automation.index.Steps.Program_TestCase_06(Steps.java:146)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Timed out after 15 seconds. Unable to locate the element
+at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:90)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+... 25 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[contains(@name,'txtVolunteerRole')]"}
+  (Session info: chrome=81.0.4044.138)
+  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'DESKTOP-C0CNHNA', ip: '192.168.43.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\Admin\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58804}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 81.0.4044.138, webStorageEnabled: true}
+Session ID: 0596b19935a26dfa5e576e6dd3126b27
+*** Element info: {Using=xpath, value=//input[contains(@name,'txtVolunteerRole')]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:40)
+at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:156)
+at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:69)
+at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:86)
+... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
+            <line>
+              <![CDATA[<br><b>Please look to the screenshot - </b>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;<br><Strong><font color=#FF0000>--Failed</font></strong></br>]]>
+            </line>
+            <line>
+              <![CDATA[</br>&nbsp;&nbsp;&nbsp;&nbsp;<a href='screenshots/0526190544592Program_TestCase_06.png' target='_new'>0526190544592Program_TestCase_06.png</a></br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Program_TestCase_06 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.Steps@74650e52]" name="tearDown" is-config="true" duration-ms="10735" started-at="2020-05-26T13:05:34Z" finished-at="2020-05-26T13:05:45Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.Steps@1e965684]" name="tearDown" is-config="true" duration-ms="1152" started-at="2020-05-26T13:35:44Z" finished-at="2020-05-26T13:35:45Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Program_TestCase_06 status=SUCCESS method=Steps.Program_TestCase_06()[pri:0, instance:com.automation.index.Steps@74650e52] output={null}]]]>
+                <![CDATA[[TestResult name=Program_TestCase_06 status=SKIP method=Steps.Program_TestCase_06()[pri:0, instance:com.automation.index.Steps@1e965684] output=<br><b>Please look to the screenshot - </b>]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.Steps@74650e52]" name="zipfileupdate" is-config="true" duration-ms="9" started-at="2020-05-26T13:05:45Z" finished-at="2020-05-26T13:05:45Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.automation.index.Steps@1e965684]" name="setUp" is-config="true" duration-ms="9159" started-at="2020-05-26T13:35:45Z" finished-at="2020-05-26T13:35:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automation.index.Steps.Program_TestCase_06()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@7e0e6aa2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Program_TestCase_06()[pri:0, instance:com.automation.index.Steps@1e965684]" name="Program_TestCase_06" duration-ms="240195" started-at="2020-05-26T13:35:54Z" finished-at="2020-05-26T13:39:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Program_TestCase_06 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.index.Steps@1e965684]" name="tearDown" is-config="true" duration-ms="10996" started-at="2020-05-26T13:39:55Z" finished-at="2020-05-26T13:40:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Program_TestCase_06 status=SUCCESS method=Steps.Program_TestCase_06()[pri:0, instance:com.automation.index.Steps@1e965684] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="zipfileupdate()[pri:0, instance:com.automation.index.Steps@1e965684]" name="zipfileupdate" is-config="true" duration-ms="21" started-at="2020-05-26T13:40:06Z" finished-at="2020-05-26T13:40:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- zipfileupdate -->
