@@ -146,6 +146,7 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.add_Team_Staff();
 		veri = logic.click_next_btn_Program_creation();
 		veri = logic.click_next_btn_Program_creation();
+		veri = logic.add_Division_Details();
 		funcs.waitforseconds(5);
 	}// End of Program_TestCase_06.
 	

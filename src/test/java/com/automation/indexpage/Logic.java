@@ -301,6 +301,7 @@ public class Logic extends BSB_AbstractPage {
 		funcs.clickon_element(driver, exp_ques);
 		exp_ques.click();
 		funcs.waitforseconds(1);
+		LogClass.logExtent("==> Select the question from the Drop Down list ");
 		funcs.clickon_element(driver, add_btn.get(0));
 		
 		funcs.waitforseconds(1);
@@ -310,6 +311,7 @@ public class Logic extends BSB_AbstractPage {
 		LogClass.logExtent("==> Click on Add Button ");
 		funcs.senddata(driver, Text_or_Multi_line_text.get(0), "Text or Multi-line text");
 		funcs.waitforseconds(3);
+		LogClass.logExtent("==> Added Text or Multi-line text Question ");
 		save_change_btn.get(0).click();
 		LogClass.logExtent("==> Click on Save Change Button to save question");
 		
@@ -320,6 +322,7 @@ public class Logic extends BSB_AbstractPage {
 		LogClass.logExtent("==> Click on Add Button ");
 		funcs.senddata(driver, Text_or_Multi_line_text.get(12), "Drop-down List");
 		funcs.senddata(driver, Text_or_Multi_line_text.get(13), "Drop-down List1");
+		LogClass.logExtent("==> Added Drop-down List Question ");
 		save_change_btn.get(3).click();
 		LogClass.logExtent("==> Click on Save Change Button to save question");
 		
@@ -330,6 +333,7 @@ public class Logic extends BSB_AbstractPage {
 		LogClass.logExtent("==> Click on Add Button ");
 		funcs.senddata(driver, Text_or_Multi_line_text.get(4), "Check Box");
 		funcs.senddata(driver, Text_or_Multi_line_text.get(5), "Check Box1");
+		LogClass.logExtent("==> Added Check Box Question ");
 		save_change_btn.get(1).click();
 		LogClass.logExtent("==> Click on Save Change Button to save question");
 		
@@ -340,6 +344,7 @@ public class Logic extends BSB_AbstractPage {
 		LogClass.logExtent("==> Click on Add Button ");
 		funcs.senddata(driver, Text_or_Multi_line_text.get(8), "Radio Button");
 		funcs.senddata(driver, Text_or_Multi_line_text.get(9), "Radio Button1");
+		LogClass.logExtent("==> Added Radio Button Question ");
 		save_change_btn.get(2).click();
 		LogClass.logExtent("==> Click on Save Change Button to save question");
 		
@@ -350,6 +355,7 @@ public class Logic extends BSB_AbstractPage {
 		LogClass.logExtent("==> Click on Add Button ");
 		funcs.senddata(driver, Text_or_Multi_line_text.get(25), "Uniform Selection");
 		funcs.senddata(driver, Text_or_Multi_line_text.get(26), "M");
+		LogClass.logExtent("==> Added Uniform Selection Question ");
 		save_change_btn.get(6).click();
 		LogClass.logExtent("==> Click on Save Change Button to save question");
 		
@@ -361,6 +367,7 @@ public class Logic extends BSB_AbstractPage {
 		funcs.senddata(driver, Text_or_Multi_line_text.get(38), "Player File/Document Upload");
 		select_all.click();
 		funcs.waitforseconds(1);
+		LogClass.logExtent("==> Added Player File/Document Upload Question ");
 		save_change_btn.get(13).click();
 		LogClass.logExtent("==> Click on Save Change Button to save question");
 		
@@ -371,6 +378,7 @@ public class Logic extends BSB_AbstractPage {
 		LogClass.logExtent("==> Click on Add Button ");
 		funcs.senddata(driver, Text_or_Multi_line_text.get(24), "Waiver");
 		textarea.sendKeys("Waiver");
+		LogClass.logExtent("==> Added Waiver Question ");
 		save_change_btn.get(7).click();
 		LogClass.logExtent("==> Click on Save Change Button to save question");
 		
@@ -383,6 +391,7 @@ public class Logic extends BSB_AbstractPage {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(2);
 		funcs.clickon_element(driver, save_setting);
+		LogClass.logExtent("==> Click on Save Setting Button");
 		return new Verify(driver);
 	}	
 	
@@ -402,6 +411,8 @@ public class Logic extends BSB_AbstractPage {
 		feesanddiscount1.get(9).sendKeys("21");
 		
 		click_on_save_setting();
+		
+		LogClass.logExtent("==> Fees and Discount Added ");
 		
 		return new Verify(driver);
 	}	
@@ -424,6 +435,112 @@ public class Logic extends BSB_AbstractPage {
 		select_team_staff_roles.get(1).click();
 		select_team_staff_roles.get(2).click();
 		click_on_save_setting();
+		LogClass.logExtent("==> Added Team Staff Standard and Custom Positions ");
+		return new Verify(driver);
+	}
+
+	@FindBy(xpath="//input[contains(@data-bind,': DivisionName')]")private static WebElement division_name;
+	@FindBy(xpath="//input[contains(@data-bind,'value: OpenRegistration')]")private static List<WebElement> registration_start_dateandtime;
+	@FindBy(xpath="//input[contains(@data-bind,'value: CloseRegistration')]")private static List<WebElement> registration_close_dateandtime;
+	@FindBy(xpath="//input[contains(@data-bind,'value: StartDate')]")private static WebElement season_start_date;
+	@FindBy(xpath="//input[contains(@data-bind,'value: EndDate')]")private static WebElement season_end_date;
+	@FindBy(xpath="//input[contains(@data-bind,'value: MinAge')]")private static WebElement minage;
+	@FindBy(xpath="//input[contains(@data-bind,'value: MaxAge')]")private static WebElement maxage;
+	@FindBy(xpath="//input[@class='BSBInput full-width priceInput']")private static WebElement division_price;
+	@FindBy(xpath="//span[text()='Select']//..//div//b")private static WebElement click_select_gender;
+	@FindBy(xpath="//li[text()='Coed']")private static WebElement select_coed;
+	@FindBy(xpath="//span[text()='Save']")private static WebElement save_btn_div;
+	@FindBy(xpath="//span[text()='Advanced']")private static WebElement advanced_btn;
+	@FindBy(xpath="//input[contains(@id,'MaxPlayersTextBox')]")private static WebElement maxplayers;
+	@FindBy(xpath="//a[text()='Fees & Discounts']")private static WebElement feesanddiscount_advanced_setting;
+	@FindBy(xpath="//span[text()='No']")private static WebElement deposit_only_yes;
+	@FindBy(xpath="//input[contains(@id,'txtDepositAmt')]")private static WebElement deposit_amount;
+	@FindBy(xpath="//input[contains(@id,'EarlyBirdDeadlineDate')]")private static WebElement earlybird_discount_date;
+	@FindBy(xpath="//input[contains(@id,'EarlyBirdDeadlineTime')]")private static WebElement earlybird_discount_time;
+	@FindBy(xpath="//input[contains(@id,'txtEarlyBirdDiscount')]")private static WebElement early_bird_discount_amount;
+	@FindBy(xpath="//input[contains(@id,'LateFeeDeadlineDate')]")private static WebElement late_fee_start_date;
+	@FindBy(xpath="//input[contains(@id,'LateFeeDeadlineTime')]")private static WebElement late_fee_start_time;
+	@FindBy(xpath="//input[contains(@id,'LateFeeAmt')]")private static WebElement late_fee_amount;
+	
+	public Verify add_Division_Details() {
+		// TODO Auto-generated method stub
+		
+		funcs.waitforseconds(1);
+		funcs.senddata(driver, division_name, "Div A without Plan");
+		LogClass.logExtent("==> Entered Division Name ");
+		funcs.senddata(driver, registration_start_dateandtime.get(0), BSB_TestData.Today_Date());
+		LogClass.logExtent("==> Entered Registration Start Date");
+		funcs.senddata(driver, registration_start_dateandtime.get(1), "12:00 AM");
+		LogClass.logExtent("==> Entered Registration Start Time");
+		
+		funcs.senddata(driver, registration_close_dateandtime.get(0), BSB_TestData.Future_Date());
+		LogClass.logExtent("==> Entered Registration End Date");
+		funcs.senddata(driver, registration_close_dateandtime.get(1), "12:00 AM");
+		LogClass.logExtent("==> Entered Registration End Time");
+		
+		funcs.senddata(driver, season_start_date,BSB_TestData.Today_Date());
+		LogClass.logExtent("==> Entered Season Start Date");
+		funcs.senddata(driver, season_end_date,BSB_TestData.Future_Date());
+		LogClass.logExtent("==> Entered Season End Date");
+		
+		funcs.senddata(driver, minage, "01/01/2020");
+		LogClass.logExtent("==> Entered Minage Date");
+		funcs.senddata(driver, maxage,"01/01/2000");
+		LogClass.logExtent("==> Entered Maxage Date");
+		
+		funcs.senddata(driver, division_price, "100");
+		LogClass.logExtent("==> Entered Division Price");
+		
+		funcs.clickon_element(driver, click_select_gender);
+		funcs.waitforseconds(1);
+		click_select_gender.click();
+		funcs.clickon_element(driver, select_coed);
+		LogClass.logExtent("==> Selected the Gender");
+		funcs.waitforseconds(1);
+		select_coed.click();
+		funcs.clickon_element_wid(driver, save_btn_div);
+		
+		funcs.clickon_element(driver, advanced_btn);
+		LogClass.logExtent("==> Click on Advanced Button");
+		funcs.waitforseconds(1);
+		funcs.senddata(driver, maxplayers, "1");
+		LogClass.logExtent("==> Entered Max players number");
+		
+		click_on_save_setting();
+		
+		//funcs.clickon_element(driver, feesanddiscount_advanced_setting);
+		//LogClass.logExtent("==> Click on Fees and Discount Button");
+		funcs.waitforseconds(3);
+		
+		funcs.clickon_element(driver, deposit_only_yes);
+		LogClass.logExtent("==> Click on Deposit Only Yes");
+		funcs.waitforseconds(1);
+		
+		funcs.senddata(driver, deposit_amount, "25");
+		LogClass.logExtent("==> Enterd Deposit Amount");
+		
+		funcs.senddata(driver, earlybird_discount_date, BSB_TestData.Today_Date());
+		LogClass.logExtent("==> Enterd Early Bird Discount Date");
+		
+		funcs.senddata(driver,earlybird_discount_time, "12:00 PM");
+		LogClass.logExtent("==> Enterd Early Bird Discount Time");
+		
+		funcs.senddata(driver, early_bird_discount_amount, "10");
+		LogClass.logExtent("==> Enterd Early Bird Discount Amount");
+		
+		funcs.senddata(driver, late_fee_start_date, BSB_TestData.Future_Date());
+		LogClass.logExtent("==> Enterd Late Fee Start Date");
+		
+		funcs.senddata(driver, late_fee_start_time, "12:00 PM");
+		LogClass.logExtent("==> Enterd Late Fee Start Time");
+		
+		funcs.senddata(driver, late_fee_amount, "35");
+		LogClass.logExtent("==> Enterd Late Fee Amount");
+		
+		
+		click_on_save_setting();
+		
+		LogClass.logExtent("==> Saved the Division Setting");
 		return new Verify(driver);
 	}	
 	

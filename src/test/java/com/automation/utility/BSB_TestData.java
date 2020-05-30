@@ -381,7 +381,7 @@ public class BSB_TestData {
 		}
 		return builder.toString();
 	}
-
+//Program name
 	public static String Non_tryout_program_name(String str,int count) {
 		StringBuilder builder = new StringBuilder();
 		while (count-- != 0) {
@@ -396,6 +396,45 @@ public class BSB_TestData {
 		return str+"_"+builder.toString()+"_"+df.format(dateobj);
 	}
 	
+// Today Date
+
+	public static String Today_Date() {
+		DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+	    Date dateobj = new Date();
+	    //System.out.println(df.format(dateobj));
+	    String month = df.format(dateobj).substring(3, 5);
+	   // System.out.println(month);
+	   // int monthint = Integer.valueOf(month) + 2;
+	   // System.out.println(monthint);
+	    String day = df.format(dateobj).substring(0, 2);
+	    //System.out.println(day);
+	    String year = df.format(dateobj).substring(6, 10);
+	    //System.out.println(year);
+	    String TodayDate = month+"/"+day+"/"+year;
+	    System.out.println(TodayDate);   
+		return TodayDate;
+	}
+	
+//Future Date	
+	
+public static String Future_Date() {
+		
+	DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+    Date dateobj = new Date();
+   // System.out.println(df.format(dateobj));
+    String month = df.format(dateobj).substring(3, 5);
+    //System.out.println(month);
+    int monthint = Integer.valueOf(month) + 2;
+    //System.out.println(monthint);
+    //String day = df.format(dateobj).substring(0, 2);
+    //System.out.println(day);
+    String year = df.format(dateobj).substring(6, 10);
+   //System.out.println(year);
+    String FutureDate = monthint+"/"+28+"/"+year;
+    System.out.println(FutureDate);     
+	return FutureDate;
+	}
+//Random name Alphabetic only	
 	private static final String ALPHA_STRING = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	public static String randomAlpha(int count) {
