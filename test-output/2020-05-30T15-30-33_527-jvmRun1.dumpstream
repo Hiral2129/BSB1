@@ -1,0 +1,254 @@
+# Created at 2020-05-30T15:36:37.920
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:390)
+	at java.lang.Thread.run(Unknown Source)
+
+
+# Created at 2020-05-30T15:36:39.886
+Unexpected IOException with stream: [
+
+# Created at 2020-05-30T15:36:39.887
+Unexpected IOException with stream: 1
+
+# Created at 2020-05-30T15:36:39.887
+Unexpected IOException with stream: 5
+
+# Created at 2020-05-30T15:36:39.888
+Unexpected IOException with stream: 9
+
+# Created at 2020-05-30T15:36:39.888
+Unexpected IOException with stream: 0
+
+# Created at 2020-05-30T15:36:39.889
+Unexpected IOException with stream: 8
+
+# Created at 2020-05-30T15:36:39.889
+Unexpected IOException with stream: 3
+
+# Created at 2020-05-30T15:36:39.890
+Unexpected IOException with stream: 3
+
+# Created at 2020-05-30T15:36:39.890
+Unexpected IOException with stream: 1
+
+# Created at 2020-05-30T15:36:39.891
+Unexpected IOException with stream: 9
+
+# Created at 2020-05-30T15:36:39.891
+Unexpected IOException with stream: 9
+
+# Created at 2020-05-30T15:36:39.892
+Unexpected IOException with stream: .
+
+# Created at 2020-05-30T15:36:39.892
+Unexpected IOException with stream: 8
+
+# Created at 2020-05-30T15:36:39.893
+Unexpected IOException with stream: 8
+
+# Created at 2020-05-30T15:36:39.893
+Unexpected IOException with stream: 5
+
+# Created at 2020-05-30T15:36:39.893
+Unexpected IOException with stream: ]
+
+# Created at 2020-05-30T15:36:39.894
+Unexpected IOException with stream: [
+
+# Created at 2020-05-30T15:36:39.894
+Unexpected IOException with stream: W
+
+# Created at 2020-05-30T15:36:39.895
+Unexpected IOException with stream: A
+
+# Created at 2020-05-30T15:36:39.896
+Unexpected IOException with stream: R
+
+# Created at 2020-05-30T15:36:39.896
+Unexpected IOException with stream: N
+
+# Created at 2020-05-30T15:36:39.896
+Unexpected IOException with stream: I
+
+# Created at 2020-05-30T15:36:39.897
+Unexpected IOException with stream: N
+
+# Created at 2020-05-30T15:36:39.897
+Unexpected IOException with stream: G
+
+# Created at 2020-05-30T15:36:39.898
+Unexpected IOException with stream: ]
+
+# Created at 2020-05-30T15:36:39.898
+Unexpected IOException with stream: :
+
+# Created at 2020-05-30T15:36:39.898
+Unexpected IOException with stream:  
+
+# Created at 2020-05-30T15:36:39.899
+Unexpected IOException with stream: T
+
+# Created at 2020-05-30T15:36:39.899
+Unexpected IOException with stream: i
+
+# Created at 2020-05-30T15:36:39.900
+Unexpected IOException with stream: m
+
+# Created at 2020-05-30T15:36:39.900
+Unexpected IOException with stream: e
+
+# Created at 2020-05-30T15:36:39.900
+Unexpected IOException with stream: d
+
+# Created at 2020-05-30T15:36:39.901
+Unexpected IOException with stream:  
+
+# Created at 2020-05-30T15:36:39.901
+Unexpected IOException with stream: o
+
+# Created at 2020-05-30T15:36:39.902
+Unexpected IOException with stream: u
+
+# Created at 2020-05-30T15:36:39.902
+Unexpected IOException with stream: t
+
+# Created at 2020-05-30T15:36:39.902
+Unexpected IOException with stream:  
+
+# Created at 2020-05-30T15:36:39.903
+Unexpected IOException with stream: c
+
+# Created at 2020-05-30T15:36:39.903
+Unexpected IOException with stream: o
+
+# Created at 2020-05-30T15:36:39.904
+Unexpected IOException with stream: n
+
+# Created at 2020-05-30T15:36:39.904
+Unexpected IOException with stream: n
+
+# Created at 2020-05-30T15:36:39.904
+Unexpected IOException with stream: e
+
+# Created at 2020-05-30T15:36:39.905
+Unexpected IOException with stream: c
+
+# Created at 2020-05-30T15:36:39.905
+Unexpected IOException with stream: t
+
+# Created at 2020-05-30T15:36:39.905
+Unexpected IOException with stream: i
+
+# Created at 2020-05-30T15:36:39.906
+Unexpected IOException with stream: n
+
+# Created at 2020-05-30T15:36:39.906
+Unexpected IOException with stream: g
+
+# Created at 2020-05-30T15:36:39.907
+Unexpected IOException with stream:  
+
+# Created at 2020-05-30T15:36:39.907
+Unexpected IOException with stream: t
+
+# Created at 2020-05-30T15:36:39.907
+Unexpected IOException with stream: o
+
+# Created at 2020-05-30T15:36:39.908
+Unexpected IOException with stream:  
+
+# Created at 2020-05-30T15:36:39.908
+Unexpected IOException with stream: C
+
+# Created at 2020-05-30T15:36:39.909
+Unexpected IOException with stream: h
+
+# Created at 2020-05-30T15:36:39.909
+Unexpected IOException with stream: r
+
+# Created at 2020-05-30T15:36:39.909
+Unexpected IOException with stream: o
+
+# Created at 2020-05-30T15:36:39.910
+Unexpected IOException with stream: m
+
+# Created at 2020-05-30T15:36:39.910
+Unexpected IOException with stream: e
+
+# Created at 2020-05-30T15:36:39.911
+Unexpected IOException with stream: ,
+
+# Created at 2020-05-30T15:36:39.911
+Unexpected IOException with stream:  
+
+# Created at 2020-05-30T15:36:39.911
+Unexpected IOException with stream: r
+
+# Created at 2020-05-30T15:36:39.912
+Unexpected IOException with stream: e
+
+# Created at 2020-05-30T15:36:39.912
+Unexpected IOException with stream: t
+
+# Created at 2020-05-30T15:36:39.912
+Unexpected IOException with stream: r
+
+# Created at 2020-05-30T15:36:39.913
+Unexpected IOException with stream: y
+
+# Created at 2020-05-30T15:36:39.913
+Unexpected IOException with stream: i
+
+# Created at 2020-05-30T15:36:39.914
+Unexpected IOException with stream: n
+
+# Created at 2020-05-30T15:36:39.914
+Unexpected IOException with stream: g
+
+# Created at 2020-05-30T15:36:39.915
+Unexpected IOException with stream: .
+
+# Created at 2020-05-30T15:36:39.915
+Unexpected IOException with stream: .
+
+# Created at 2020-05-30T15:36:39.915
+Unexpected IOException with stream: .
+
+# Created at 2020-05-30T15:36:39.916
+Unexpected IOException with stream: 
+
+# Created at 2020-05-30T15:36:39.916
+Unexpected IOException with stream: 
+
+
+# Created at 2020-05-30T15:36:47.911
+Unexpected IOException: 8,1,com.automation.index.Steps,setUp(com.automation.index.Steps),null,session not created exception\000Afrom chrome not reachable\000A  (Session info: chrome=83.0.4103.61)\000A  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e)\002Cplatform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 14.72 seconds\000ABuild info: version: '3.13.0'\002C revision: '2f0d292'\002C time: '2018-06-25T15:24:21.231Z'\000ASystem info: host: 'DESKTOP-C0CNHNA'\002C ip: '192.168.43.101'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_231'\000ADriver info: driver.version: ChromeDriver,null,session not created exception\000Afrom chrome not reachable\000A  (Session info: chrome=83.0.4103.61)\000A  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e)\002Cplatform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 14.72 seconds\000ABuild info: version: '3.13.0'\002C revision: '2f0d292'\002C time: '2018-06-25T15:24:21.231Z'\000ASystem info: host: 'DESKTOP-C0CNHNA'\002C ip: '192.168.43.101'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_231'\000ADriver info: driver.version: ChromeDriver,Steps>BSB_SeleniumInit.setUp:203 \00BB SessionNotCreated session not created excep...,org.openqa.selenium.SessionNotCreatedException: \000Asession not created exception\000Afrom chrome not reachable\000A  (Session info: chrome=83.0.4103.61)\000A  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e)\002Cplatform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 14.72 seconds\000ABuild info: version: '3.13.0'\002C revision: '2f0d292'\002C time: '2018-06-25T15:24:21.231Z'\000ASystem info: host: 'DESKTOP-C0CNHNA'\002C ip: '192.168.43.101'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_231'\000ADriver info: driver.version: ChromeDriver\000A
+
+
+# Created at 2020-05-30T15:36:47.912
+Unexpected IOException with stream: I am in onTestSkipped method Program_TestCase_06 skipped
+
+
+# Created at 2020-05-30T15:36:47.913
+Unexpected IOException: 9,1,com.automation.index.Steps,Program_TestCase_06(com.automation.index.Steps),null,session not created exception\000Afrom chrome not reachable\000A  (Session info: chrome=83.0.4103.61)\000A  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e)\002Cplatform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 14.72 seconds\000ABuild info: version: '3.13.0'\002C revision: '2f0d292'\002C time: '2018-06-25T15:24:21.231Z'\000ASystem info: host: 'DESKTOP-C0CNHNA'\002C ip: '192.168.43.101'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_231'\000ADriver info: driver.version: ChromeDriver,null
+
+
+# Created at 2020-05-30T15:36:47.914
+Unexpected IOException with stream: message from tear downnull
+
+
+# Created at 2020-05-30T15:36:47.936
+Unexpected IOException with stream: I am in onFinish method BSB_Login_Module_TestCases
+
+
+# Created at 2020-05-30T15:36:48.113
+Unexpected IOException: 9,1,com.automation.index.Steps,zipfileupdate(com.automation.index.Steps),null,null,null
+
+
+# Created at 2020-05-30T15:36:48.175
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGXmlTestSuite,TestSuite,null,null,null
+
+

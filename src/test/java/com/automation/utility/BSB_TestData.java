@@ -424,7 +424,10 @@ public static String Future_Date() {
    // System.out.println(df.format(dateobj));
     String month = df.format(dateobj).substring(3, 5);
     //System.out.println(month);
+    
     int monthint = Integer.valueOf(month) + 2;
+    if(monthint>12)
+    	monthint = monthint-12;
     //System.out.println(monthint);
     //String day = df.format(dateobj).substring(0, 2);
     //System.out.println(day);
@@ -434,6 +437,67 @@ public static String Future_Date() {
     System.out.println(FutureDate);     
 	return FutureDate;
 	}
+
+public static String Future_Date_one_month() {
+	
+	DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+    Date dateobj = new Date();
+   // System.out.println(df.format(dateobj));
+    String month = df.format(dateobj).substring(3, 5);
+    //System.out.println(month);
+    int monthint = Integer.valueOf(month) + 1;
+    if(monthint>12)
+    	monthint = monthint-12;
+    //System.out.println(monthint);
+    //String day = df.format(dateobj).substring(0, 2);
+    //System.out.println(day);
+    String year = df.format(dateobj).substring(6, 10);
+   //System.out.println(year);
+    String FutureDate = monthint+"/"+28+"/"+year;
+    System.out.println(FutureDate);     
+	return FutureDate;
+	}
+
+public static String Future_Date_three_month() {
+	
+	DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+    Date dateobj = new Date();
+   // System.out.println(df.format(dateobj));
+    String month = df.format(dateobj).substring(3, 5);
+    //System.out.println(month);
+    int monthint = Integer.valueOf(month) + 3;
+    if(monthint>12)
+    	monthint = monthint-12;
+    //System.out.println(monthint);
+    //String day = df.format(dateobj).substring(0, 2);
+    //System.out.println(day);
+    String year = df.format(dateobj).substring(6, 10);
+   //System.out.println(year);
+    String FutureDate = monthint+"/"+28+"/"+year;
+    System.out.println(FutureDate);     
+	return FutureDate;
+	}
+
+public static String Future_Date_four_month() {
+	
+	DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+    Date dateobj = new Date();
+   // System.out.println(df.format(dateobj));
+    String month = df.format(dateobj).substring(3, 5);
+    //System.out.println(month);
+    int monthint = Integer.valueOf(month) + 4;
+    if(monthint>12)
+    	monthint = monthint-12;
+    //System.out.println(monthint);
+    //String day = df.format(dateobj).substring(0, 2);
+    //System.out.println(day);
+    String year = df.format(dateobj).substring(6, 10);
+   //System.out.println(year);
+    String FutureDate = monthint+"/"+28+"/"+year;
+    System.out.println(FutureDate);     
+	return FutureDate;
+	}
+
 //Random name Alphabetic only	
 	private static final String ALPHA_STRING = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

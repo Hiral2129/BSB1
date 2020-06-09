@@ -408,7 +408,7 @@ public class Logic extends BSB_AbstractPage {
 		feesanddiscount1.get(6).sendKeys("6");
 		feesanddiscount1.get(7).sendKeys("11");
 		feesanddiscount1.get(8).sendKeys("16");
-		feesanddiscount1.get(9).sendKeys("21");
+		feesanddiscount1.get(9).sendKeys("9");
 		
 		click_on_save_setting();
 		
@@ -461,12 +461,17 @@ public class Logic extends BSB_AbstractPage {
 	@FindBy(xpath="//input[contains(@id,'LateFeeDeadlineDate')]")private static WebElement late_fee_start_date;
 	@FindBy(xpath="//input[contains(@id,'LateFeeDeadlineTime')]")private static WebElement late_fee_start_time;
 	@FindBy(xpath="//input[contains(@id,'LateFeeAmt')]")private static WebElement late_fee_amount;
-	
+	@FindBy(xpath="//span[text()='Create New Payment Plan']")private static WebElement Create_New_Payment_Plan_btn;
+	@FindBy(xpath="//input[contains(@data-bind,'PlanName')]")private static WebElement plan_name;
+	@FindBy(xpath="//span[text()='Add New']")private static WebElement add_new_btn_payment_installment;
+	@FindBy(xpath="//input[@name='Amount']")private static List<WebElement> installment_amount;
+	@FindBy(xpath="//input[contains(@class,'installment-DueInDate')]")private static List<WebElement> installment_date;
+	@FindBy(xpath="//span[text()='Finish']")private static WebElement finish_btn;
 	public Verify add_Division_Details() {
 		// TODO Auto-generated method stub
 		
 		funcs.waitforseconds(1);
-		funcs.senddata(driver, division_name, "Div A without Plan");
+		funcs.senddata(driver, division_name, "Div A with Plan");
 		LogClass.logExtent("==> Entered Division Name ");
 		funcs.senddata(driver, registration_start_dateandtime.get(0), BSB_TestData.Today_Date());
 		LogClass.logExtent("==> Entered Registration Start Date");
@@ -508,39 +513,80 @@ public class Logic extends BSB_AbstractPage {
 		
 		click_on_save_setting();
 		
-		//funcs.clickon_element(driver, feesanddiscount_advanced_setting);
-		//LogClass.logExtent("==> Click on Fees and Discount Button");
+		funcs.waitforseconds(5);
+		deposit_only_yes.click();
+		LogClass.logExtent("==> Click on Deposit Only Yes");
 		funcs.waitforseconds(3);
 		
-		funcs.clickon_element(driver, deposit_only_yes);
-		LogClass.logExtent("==> Click on Deposit Only Yes");
-		funcs.waitforseconds(1);
-		
 		funcs.senddata(driver, deposit_amount, "25");
-		LogClass.logExtent("==> Enterd Deposit Amount");
+		LogClass.logExtent("==> Entered Deposit Amount");
 		
 		funcs.senddata(driver, earlybird_discount_date, BSB_TestData.Today_Date());
-		LogClass.logExtent("==> Enterd Early Bird Discount Date");
+		LogClass.logExtent("==> Entered Early Bird Discount Date");
 		
 		funcs.senddata(driver,earlybird_discount_time, "12:00 PM");
-		LogClass.logExtent("==> Enterd Early Bird Discount Time");
+		LogClass.logExtent("==> Entered Early Bird Discount Time");
 		
 		funcs.senddata(driver, early_bird_discount_amount, "10");
-		LogClass.logExtent("==> Enterd Early Bird Discount Amount");
+		LogClass.logExtent("==> Entered Early Bird Discount Amount");
 		
-		funcs.senddata(driver, late_fee_start_date, BSB_TestData.Future_Date());
-		LogClass.logExtent("==> Enterd Late Fee Start Date");
+		funcs.senddata(driver, late_fee_start_date, BSB_TestData.Future_Date_one_month());
+		LogClass.logExtent("==> Entered Late Fee Start Date");
 		
 		funcs.senddata(driver, late_fee_start_time, "12:00 PM");
-		LogClass.logExtent("==> Enterd Late Fee Start Time");
+		LogClass.logExtent("==> Entered Late Fee Start Time");
 		
 		funcs.senddata(driver, late_fee_amount, "35");
-		LogClass.logExtent("==> Enterd Late Fee Amount");
+		LogClass.logExtent("==> Entered Late Fee Amount");
 		
 		
 		click_on_save_setting();
-		
 		LogClass.logExtent("==> Saved the Division Setting");
+		
+		funcs.waitforseconds(5);
+		deposit_only_yes.click();
+		LogClass.logExtent("==> Enable Wait List Yes");
+		
+		click_on_save_setting();
+		LogClass.logExtent("==> Saved the Division Setting");
+		
+		funcs.waitforseconds(1);
+		funcs.clickon_element(driver, Create_New_Payment_Plan_btn);
+		LogClass.logExtent("==> Clicked on Create New Payment Plan Button");
+		
+		funcs.senddata(driver, plan_name, "Easy Pay");
+		LogClass.logExtent("==> Entered Payment Plan Name");
+		
+		for(int i=0; i<=2;i++) {
+		funcs.clickon_element(driver, add_new_btn_payment_installment);
+		LogClass.logExtent("==> Clicked on Add New button for the payment installment");
+		funcs.waitforseconds(1);}
+		
+		for(WebElement ele:installment_amount) {
+			funcs.senddata(driver, ele, "20");
+		}
+		LogClass.logExtent("==> Entered Installment Amount");
+		
+		funcs.senddata(driver,installment_date.get(0),BSB_TestData.Today_Date());
+		funcs.senddata(driver,installment_date.get(1),BSB_TestData.Future_Date_one_month());
+		funcs.senddata(driver,installment_date.get(2),BSB_TestData.Future_Date());
+		funcs.senddata(driver,installment_date.get(3),BSB_TestData.Future_Date_three_month());
+		funcs.senddata(driver,installment_date.get(4),BSB_TestData.Future_Date_four_month());
+		
+		LogClass.logExtent("==> Entered Installment Dates");
+		
+		funcs.clickon_element(driver, save_btn_div);
+		LogClass.logExtent("==> Clicked on Save button");
+		
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver, finish_btn);
+		LogClass.logExtent("==> Clicked on Finish button");
+		
+		funcs.waitforseconds(7);
+		funcs.clickon_element(driver, finish_btn);
+		LogClass.logExtent("==> Clicked on Finish button");
+		
+		
 		return new Verify(driver);
 	}	
 	
