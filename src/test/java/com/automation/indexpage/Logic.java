@@ -467,6 +467,7 @@ public class Logic extends BSB_AbstractPage {
 	@FindBy(xpath="//input[@name='Amount']")private static List<WebElement> installment_amount;
 	@FindBy(xpath="//input[contains(@class,'installment-DueInDate')]")private static List<WebElement> installment_date;
 	@FindBy(xpath="//span[text()='Finish']")private static WebElement finish_btn;
+	@FindBy(xpath="//textarea")private static WebElement plan_description;
 	public Verify add_Division_Details() {
 		// TODO Auto-generated method stub
 		
@@ -575,6 +576,10 @@ public class Logic extends BSB_AbstractPage {
 		
 		LogClass.logExtent("==> Entered Installment Dates");
 		
+		funcs.senddata(driver, plan_description, "This is plan Description for the payment plan");
+		LogClass.logExtent("Entered Plan Description for the Payment Plan");
+		funcs.waitforseconds(1);
+		
 		funcs.clickon_element(driver, save_btn_div);
 		LogClass.logExtent("==> Clicked on Save button");
 		
@@ -585,7 +590,6 @@ public class Logic extends BSB_AbstractPage {
 		funcs.waitforseconds(7);
 		funcs.clickon_element(driver, finish_btn);
 		LogClass.logExtent("==> Clicked on Finish button");
-		
 		
 		return new Verify(driver);
 	}	
