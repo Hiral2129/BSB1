@@ -592,6 +592,22 @@ public class Logic extends BSB_AbstractPage {
 		LogClass.logExtent("==> Clicked on Finish button");
 		
 		return new Verify(driver);
+	}
+
+	
+	@FindBy(xpath="//i[@class='icn icn-tournament-archive']")private static List<WebElement> archive_button;
+	public Verify click_archive_program_button() {
+		// TODO Auto-generated method stub
+		int count = 0;
+		for(int i=0;i<= archive_button.size()-30;i++ ) {
+			funcs.waitforseconds(5);
+			funcs.clickon_element(driver,archive_button.get(i));
+			LogClass.logExtent("==> Clicked on Archive Program Button");
+			funcs.waitforseconds(10);
+			count++;
+			LogClass.logExtent("==> "+count+" Program Archived");
+		}
+		return new Verify(driver);
 	}	
 	
 	

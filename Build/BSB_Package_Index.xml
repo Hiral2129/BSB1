@@ -39,28 +39,28 @@
 		</classes>
 	</test>		 -->
 	
-	<test name="BSB_Login_Module_TestCases">
+	<!-- <test name="BSB_Login_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.Steps">
 				<methods>					
 				<include name="Program_TestCase_06" />
-			<!-- 	<include name="Program_TestCase_02" /> -->
+				<include name="Program_TestCase_02" />
 				</methods>
 			</class>
 		</classes>
-	</test>		
+	</test>		 -->
 	
-<!-- <test name="BSB_Program_Module_TestCases">
+<test name="BSB_Program_Module_TestCases">
 	<classes>
 		<class name="com.automation.index.Steps">
 			<groups>
 				<run>
-					<include name="program" />
+					<include name="deleteprogram" />
 				</run>
 			</groups>
 		</class>
 	</classes>
-</test>		 -->
+</test>		
 
 </suite>
  

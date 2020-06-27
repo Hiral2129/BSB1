@@ -233,5 +233,19 @@ public class Steps extends BSB_SeleniumInit {
 	}// End of Portal_Creation_TestCase_01.
 	
 	
+	@Test(priority = 0, enabled = true, groups ="deleteprogram")
+	public void Delete_Program_TestCase_01() {
+		step = 1;
+		String report_msg;// String for the log in the Report		
+		report_msg = "To verify that user is able to create Non Tryout Program";
+		LogClass.logExtent(report_msg);
+		veri = logic.geturlforcore();
+		veri.homepageverify();
+		veri = logic.login_as_admin();
+		veri = logic.click_archive_program_button();
+		funcs.waitforseconds(5);
+	}// End of Program_TestCase_06.
+	
+	
 	
 }// End of Class
