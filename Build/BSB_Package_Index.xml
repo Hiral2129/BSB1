@@ -29,7 +29,7 @@
 		
 		
 	<!-- Methods for Login -->	
-	<!-- <test name="BSB_Login_Module_TestCases">
+	<test name="BSB_Login_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.Steps">
 				<methods>					
@@ -37,7 +37,7 @@
 				</methods>
 			</class>
 		</classes>
-	</test>		 -->
+	</test>		
 	
 	<!-- <test name="BSB_Login_Module_TestCases">
 		<classes>
@@ -50,7 +50,7 @@
 		</classes>
 	</test>		 -->
 	
-<test name="BSB_Program_Module_TestCases">
+<!-- <test name="BSB_Program_Module_TestCases">
 	<classes>
 		<class name="com.automation.index.Steps">
 			<groups>
@@ -60,7 +60,7 @@
 			</groups>
 		</class>
 	</classes>
-</test>		
+</test>		 -->
 
 </suite>
  

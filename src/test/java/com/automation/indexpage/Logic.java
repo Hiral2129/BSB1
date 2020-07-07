@@ -44,7 +44,9 @@ public class Logic extends BSB_AbstractPage {
 		return new Verify(driver);
 	}
 		
-	@FindBy(xpath="//div[@class='skLogin']//a[contains(text(),'L')]")private static WebElement home_login;
+	//@FindBy(xpath="//a[@id='dnn_dnnLOGIN_cmdLogin']")private static WebElement home_login;
+	//@FindBy(xpath="//a[contains(@class='login-link')]")private static List<WebElement> home_login;
+	@FindBy(xpath="//div[contains(@class,'skLogin')]//a[contains(text(),'L')]")private static WebElement home_login;
 	@FindBy(xpath="//input[contains(@id,'UserNameTextBox')]")private static WebElement username;
 	@FindBy(xpath="//input[contains(@id,'Password')]")private static WebElement password;
 	@FindBy(xpath="//a[contains(@id,'SingInButton')]")private static WebElement login;
@@ -599,11 +601,28 @@ public class Logic extends BSB_AbstractPage {
 	public Verify click_archive_program_button() {
 		// TODO Auto-generated method stub
 		int count = 0;
-		for(int i=0;i<= archive_button.size()-30;i++ ) {
-			funcs.waitforseconds(5);
+		for(int i=0;i<=archive_button.size();i++) {
+			//funcs.waitforseconds(5);
 			funcs.clickon_element(driver,archive_button.get(i));
 			LogClass.logExtent("==> Clicked on Archive Program Button");
-			funcs.waitforseconds(10);
+			funcs.waitforseconds(7);
+			count++;
+			LogClass.logExtent("==> "+count+" Program Archived");
+		}
+		return new Verify(driver);
+	}	
+	
+	//@FindBy(xpath="//i[@class='icn icn-tournament-archive']")private static List<WebElement> archive_button;
+	public Verify click_archive_program_button_new_Logic() {
+		// TODO Auto-generated method stub
+		int count = 0;
+		LogClass.logExtent("==> Total Programs in this Portal : "+archive_button.size());
+		for(int i=0;i<=archive_button.size()-25;i++) {
+			//funcs.waitforseconds(5);
+			WebElement ele = driver.findElement(By.xpath("//i[@class='icn icn-tournament-archive']"));
+			funcs.clickon_element(driver,ele);
+			LogClass.logExtent("==> Clicked on Archive Program Button");
+			funcs.waitforseconds(6);
 			count++;
 			LogClass.logExtent("==> "+count+" Program Archived");
 		}

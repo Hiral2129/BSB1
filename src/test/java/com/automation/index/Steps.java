@@ -223,7 +223,7 @@ public class Steps extends BSB_SeleniumInit {
 		funcs.waitforseconds(5);
 		LogClass.makeScreenshot_without_fail(driver, "Demo"+i);
 		
-		funcs.waitforseconds(60);
+		funcs.waitforseconds(100);
 		driver.navigate().refresh();
 		
 		funcs.waitforseconds(2);
@@ -242,7 +242,7 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.geturlforcore();
 		veri.homepageverify();
 		veri = logic.login_as_admin();
-		veri = logic.click_archive_program_button();
+		veri = logic.click_archive_program_button_new_Logic();
 		funcs.waitforseconds(5);
 	}// End of Program_TestCase_06.
 	

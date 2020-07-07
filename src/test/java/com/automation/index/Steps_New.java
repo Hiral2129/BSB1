@@ -47,6 +47,10 @@ public class Steps_New extends BSB_SeleniumInit {
 		veri_new = logic_new.login_as_admin();
 		veri_new = logic_new.click_new_program_plus_sign();
 		veri_new = logic_new.select_non_tryout_program();
+		veri_new = logic_new.selct_Activity_type();
+		veri_new = logic_new.click_save_and_continue_btn();
+		veri_new = logic_new.enter_program_name("Non_Tryout");
+		veri_new = logic_new.select_national_affilation("American Legion Baseball");
 		
 		
 		

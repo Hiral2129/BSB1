@@ -12,15 +12,15 @@
   </listeners>
   <test thread-count="1" verbose="0" name="BSB_Login_Module_TestCases(failed)" parallel="tests">
     <classes>
-      <class name="com.automation.index.Steps">
+      <class name="com.automation.index.Steps_New">
         <methods>
           <include name="setUp"/>
-          <include name="Program_TestCase_06"/>
           <include name="fetchSuiteConfiguration"/>
+          <include name="Program_TestCase_01"/>
           <include name="tearDown"/>
           <include name="zipfileupdate"/>
         </methods>
-      </class> <!-- com.automation.index.Steps -->
+      </class> <!-- com.automation.index.Steps_New -->
     </classes>
   </test> <!-- BSB_Login_Module_TestCases(failed) -->
 </suite> <!-- Failed suite [BSB_Functional_TestCases_Suite] -->

@@ -1,0 +1,258 @@
+# Created at 2020-07-02T17:46:09.063
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:390)
+	at java.lang.Thread.run(Unknown Source)
+
+
+# Created at 2020-07-02T17:46:10.267
+Unexpected IOException with stream: I am in onTestSuccess method Portal_Creation_TestCase_01 succeed
+
+
+# Created at 2020-07-02T17:46:10.269
+Unexpected IOException: 6,1,com.automation.index.Steps,Portal_Creation_TestCase_01(com.automation.index.Steps),null,null,null
+
+
+# Created at 2020-07-02T17:46:10.273
+Unexpected IOException with stream: ----------->         null
+
+
+# Created at 2020-07-02T17:46:20.282
+Unexpected IOException with stream: TEST PASSED - Portal_Creation_TestCase_01
+
+
+
+# Created at 2020-07-02T17:46:20.283
+Unexpected IOException with stream: here is test status--------------------1
+
+
+# Created at 2020-07-02T17:46:21.354
+Unexpected IOException with stream: I am in onFinish method BSB_Login_Module_TestCases
+
+
+# Created at 2020-07-02T17:46:21.812
+Unexpected IOException with stream: Calling ZipFile for the Extent Report.........
+
+
+# Created at 2020-07-02T17:46:21.824
+Unexpected IOException with stream: Regular file :C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\Extent_Report_new.html is zipped to archive :C:\Users\Admin\eclipse-workspace\BSB1v\test-output\Extent_Report_new.zip
+
+
+# Created at 2020-07-02T17:46:21.826
+Unexpected IOException with stream: ---Getting references to all files in: C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots
+
+
+# Created at 2020-07-02T17:46:21.828
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0526190544592Program_TestCase_06.png
+
+
+# Created at 2020-07-02T17:46:21.831
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0530111908227Program_TestCase_06.png
+
+
+# Created at 2020-07-02T17:46:21.833
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0530112844759Program_TestCase_06.png
+
+
+# Created at 2020-07-02T17:46:21.834
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0530114852422Program_TestCase_06.png
+
+
+# Created at 2020-07-02T17:46:21.836
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0530122343941Program_TestCase_06.png
+
+
+# Created at 2020-07-02T17:46:21.837
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0530122419572Program_TestCase_06.png
+
+
+# Created at 2020-07-02T17:46:21.839
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0530122451107Program_TestCase_06.png
+
+
+# Created at 2020-07-02T17:46:21.841
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0530151956996Program_TestCase_06.png
+
+
+# Created at 2020-07-02T17:46:21.845
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0530152312242Program_TestCase_06.png
+
+
+# Created at 2020-07-02T17:46:21.846
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0530153631289Program_TestCase_06.png
+
+
+# Created at 2020-07-02T17:46:21.847
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0530155950255Program_TestCase_06.png
+
+
+# Created at 2020-07-02T17:46:21.848
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0601152637125Program_TestCase_06.png
+
+
+# Created at 2020-07-02T17:46:21.850
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0622145357709Program_TestCase_06.png
+
+
+# Created at 2020-07-02T17:46:21.853
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0627155318828Delete_Program_TestCase_01.png
+
+
+# Created at 2020-07-02T17:46:21.857
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0627155807314Delete_Program_TestCase_01.png
+
+
+# Created at 2020-07-02T17:46:21.860
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\062716002977Delete_Program_TestCase_01.png
+
+
+# Created at 2020-07-02T17:46:21.872
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0627161427688Delete_Program_TestCase_01.png
+
+
+# Created at 2020-07-02T17:46:21.907
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0627161813786Delete_Program_TestCase_01.png
+
+
+# Created at 2020-07-02T17:46:21.949
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\062716470292Delete_Program_TestCase_01.png
+
+
+# Created at 2020-07-02T17:46:21.996
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0627164908234Delete_Program_TestCase_01.png
+
+
+# Created at 2020-07-02T17:46:22.002
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0627165745205Delete_Program_TestCase_01.png
+
+
+# Created at 2020-07-02T17:46:22.004
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\0627170130913Delete_Program_TestCase_01.png
+
+
+# Created at 2020-07-02T17:46:22.005
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\Demo2151.png
+
+
+# Created at 2020-07-02T17:46:22.006
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\Extent_Report_new.html
+
+
+# Created at 2020-07-02T17:46:22.009
+Unexpected IOException with stream:      file:C:\Users\Admin\eclipse-workspace\BSB1v\test-output\screenshots\Open page Fail.png
+
+
+# Created at 2020-07-02T17:46:22.010
+Unexpected IOException with stream: ---Creating zip file
+
+
+# Created at 2020-07-02T17:46:22.013
+Unexpected IOException with stream: Writing '0526190544592Program_TestCase_06.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.039
+Unexpected IOException with stream: Writing '0530111908227Program_TestCase_06.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.072
+Unexpected IOException with stream: Writing '0530112844759Program_TestCase_06.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.099
+Unexpected IOException with stream: Writing '0530114852422Program_TestCase_06.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.128
+Unexpected IOException with stream: Writing '0530122343941Program_TestCase_06.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.220
+Unexpected IOException with stream: Writing '0530122419572Program_TestCase_06.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.340
+Unexpected IOException with stream: Writing '0530122451107Program_TestCase_06.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.440
+Unexpected IOException with stream: Writing '0530151956996Program_TestCase_06.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.446
+Unexpected IOException with stream: Writing '0530152312242Program_TestCase_06.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.449
+Unexpected IOException with stream: Writing '0530153631289Program_TestCase_06.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.475
+Unexpected IOException with stream: Writing '0530155950255Program_TestCase_06.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.502
+Unexpected IOException with stream: Writing '0601152637125Program_TestCase_06.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.525
+Unexpected IOException with stream: Writing '0622145357709Program_TestCase_06.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.537
+Unexpected IOException with stream: Writing '0627155318828Delete_Program_TestCase_01.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.555
+Unexpected IOException with stream: Writing '0627155807314Delete_Program_TestCase_01.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.573
+Unexpected IOException with stream: Writing '062716002977Delete_Program_TestCase_01.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.583
+Unexpected IOException with stream: Writing '0627161427688Delete_Program_TestCase_01.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.638
+Unexpected IOException with stream: Writing '0627161813786Delete_Program_TestCase_01.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.694
+Unexpected IOException with stream: Writing '062716470292Delete_Program_TestCase_01.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.819
+Unexpected IOException with stream: Writing '0627164908234Delete_Program_TestCase_01.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.886
+Unexpected IOException with stream: Writing '0627165745205Delete_Program_TestCase_01.png' to zip file
+
+
+# Created at 2020-07-02T17:46:22.963
+Unexpected IOException with stream: Writing '0627170130913Delete_Program_TestCase_01.png' to zip file
+
+
+# Created at 2020-07-02T17:46:23.042
+Unexpected IOException with stream: Writing 'Demo2151.png' to zip file
+
+
+# Created at 2020-07-02T17:46:23.050
+Unexpected IOException with stream: Writing 'Extent_Report_new.html' to zip file
+
+
+# Created at 2020-07-02T17:46:23.056
+Unexpected IOException with stream: Writing 'Open page Fail.png' to zip file
+
+
+# Created at 2020-07-02T17:46:23.165
+Unexpected IOException with stream: ---Done
+
+
+# Created at 2020-07-02T17:46:23.307
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGXmlTestSuite,TestSuite,null,null,null
+
+
