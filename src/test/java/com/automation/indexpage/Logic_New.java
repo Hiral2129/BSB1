@@ -45,7 +45,8 @@ public class Logic_New extends BSB_AbstractPage {
 		return new Verify_New(driver);
 	}
 	
-	
+	//@FindBy(xpath="//a[@id='dnn_dnnLOGIN_cmdLogin']")private static WebElement home_login;
+	//@FindBy(xpath="//a[contains(@class='login-link')]")private static List<WebElement> home_login;
 	@FindBy(xpath="//div[@class='skLogin']//a[contains(text(),'L')]")private static WebElement home_login;
 	@FindBy(xpath="//input[contains(@id,'UserNameTextBox')]")private static WebElement username;
 	@FindBy(xpath="//input[contains(@id,'Password')]")private static WebElement password;
