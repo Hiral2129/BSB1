@@ -1,9 +1,12 @@
 package com.automation.utility;
 
+import java.awt.AWTException;
+import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
+import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -155,6 +158,41 @@ public class funcs {
 		String absolutePath = file.getAbsolutePath();
 		element.sendKeys(absolutePath);
 	}
+	
+	// upload the file
+		public static String getabsolutepathforfile(String value) {
+			File file = new File(value);
+			String absolutePath = file.getAbsolutePath();
+			return absolutePath;
+		}
+	
+	// upload the file using robot class
+		public static void uploadthefile_robot_class(String value) throws AWTException {
+			 // Specify the file location with extension
+			 StringSelection sel = new StringSelection(value);
+			 
+			   // Copy to clipboard
+			 Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel,null);
+			 System.out.println("selection" +sel);
+			 
+			 // Create object of Robot class
+			 Robot robot = new Robot();
+			 waitforseconds(5);
+			 
+			  // Press CTRL+V
+			 robot.keyPress(KeyEvent.VK_CONTROL);
+			 robot.keyPress(KeyEvent.VK_V);
+			 
+			// Release CTRL+V
+			 robot.keyRelease(KeyEvent.VK_CONTROL);
+			 robot.keyRelease(KeyEvent.VK_V);
+			 waitforseconds(5);
+			        
+			 // Press Enter 
+			 robot.keyPress(KeyEvent.VK_ENTER);
+			 robot.keyRelease(KeyEvent.VK_ENTER);
+		}	
+		
 	//Scroll Horizontal by pixels
 	
 	public static void scrollBy_vertical(WebDriver driver,int y) {

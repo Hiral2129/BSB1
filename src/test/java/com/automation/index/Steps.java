@@ -1,4 +1,5 @@
 package com.automation.index;
+import java.awt.AWTException;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -158,7 +159,7 @@ public class Steps extends BSB_SeleniumInit {
 		LogClass.logExtent(report_msg);
 		veri = logic.production();
 		
-		List<WebElement> sclogo = driver.findElements(By.xpath("//img[@alt=\"Sports Connect\"]"));
+		List<WebElement> sclogo = driver.findElements(By.xpath("//img[@alt='Sports Connect']"));
 		sclogo.get(1).click();
 		System.out.println("==> Click on Sports Connect logo");
 		
@@ -167,21 +168,25 @@ public class Steps extends BSB_SeleniumInit {
 		
 		System.out.println("==> Range from "+min+" to "+max);
 		
+		funcs.waitforseconds(6);
+		List<WebElement> clickonhost = driver.findElements(By.xpath("//span[text()='Host']"));
+		funcs.clickon_element(driver, clickonhost.get(1));
+		System.out.println("==> Click on Host");
 		
 		for(int i=Integer.valueOf(min);i<=Integer.valueOf(max);i++)
 		{
 		
 		funcs.waitforseconds(6);
-		WebElement clickonhost = driver.findElement(By.xpath("//span[text()='Host']"));
-		funcs.clickon_element(driver, clickonhost);
+		WebElement clickonhost_1 = driver.findElement(By.xpath("//span[text()='Host']"));
+		funcs.clickon_element(driver, clickonhost_1);
 		System.out.println("==> Click on Host");
 		
-		funcs.waitforseconds(3);
+		funcs.waitforseconds(5);
 		WebElement site_mmt = driver.findElement(By.xpath("//span[text()='Host']//..//li//a[text()='Site Management']"));
 		funcs.clickon_element(driver, site_mmt);
 		System.out.println("==> Click on Site Management");
 		
-		funcs.waitforseconds(6);
+		funcs.waitforseconds(7);
 		WebElement add_new_site = driver.findElement(By.xpath("//a[text()='Add New Site']"));
 		funcs.clickon_element(driver, add_new_site);
 		System.out.println("==> Click on Add New Site");
@@ -202,28 +207,30 @@ public class Steps extends BSB_SeleniumInit {
 		funcs.senddata(driver, enter_title, BSB_TestData.getURL(12,1)+i);
 		System.out.println("==> Entere Title Name :"+"Demo"+i);
 		
-		funcs.waitforseconds(3);
+		funcs.waitforseconds(5);
 		WebElement click_on_tem = driver.findElement(By.xpath("//input[contains(@id,'Signup_cboTemplate_Input')]"));
 		funcs.jsClick(driver, click_on_tem);
 		click_on_tem.click();
 		System.out.println("==> Click to select the Template");
 		
-		funcs.waitforseconds(3);
+		funcs.waitforseconds(5);
 		WebElement select_tem = driver.findElement(By.xpath("//li[text()='BSB-ClubHomeProfessional']"));
 		funcs.jsClick(driver, select_tem );
 		System.out.println("==> Select the Template :"+select_tem.getText());
 		
-		funcs.waitforseconds(7);
+		funcs.waitforseconds(8);
 		WebElement click_on_create_site = driver.findElement(By.xpath("//a[@title='Create Site']"));
-		funcs.clickon_element(driver, click_on_create_site);
+		//funcs.clickon_element(driver, click_on_create_site);
+		//click_on_create_site.click();
+		funcs.jsClick(driver, click_on_create_site);
 		System.out.println("==> Click on Create Site");
 		
-		System.out.println("==> Waiting for 85 seconds");
+		System.out.println("==> Waiting for 100 seconds");
 		
 		funcs.waitforseconds(5);
 		LogClass.makeScreenshot_without_fail(driver, "Demo"+i);
 		
-		funcs.waitforseconds(100);
+		funcs.waitforseconds(110);
 		driver.navigate().refresh();
 		
 		funcs.waitforseconds(2);
@@ -244,8 +251,23 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.login_as_admin();
 		veri = logic.click_archive_program_button_new_Logic();
 		funcs.waitforseconds(5);
-	}// End of Program_TestCase_06.
+	}// Delete_Program_TestCase_01.
 	
+	@Test(priority = 0, enabled = true, groups ="Bulkmail")
+	public void Bulkmail_TestCase_01() throws AWTException {
+		step = 1;
+		String report_msg;// String for the log in the Report	
+		for(int i=0;i<=8;i=i+2) {	
+		report_msg = "To verify that user is able to do the bulkmail";
+		LogClass.logExtent(report_msg);
+		veri = logic.geturlforcore_Bulkmail(i+14,1);
+		veri.homepageverify();
+		veri = logic.login_as_admin_bulkmail(i+15);
+		veri = logic.bulkmail();
+		veri = logic.schedulemail();
+		funcs.waitforseconds(5);
+		}
+	}// Bulkmail_TestCase_01.
 	
 	
 }// End of Class

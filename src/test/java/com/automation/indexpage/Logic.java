@@ -1,5 +1,6 @@
 package com.automation.indexpage;
 
+import java.awt.AWTException;
 import java.util.ArrayList;
 import java.util.List;
 import org.openqa.selenium.By;
@@ -43,10 +44,21 @@ public class Logic extends BSB_AbstractPage {
 		LogClass.logExtent("Step 1 : "+driver.getCurrentUrl());
 		return new Verify(driver);
 	}
+	
+	public Verify geturlforcore_Bulkmail(int row,int col) {
+		// TODO Auto-generated method stub
+		testUrl = BSB_TestData.getURL(row,col);	
+		System.out.println("URL : "+testUrl);
+		driver.get(testUrl);		
+		funcs.waitforseconds(2);
+		LogClass.logExtent("Step 1 : "+driver.getCurrentUrl());
+		return new Verify(driver);
+	}
 		
-	//@FindBy(xpath="//a[@id='dnn_dnnLOGIN_cmdLogin']")private static WebElement home_login;
+	@FindBy(xpath="//a[@id='dnn_dnnLOGIN_cmdLogin']")private static WebElement home_login;  //production Servers
 	//@FindBy(xpath="//a[contains(@class='login-link')]")private static List<WebElement> home_login;
-	@FindBy(xpath="//div[contains(@class,'skLogin')]//a[contains(text(),'L')]")private static WebElement home_login;
+	//@FindBy(xpath="//div[contains(@class,'skLogin')]//a[contains(text(),'L')]")private static WebElement home_login;
+	//@FindBy(xpath="//a[@id='dnn_dnnLOGINLL_cmdLogin']")private static WebElement home_login;   // Clubs portal 15
 	@FindBy(xpath="//input[contains(@id,'UserNameTextBox')]")private static WebElement username;
 	@FindBy(xpath="//input[contains(@id,'Password')]")private static WebElement password;
 	@FindBy(xpath="//a[contains(@id,'SingInButton')]")private static WebElement login;
@@ -101,6 +113,22 @@ public class Logic extends BSB_AbstractPage {
 			
 		return new Verify(driver);
 	}  
+	
+	public Verify login_as_admin_bulkmail(int row) {
+		// TODO Auto-generated method stub
+		funcs.clickon_element(driver, home_login);
+		funcs.waitforseconds(4);
+		LogClass.logExtent("==> Click on home Login Button to process login");
+		funcs.senddata(driver, username, BSB_TestData.getURL(row, 1));
+		LogClass.logExtent("==> Enter User Name");
+		funcs.waitforseconds(1);
+		funcs.senddata(driver, password, BSB_TestData.getURL(24, 1));
+		LogClass.logExtent("==> Enter Password");
+		funcs.clickon_element(driver, login);
+		LogClass.logExtent("==> Click on login button ");
+		funcs.waitforseconds(5);
+		return new Verify(driver);
+	}
 	
 	/*
 	 * =================
@@ -627,7 +655,115 @@ public class Logic extends BSB_AbstractPage {
 			LogClass.logExtent("==> "+count+" Program Archived");
 		}
 		return new Verify(driver);
-	}	
+	}
+
+	@FindBy(xpath = "//a[text()='Email']")private static List<WebElement> email_Menu;
+	@FindBy(xpath = "//a[text()='Bulk Email']")private static WebElement Bulkmail;
+	@FindBy(xpath = "//a[contains(@id,'AddLinkButton')]")private static List<WebElement> Select_Program;
+	@FindBy(xpath = "//div[@class='row']//textarea[contains(@class,'form-control')]") private static WebElement additinal_EmailID;
+	@FindBy(xpath = "//input[contains(@size,'40')]")private static WebElement Subject;
+	@FindBy(xpath = "//div[@class='RadAjaxPanel']//a[text()='Select a Template']")private static WebElement Template;
+	@FindBy(xpath = "//tbody//div[@class='RadAjaxPanel']//a[text()='Edit']")private static List<WebElement> Edit_Template;
+	@FindBy(xpath = "//div[@class='newFileUpload']//a[@id='attachFileLink']")private static WebElement Attachment;
+	@FindBy(xpath = "//div[@class='pull-right']//a[span[@class='icn icn-tournament-true']]")private static WebElement SendEmail;
+	public Verify bulkmail() throws AWTException {
+		// TODO Auto-generated method stub
+		System.out.println("Bulk_mail fuctioncall");
+		funcs.mousehover_on_element(driver, email_Menu.get(0));
+		LogClass.logExtent("==> Mouse hover on menu");
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver, Bulkmail);
+		LogClass.logExtent("==> Click on Bulkmail");
+		funcs.waitforseconds(5);
+		funcs.clickon_element(driver, Select_Program.get(0));
+		LogClass.logExtent("==> Select program");
+		funcs.waitforseconds(3);
+		funcs.senddata(driver, additinal_EmailID, "itw.hiralm@gmail.com;ti.harshidd@gmail.com;\n" + 
+				"itw.minalp@gmail.com;\n" + 
+				"itw.rudrim@gmail.com;\n" + 
+				"itw.hiralm@gmail.com;\n" + 
+				"itw.krishnapatel@gmail.com;\n" + 
+				"mrudul@idea2working.com;\n" + 
+				"Itw.durvab@gmail.com;\n" + 
+				"Itw.vipulp@gmail.com");
+		LogClass.logExtent("==> Enter Email ID for Additional Recipients");
+		funcs.waitforseconds(5);
+		funcs.senddata(driver, Subject, "Test Bulkmail");
+		LogClass.logExtent("==> Enter Subject name");
+		funcs.waitforseconds(3);
+		funcs.clickon_element(driver, Template);
+		LogClass.logExtent("==> Click on template");
+		funcs.waitforseconds(15);
+		funcs.clickon_element(driver, Edit_Template.get(0));
+		LogClass.logExtent("==> Click on Edit_button");
+		funcs.waitforseconds(15);
+		Actions ac = new Actions(driver);
+		ac.moveToElement(Attachment).build().perform();
+		funcs.waitforseconds(10);
+		String path ="Resources/Images/Bulkmail_AattachmentFile.jpg";
+		path = funcs.getabsolutepathforfile(path);
+		System.out.println("path= " +path);
+		Attachment.click();
+	    LogClass.logExtent("==> Click on Attachment");
+        funcs.waitforseconds(10);
+        funcs.uploadthefile_robot_class(path);            
+		funcs.waitforseconds(20);
+		funcs.clickon_element(driver, SendEmail);
+	    LogClass.logExtent("==> Click on SendEmail");
+		funcs.waitforseconds(10);  
+		return new Verify(driver);
+	}
+
+	//Schedule_ mail
+		@FindBy(xpath = "//a[text()='Email']")private static List<WebElement> email_Menu1;
+		@FindBy(xpath = "//a[text()='Email Statistics']")private static WebElement EmailStatistics;
+		@FindBy(xpath = "//a[text()='Resend']")private static WebElement Resend;
+		@FindBy(xpath = "//input[contains(@size,'40')]")private static WebElement ScheduleSubject;
+		@FindBy(xpath = "//a[@class='bsb-btn btn-default btn-tournament btn-tournament-orange h-s-r-margin sendEmail']")private static WebElement Schedule_Email;
+		@FindBy(xpath = "//div[span[@class='form-control-feedback']]")private static WebElement Date;
+		@FindBy(xpath = "//input[@id='scheduleTime']")private static WebElement EnterTime;
+		@FindBy(xpath = "//a[@class='bsb-btn btn-transparent btn-tournament btn-tournament-orange btn-blue h-s-l-margin']")private static WebElement Save_Button;
+		public Verify schedulemail() {
+			// TODO Auto-generated method stub
+			Actions action = new Actions(driver);
+			System.out.println("Bulk_mail fuctioncall");
+			funcs.mousehover_on_element(driver, email_Menu1.get(0));
+			LogClass.logExtent("==> Mouse hover on menu");
+			funcs.waitforseconds(5);
+			funcs.clickon_element(driver, EmailStatistics);
+			LogClass.logExtent("==> Click on Email Statistics");
+			funcs.waitforseconds(5);
+			driver.navigate().refresh();	
+			funcs.waitforseconds(5);
+			funcs.clickon_element(driver, Resend);
+			LogClass.logExtent("==> Click on Resend");
+			funcs.waitforseconds(10);
+			Subject.clear();
+			funcs.waitforseconds(3);
+			funcs.senddata(driver, ScheduleSubject, "Test_Schedulemail");
+			LogClass.logExtent("==> Enter Subject name");
+			funcs.waitforseconds(3);
+			funcs.clickon_element(driver, Schedule_Email);
+			LogClass.logExtent("==> Click on Schedule_email");
+			funcs.waitforseconds(10);
+			
+			Date.click();
+			funcs.waitforseconds(10);
+			action.sendKeys(Keys.ENTER).build().perform();
+			funcs.waitforseconds(3);
+			LogClass.logExtent("==> Click on Date");
+			
+			String time=BSB_TestData.TimeFormate();
+			funcs.senddata(driver, EnterTime, time);
+			LogClass.logExtent("==> EnterTime");
+			funcs.waitforseconds(5);
+			
+			Save_Button.click();
+			LogClass.logExtent("==> Click on save button");
+			funcs.waitforseconds(5);
+			return new Verify(driver);
+		}
+
 	
 	
 }//End of Class

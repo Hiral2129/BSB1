@@ -126,7 +126,7 @@ public class BSB_Common {
 	// C:\Users\User\eclipse-workspace\RentCount_UK\test-output\screenshots
 
 	public static void zipdirectory() throws IOException {
-		File directoryToZip = new File("C:\\Users\\Admin\\eclipse-workspace\\BSB1v\\test-output\\screenshots");
+		File directoryToZip = new File("C:\\Users\\Admin\\eclipse-workspace\\BSB1v\\test-output\\screenshots");  //original statement before properties file used
 
 		List<File> fileList = new ArrayList<File>();
 		System.out.println("---Getting references to all files in: " + directoryToZip.getCanonicalPath());

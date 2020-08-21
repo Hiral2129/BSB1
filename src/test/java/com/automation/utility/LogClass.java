@@ -66,7 +66,7 @@ public class LogClass {
 		try {
 
 			//String reportFolder = "C:/Users/User/eclipse-workspace/RentCount_UK/test-output" + File.separator;
-			String reportFolder = "C:\\Users\\Admin\\eclipse-workspace\\BSB1v\\test-output" + File.separator;
+			String reportFolder = "C:\\Users\\Admin\\eclipse-workspace\\BSB1v\\test-output" + File.separator; //original statement before properties file used
 			
 			
 			String screenshotsFolder = "screenshots";

@@ -8,6 +8,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -395,6 +396,21 @@ public class BSB_TestData {
 
 		return str+"_"+builder.toString()+"_"+df.format(dateobj);
 	}
+	
+	
+	public static String TimeFormate() {
+		// TODO Auto-generated method stub
+		//String scheduleTime;
+		SimpleDateFormat dateFormat1 = new SimpleDateFormat();
+	    dateFormat1.setTimeZone(TimeZone.getTimeZone("US/Eastern"));
+	    Calendar cal = Calendar.getInstance();
+	    cal.add(Calendar.MINUTE, 3);
+        String n=dateFormat1.format(cal.getTime());
+        System.out.println("Full Date  = " +n);
+        String time=n.substring(8, n.length());
+        System.out.println("Time= " +time);
+        return time;
+	}	
 	
 // Today Date
 
