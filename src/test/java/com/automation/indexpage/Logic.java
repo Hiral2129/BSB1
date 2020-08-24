@@ -688,7 +688,11 @@ public class Logic extends BSB_AbstractPage {
 				"Itw.vipulp@gmail.com");
 		LogClass.logExtent("==> Enter Email ID for Additional Recipients");
 		funcs.waitforseconds(5);
-		funcs.senddata(driver, Subject, "Test Bulkmail");
+		
+		String subjectportal = testUrl.substring(8, 13);
+		
+		funcs.senddata(driver, Subject, subjectportal +" Test Bulkmail");
+		
 		LogClass.logExtent("==> Enter Subject name");
 		funcs.waitforseconds(3);
 		funcs.clickon_element(driver, Template);
@@ -740,7 +744,9 @@ public class Logic extends BSB_AbstractPage {
 			funcs.waitforseconds(10);
 			Subject.clear();
 			funcs.waitforseconds(3);
-			funcs.senddata(driver, ScheduleSubject, "Test_Schedulemail");
+			
+			String subjectportal = testUrl.substring(8, 13);
+			funcs.senddata(driver, ScheduleSubject, subjectportal +" Test_Schedulemail");
 			LogClass.logExtent("==> Enter Subject name");
 			funcs.waitforseconds(3);
 			funcs.clickon_element(driver, Schedule_Email);

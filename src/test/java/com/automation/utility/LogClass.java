@@ -1,7 +1,10 @@
 package com.automation.utility;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -58,6 +61,7 @@ public class LogClass {
 	
 	// Function to take a ScreenShot
 	public static void makeScreenshot(WebDriver driver, String screenshotName) {
+		 String screenshotpath="";
 		WebDriver augmentedDriver = new Augmenter().augment(driver);
 		/* Take a screenshot */
 		File screenshot = ((TakesScreenshot) augmentedDriver).getScreenshotAs(OutputType.FILE);
@@ -66,8 +70,26 @@ public class LogClass {
 		try {
 
 			//String reportFolder = "C:/Users/User/eclipse-workspace/RentCount_UK/test-output" + File.separator;
-			String reportFolder = "C:\\Users\\Admin\\eclipse-workspace\\BSB1v\\test-output" + File.separator; //original statement before properties file used
+			//String reportFolder = "C:\\Users\\Admin\\eclipse-workspace\\BSB1v\\test-output" + File.separator; //original statement before properties file used
 			
+			String filepath = funcs.getabsolutepathforfile("path.properties");
+			
+			try (InputStream input = new FileInputStream(filepath)) {
+
+	            Properties prop = new Properties();
+
+	            // load a properties file
+	            prop.load(input);
+
+	            // get the property value and print it out
+	            System.out.println(prop.getProperty("screenshotpath"));
+	            screenshotpath =prop.getProperty("screenshotpath");  
+
+	        } catch (IOException ex) {
+	            ex.printStackTrace();
+	        }
+			
+			String reportFolder = screenshotpath + File.separator; //original statement before properties file used
 			
 			String screenshotsFolder = "screenshots";
 			File screenshotFolder = new File(reportFolder + screenshotsFolder);

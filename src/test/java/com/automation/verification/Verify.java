@@ -37,7 +37,7 @@ public class Verify extends BSB_AbstractPage {
 
 	public static void homepageverify() {
 		// TODO Auto-generated method stub		
-		  String urlpass = "";
+		  String urlpass = "vipul";
 		  System.out.println("Url Display on window :" +driver.getCurrentUrl()); 
 		  
 		  if (driver.getCurrentUrl().contains(urlpass)) {

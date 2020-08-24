@@ -2,16 +2,6 @@ package com.automation.utility;
 
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileFilter;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -126,8 +116,31 @@ public class BSB_Common {
 	// C:\Users\User\eclipse-workspace\RentCount_UK\test-output\screenshots
 
 	public static void zipdirectory() throws IOException {
-		File directoryToZip = new File("C:\\Users\\Admin\\eclipse-workspace\\BSB1v\\test-output\\screenshots");  //original statement before properties file used
+		
+		String zipdirectorypath = "";
+		String filepath = funcs.getabsolutepathforfile("path.properties");
+		
+		try (InputStream input = new FileInputStream(filepath)) {
 
+            Properties prop = new Properties();
+
+            // load a properties file
+            prop.load(input);
+
+            // get the property value and print it out
+            
+            System.out.println(prop.getProperty("zipdirectorypath"));
+            zipdirectorypath =prop.getProperty("zipdirectorypath");
+            
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+		
+		//File directoryToZip = new File("C:\\Users\\Admin\\eclipse-workspace\\BSB1v\\test-output\\screenshots");  //original statement before properties file used
+
+		File directoryToZip = new File(zipdirectorypath);
+		
 		List<File> fileList = new ArrayList<File>();
 		System.out.println("---Getting references to all files in: " + directoryToZip.getCanonicalPath());
 		getAllFiles(directoryToZip, fileList);

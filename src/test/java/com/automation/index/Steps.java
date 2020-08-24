@@ -257,13 +257,14 @@ public class Steps extends BSB_SeleniumInit {
 	public void Bulkmail_TestCase_01() throws AWTException {
 		step = 1;
 		String report_msg;// String for the log in the Report	
-		for(int i=0;i<=8;i=i+2) {	
+		for(int i=4;i<=4;i=i+2) {	
 		report_msg = "To verify that user is able to do the bulkmail";
 		LogClass.logExtent(report_msg);
 		veri = logic.geturlforcore_Bulkmail(i+14,1);
 		veri.homepageverify();
 		veri = logic.login_as_admin_bulkmail(i+15);
 		veri = logic.bulkmail();
+		funcs.waitforseconds(5);
 		veri = logic.schedulemail();
 		funcs.waitforseconds(5);
 		}
