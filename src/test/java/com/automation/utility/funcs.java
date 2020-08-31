@@ -177,7 +177,7 @@ public class funcs {
 			 
 			 // Create object of Robot class
 			 Robot robot = new Robot();
-			 waitforseconds(5);
+			 waitforseconds(2);
 			 
 			  // Press CTRL+V
 			 robot.keyPress(KeyEvent.VK_CONTROL);
@@ -186,7 +186,7 @@ public class funcs {
 			// Release CTRL+V
 			 robot.keyRelease(KeyEvent.VK_CONTROL);
 			 robot.keyRelease(KeyEvent.VK_V);
-			 waitforseconds(5);
+			 waitforseconds(2);
 			        
 			 // Press Enter 
 			 robot.keyPress(KeyEvent.VK_ENTER);
