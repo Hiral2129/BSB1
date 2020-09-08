@@ -401,14 +401,35 @@ public class BSB_TestData {
 	public static String TimeFormate() {
 		// TODO Auto-generated method stub
 		//String scheduleTime;
+		/*
+		 * SimpleDateFormat dateFormat1 = new SimpleDateFormat();
+		 * dateFormat1.setTimeZone(TimeZone.getTimeZone("US/Eastern")); Calendar cal =
+		 * Calendar.getInstance(); cal.add(Calendar.MINUTE, 3); String
+		 * n=dateFormat1.format(cal.getTime()); System.out.println("Full Date  = " +n);
+		 * String time=n.substring(7, n.length()); System.out.println("Time= " +time);
+		 */
+		String time;
 		SimpleDateFormat dateFormat1 = new SimpleDateFormat();
 	    dateFormat1.setTimeZone(TimeZone.getTimeZone("US/Eastern"));
 	    Calendar cal = Calendar.getInstance();
 	    cal.add(Calendar.MINUTE, 3);
         String n=dateFormat1.format(cal.getTime());
+        //n="03/09/20 8:30 AM";
         System.out.println("Full Date  = " +n);
-        String time=n.substring(8, n.length());
-        System.out.println("Time= " +time);
+        int colonindex=n.indexOf(":");
+        //System.out.println(": placed= " +colonindex);
+        //String tt =n.substring(colonindex, n.length());
+        //System.out.println("tt= " +tt);
+        String tt1 =n.substring(colonindex-2,colonindex-1);
+        System.out.println("tt1= " +tt1);
+        if(tt1.equals("1")) {
+        	 time=n.substring(colonindex-2, n.length());
+        	 System.out.println("Time with two digits in hours= " +time);
+        }
+        else {
+        	 time=n.substring(colonindex-1, n.length());
+        	 System.out.println("Time with one digit in hours= " +time);
+        }
         return time;
 	}	
 	

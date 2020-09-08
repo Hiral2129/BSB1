@@ -676,7 +676,7 @@ public class Logic extends BSB_AbstractPage {
 		funcs.waitforseconds(4);
 		funcs.clickon_element(driver, Bulkmail);
 		LogClass.logExtent("==> Click on Bulkmail");
-		funcs.waitforseconds(5);
+		funcs.waitforseconds(8);
 		funcs.clickon_element(driver, Select_Program.get(0));
 		LogClass.logExtent("==> Select program");
 		funcs.waitforseconds(1);
@@ -692,7 +692,7 @@ public class Logic extends BSB_AbstractPage {
 		funcs.waitforseconds(5);
 		
 		String subjectportal = testUrl.substring(8, 13);
-		funcs.senddata(driver, Subject, subjectportal +" Test Bulkmail");
+		funcs.senddata(driver, Subject, subjectportal +" Test Bulkmail " + BSB_TestData.Today_Date());
 		LogClass.logExtent("==> Enter Subject name");
 		
 		funcs.senddata(driver, reply_to, "vipul@mailinator.com");
@@ -753,7 +753,7 @@ public class Logic extends BSB_AbstractPage {
 			Subject.clear();
 			//funcs.waitforseconds(3);
 			String subjectportal = testUrl.substring(8, 13);
-			funcs.senddata(driver, ScheduleSubject, subjectportal +" Test_Schedulemail");
+			funcs.senddata(driver, ScheduleSubject, subjectportal +" Test_Schedulemail "+BSB_TestData.Today_Date());
 			LogClass.logExtent("==> Enter Subject name");
 			
 			funcs.senddata(driver, reply_to, "vipul@mailinator.com");
