@@ -679,7 +679,7 @@ public class Logic extends BSB_AbstractPage {
 		funcs.waitforseconds(8);
 		funcs.clickon_element(driver, Select_Program.get(0));
 		LogClass.logExtent("==> Select program");
-		funcs.waitforseconds(1);
+		funcs.waitforseconds(13);
 		funcs.senddata(driver, additinal_EmailID, "itw.hiralm@gmail.com;vipulmailinator@mailinator.com;ti.harshidd@gmail.com;\n" + 
 				"itw.minalp@gmail.com;\n" + 
 				"itw.rudrim@gmail.com;\n" + 

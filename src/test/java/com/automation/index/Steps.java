@@ -254,11 +254,16 @@ public class Steps extends BSB_SeleniumInit {
 	}// Delete_Program_TestCase_01.
 	
 	@Test(priority = 0, enabled = true, groups ="Bulkmail")
-	public void Test_Test_case_for_git_hub_() throws AWTException {
+	public void Test_Test_case_for_git_hub_2() throws AWTException {
 		//Hello this function is for the testting purpose how to do merge and manage code from more 
 		//then On developer
 		}// Test_Test_case_for_git_hub End
 	
+	@Test(priority = 0, enabled = true, groups ="Bulkmail")
+	public void Test_Test_case_for_git_hub_1() throws AWTException {
+		//Hello this function is for the testting purpose how to do merge and manage code from more 
+		//then On developer
+		}// Test_Test_case_for_git_hub End
 	
 	@Test(priority = 0, enabled = true, groups ="Bulkmail")
 	public void Bulkmail_TestCase_01() throws AWTException {
