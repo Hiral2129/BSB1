@@ -3,6 +3,7 @@ import java.awt.AWTException;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -168,10 +169,10 @@ public class Steps extends BSB_SeleniumInit {
 		
 		System.out.println("==> Range from "+min+" to "+max);
 		
-		funcs.waitforseconds(6);
-		List<WebElement> clickonhost = driver.findElements(By.xpath("//span[text()='Host']"));
-		funcs.clickon_element(driver, clickonhost.get(1));
-		System.out.println("==> Click on Host");
+		//funcs.waitforseconds(6);
+		//List<WebElement> clickonhost = driver.findElements(By.xpath("//span[text()='Host']"));
+		//funcs.clickon_element(driver, clickonhost.get(1));
+		//System.out.println("==> Click on Host");
 		
 		for(int i=Integer.valueOf(min);i<=Integer.valueOf(max);i++)
 		{
@@ -182,7 +183,9 @@ public class Steps extends BSB_SeleniumInit {
 		System.out.println("==> Click on Host");
 		
 		funcs.waitforseconds(5);
-		WebElement site_mmt = driver.findElement(By.xpath("//span[text()='Host']//..//li//a[text()='Site Management']"));
+		//WebElement site_mmt = driver.findElement(By.xpath("//span[text()='Host']//..//li//a[text()='Site Management']"));
+		WebElement site_mmt = driver.findElement(By.xpath("//span[text()='Host']//..//li//span[text()='Site Management']"));
+		
 		funcs.clickon_element(driver, site_mmt);
 		System.out.println("==> Click on Site Management");
 		
@@ -190,6 +193,7 @@ public class Steps extends BSB_SeleniumInit {
 		WebElement add_new_site = driver.findElement(By.xpath("//a[text()='Add New Site']"));
 		funcs.clickon_element(driver, add_new_site);
 		System.out.println("==> Click on Add New Site");
+		
 		
 		funcs.waitforseconds(7);
 		WebElement click_on_child = driver.findElement(By.xpath("//label[text()='Child']//..//input[2]"));
@@ -202,7 +206,7 @@ public class Steps extends BSB_SeleniumInit {
 		System.out.println("Site Alias :"+getsitealiaslink);
 		funcs.senddata(driver, enter_site_alias, getsitealiaslink+BSB_TestData.getURL(11,1)+i);
 		System.out.println("==> Enter Port site alias :"+"Demo"+i);
-		
+				
 		WebElement enter_title = driver.findElement(By.xpath("//input[contains(@id,'Signup_txtPortalName')]"));
 		funcs.senddata(driver, enter_title, BSB_TestData.getURL(12,1)+i);
 		System.out.println("==> Entere Title Name :"+"Demo"+i);
@@ -257,7 +261,7 @@ public class Steps extends BSB_SeleniumInit {
 	public void Bulkmail_TestCase_01() throws AWTException {
 		step = 1;
 		String report_msg;// String for the log in the Report	
-		for(int i=4;i<=8;i=i+2) {	
+		for(int i=0;i<=8;i=i+2) {	
 		report_msg = "To verify that user is able to do the bulkmail";
 		LogClass.logExtent(report_msg);
 		veri = logic.geturlforcore_Bulkmail(i+14,1);

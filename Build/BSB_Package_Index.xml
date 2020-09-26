@@ -33,7 +33,7 @@
 		<classes>
 			<class name="com.automation.index.Steps">
 				<methods>					
-				<include name="Bulkmail_TestCase_01()" />
+				<include name="Portal_Creation_TestCase_01()" />
 				</methods>
 			</class>
 		</classes>

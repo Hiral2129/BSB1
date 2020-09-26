@@ -37,7 +37,7 @@ public class Verify extends BSB_AbstractPage {
 
 	public static void homepageverify() {
 		// TODO Auto-generated method stub		
-		  String urlpass = "";
+		  String urlpass = "bsb";
 		  System.out.println("Url Display on window :" +driver.getCurrentUrl()); 
 		  
 		  if (driver.getCurrentUrl().contains(urlpass)) {
@@ -48,7 +48,7 @@ public class Verify extends BSB_AbstractPage {
 				LogClass.VerificationFailed_Extent_Report("-----> Verified BSB home page is not open <-----");			
 				LogClass.AssertFailed_Extent_Report();
 				LogClass.makeScreenshot(driver, "Open page Fail");
-				Assert.assertTrue(false);
+				Assert.assertTrue(false); 
 			}
 		  
 	}
