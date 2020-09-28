@@ -28,29 +28,37 @@
 	</listeners>
 		
 		
-	<!-- Methods for Login -->	
-	<test name="BSB_Login_Module_TestCases">
+	<!-- Methods for Program Creation -->	
+	<test name="BSB_Program_Creation_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.Steps">
 				<methods>					
-				<include name="Portal_Creation_TestCase_01()" />
+			<!-- 	<include name="Program_TestCase_01" /> -->
+			<!-- 	<include name="Program_TestCase_02" /> -->
+				<include name="Program_TestCase_03" />
+				<!-- <include name="Program_TestCase_04" />
+				<include name="Program_TestCase_05" />
+				<include name="Program_TestCase_06" />
+				<include name="Program_TestCase_07" /> -->
 				</methods>
 			</class>
 		</classes>
 	</test>		
 	
-	<!-- <test name="BSB_Login_Module_TestCases">
+	<!-- Methods for Bulk Mail -->	
+	<!-- <test name="BSB_BulkMail_Module_TestCases">
 		<classes>
 			<class name="com.automation.index.Steps">
 				<methods>					
-				<include name="Program_TestCase_06" />
-				<include name="Program_TestCase_02" />
+				<include name="Bulkmail_TestCase_01()" />
 				</methods>
 			</class>
 		</classes>
 	</test>		 -->
 	
-<!-- <test name="BSB_Program_Module_TestCases">
+	
+<!-- Methods for Archieve Programs -->		
+<!-- <test name="BSB_Program_Archieve_Module_TestCases">
 	<classes>
 		<class name="com.automation.index.Steps">
 			<groups>

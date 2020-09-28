@@ -123,6 +123,20 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.enter_program_name("TRYOUT");
 		veri = logic.select_activity_type("Baseball");
 		veri = logic.select_national_affilation("American Legion Baseball");
+		veri = logic.click_next_btn_Program_creation();
+		veri = logic.click_add_new_question_btn_Program_creation();
+		//veri = logic.click_skip_btn_Program_creation();
+		veri = logic.Add_question_for_Program_creation();
+		veri = logic.click_next_btn_Program_creation();
+		veri = logic.Add_Special_Discount_or_Fee();
+		veri = logic.click_next_btn_Program_creation();
+		//veri = logic.click_skip_btn_Program_creation();
+		veri = logic.add_Team_Staff();
+		veri = logic.click_next_btn_Program_creation();
+		//veri = logic.click_skip_btn_Program_creation();
+		veri = logic.step5_Program_creation();
+		veri = logic.add_Division_Details_Tryout();
+		funcs.waitforseconds(5);
 	}// End of Program_TestCase_05.
 	
 	@Test(priority = 0, enabled = true, groups ="program")
@@ -151,6 +165,39 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.add_Division_Details();
 		funcs.waitforseconds(5);
 	}// End of Program_TestCase_06.
+	
+	
+	@Test(priority = 0, enabled = true, groups ="program")
+	public void Program_TestCase_07() {
+		step = 1;
+		String report_msg;// String for the log in the Report		
+		report_msg = "To verify that user is able to create Teamcoach Program";
+		LogClass.logExtent(report_msg);
+		veri = logic.geturlforcore();
+		veri.homepageverify();
+		veri = logic.login_as_admin();
+		veri = logic.click_new_program_plus_sign();
+		veri = logic.click_Creat_TeamCoach_Registration_Program();
+		veri = logic.enter_program_name("TeamCoach");
+		veri = logic.select_activity_type("Baseball");
+		veri = logic.select_national_affilation("American Legion Baseball");
+		veri = logic.click_next_btn_Program_creation();
+		veri = logic.click_add_new_question_btn_Program_creation();
+		veri = logic.Add_question_for_Program_creation();
+		veri = logic.click_next_btn_Program_creation();
+		//veri = logic.click_skip_btn_Program_creation();
+		veri = logic.Add_Special_Discount_or_Fee();
+		veri = logic.click_next_btn_Program_creation();
+		veri = logic.click_skip_btn_Program_creation();
+		veri = logic.add_Team_Staff();
+		veri = logic.click_next_btn_Program_creation();
+		veri = logic.click_next_btn_Program_creation();
+		//veri = logic.click_skip_btn_Program_creation();
+		//veri = logic.click_skip_btn_Program_creation();
+		veri = logic.add_Division_Details_TeamCoach();
+		//veri = logic.addNEW_Division_Details_TeamCoach();
+		funcs.waitforseconds(5);
+	}// End of Program_TestCase_07.
 	
 	@Test(priority = 0, enabled = true, groups ="portal")
 	public void Portal_Creation_TestCase_01() {
