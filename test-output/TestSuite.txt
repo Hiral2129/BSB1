@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: TestSuite
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 64.132 s <<< FAILURE! - in TestSuite
-Bulkmail_TestCase_01(com.automation.index.Steps)  Time elapsed: 8.43 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at com.automation.index.Steps.Bulkmail_TestCase_01(Steps.java:264)
-
