@@ -182,7 +182,7 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.login_as_admin();
 		veri = logic.click_new_program_plus_sign();
 		veri = logic.click_Creat_TeamCoach_Registration_Program();
-		veri = logic.enter_program_name("TeamCoach");
+		veri = logic.enter_program_name("TeamCoach1");
 		veri = logic.select_activity_type("Baseball");
 		veri = logic.select_national_affilation("American Legion Baseball");
 		veri = logic.click_next_btn_Program_creation();
