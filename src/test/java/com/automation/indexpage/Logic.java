@@ -28,7 +28,7 @@ import com.automation.utility.BSB_TestData;
 //import com.automation.utility.Common;
 import com.automation.utility.LogClass;
 import com.automation.utility.funcs;
-import com.sun.corba.se.spi.orbutil.fsm.Action;
+//import com.sun.corba.se.spi.orbutil.fsm.Action;
 
 import com.automation.verification.Verify;
 import com.aventstack.extentreports.model.Log;
@@ -518,6 +518,29 @@ public class Logic extends BSB_AbstractPage {
 		feesanddiscount1.get(7).sendKeys("11");
 		feesanddiscount1.get(8).sendKeys("16");
 		feesanddiscount1.get(9).sendKeys("9");
+		
+		click_on_save_setting();
+		
+		LogClass.logExtent("==> Fees and Discount Added ");
+		
+		return new Verify(driver);
+	}	
+	
+	@FindBy(xpath="//input[@class='BSBInput full-width priceInput']")private static List<WebElement> feesanddiscount_a;
+	@FindBy(xpath="//input[@class=\"BSBInput full-width priceInput\"]//..//input")private static List<WebElement> feesanddiscount1_a;
+	public Verify Add_Special_Discount_or_Fee_TeamCoach() {
+		// TODO Auto-generated method stub
+		funcs.waitforseconds(2);
+		feesanddiscount1_a.get(6).sendKeys("6");
+		feesanddiscount_a.get(0).sendKeys("10");
+		feesanddiscount_a.get(1).sendKeys("15");
+		feesanddiscount_a.get(2).sendKeys("20");
+		feesanddiscount_a.get(3).sendKeys("25");
+		
+		//feesanddiscount1_a.get(6).sendKeys("6");
+		feesanddiscount1_a.get(7).sendKeys("11");
+		feesanddiscount1_a.get(8).sendKeys("16");
+		//feesanddiscount1_a.get(9).sendKeys("9");
 		
 		click_on_save_setting();
 		

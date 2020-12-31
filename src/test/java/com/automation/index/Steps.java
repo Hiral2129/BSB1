@@ -190,7 +190,7 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.Add_question_for_Program_creation();
 		veri = logic.click_next_btn_Program_creation();
 		//veri = logic.click_skip_btn_Program_creation();
-		veri = logic.Add_Special_Discount_or_Fee();
+		veri = logic.Add_Special_Discount_or_Fee_TeamCoach();
 		veri = logic.click_next_btn_Program_creation();
 		veri = logic.click_skip_btn_Program_creation();
 		veri = logic.add_Team_Staff();

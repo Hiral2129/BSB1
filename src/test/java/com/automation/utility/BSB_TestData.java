@@ -469,8 +469,9 @@ public static String Future_Date() {
     //String day = df.format(dateobj).substring(0, 2);
     //System.out.println(day);
     String year = df.format(dateobj).substring(6, 10);
-   //System.out.println(year);
-    String FutureDate = monthint+"/"+28+"/"+year;
+    int yearint = Integer.valueOf(year) + 1;
+	//System.out.println(year);
+	String FutureDate = monthint+"/"+28+"/"+yearint;
     System.out.println(FutureDate);     
 	return FutureDate;
 	}
@@ -489,8 +490,9 @@ public static String Future_Date_one_month() {
     //String day = df.format(dateobj).substring(0, 2);
     //System.out.println(day);
     String year = df.format(dateobj).substring(6, 10);
-   //System.out.println(year);
-    String FutureDate = monthint+"/"+28+"/"+year;
+    int yearint = Integer.valueOf(year) + 1;
+	//System.out.println(year);
+	String FutureDate = monthint+"/"+28+"/"+yearint;
     System.out.println(FutureDate);     
 	return FutureDate;
 	}
@@ -509,8 +511,9 @@ public static String Future_Date_three_month() {
     //String day = df.format(dateobj).substring(0, 2);
     //System.out.println(day);
     String year = df.format(dateobj).substring(6, 10);
-   //System.out.println(year);
-    String FutureDate = monthint+"/"+28+"/"+year;
+    int yearint = Integer.valueOf(year) + 1;
+	//System.out.println(year);
+	String FutureDate = monthint+"/"+28+"/"+yearint;
     System.out.println(FutureDate);     
 	return FutureDate;
 	}
@@ -529,8 +532,9 @@ public static String Future_Date_four_month() {
     //String day = df.format(dateobj).substring(0, 2);
     //System.out.println(day);
     String year = df.format(dateobj).substring(6, 10);
-   //System.out.println(year);
-    String FutureDate = monthint+"/"+28+"/"+year;
+    int yearint = Integer.valueOf(year) + 1;
+	//System.out.println(year);
+	String FutureDate = monthint+"/"+28+"/"+yearint;
     System.out.println(FutureDate);     
 	return FutureDate;
 	}
