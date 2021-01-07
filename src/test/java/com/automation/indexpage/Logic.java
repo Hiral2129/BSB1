@@ -65,7 +65,7 @@ public class Logic extends BSB_AbstractPage {
 		return new Verify(driver);
 	}
 		
-	@FindBy(xpath="//a[@id='dnn_dnnLOGIN_cmdLogin'or @id='dnn_dnnLOGINLL_cmdLogin']")private static WebElement home_login;  //production Servers
+	@FindBy(xpath="//a[@id='dnn_dnnLOGIN_cmdLogin'or @id='dnn_dnnLOGINLL_cmdLogin' or @id='dnn_dnnLOGIN1_cmdLogin']")private static WebElement home_login;  //production Servers
 	//@FindBy(xpath="//a[@id='dnn_dnnLOGIN_cmdLogin']")private static WebElement home_login;  //production Servers
 	//@FindBy(xpath="//a[contains(@class='login-link')]")private static List<WebElement> home_login;
 	//@FindBy(xpath="//div[contains(@class,'skLogin')]//a[contains(text(),'L')]")private static WebElement home_login;
