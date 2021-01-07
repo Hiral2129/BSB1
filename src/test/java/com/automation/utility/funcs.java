@@ -33,7 +33,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.sun.glass.ui.Clipboard;
+//import com.sun.glass.ui.Clipboard;
 
 
 import java.awt.Toolkit;
