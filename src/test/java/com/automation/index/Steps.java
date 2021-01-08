@@ -129,7 +129,6 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.select_national_affilation("American Legion Baseball");
 		veri = logic.click_next_btn_Program_creation();
 		veri = logic.click_add_new_question_btn_Program_creation();
-		//veri = logic.click_skip_btn_Program_creation();
 		veri = logic.Add_question_for_Program_creation();
 		veri = logic.click_next_btn_Program_creation();
 		veri = logic.Add_Special_Discount_or_Fee();
@@ -137,7 +136,6 @@ public class Steps extends BSB_SeleniumInit {
 		//veri = logic.click_skip_btn_Program_creation();
 		veri = logic.add_Team_Staff();
 		veri = logic.click_next_btn_Program_creation();
-		//veri = logic.click_skip_btn_Program_creation();
 		veri = logic.step5_Program_creation();
 		veri = logic.add_Division_Details_Tryout();
 		funcs.waitforseconds(5);
@@ -189,17 +187,13 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.click_add_new_question_btn_Program_creation();
 		veri = logic.Add_question_for_Program_creation();
 		veri = logic.click_next_btn_Program_creation();
-		//veri = logic.click_skip_btn_Program_creation();
 		veri = logic.Add_Special_Discount_or_Fee_TeamCoach();
 		veri = logic.click_next_btn_Program_creation();
-		veri = logic.click_skip_btn_Program_creation();
 		veri = logic.add_Team_Staff();
 		veri = logic.click_next_btn_Program_creation();
-		veri = logic.click_next_btn_Program_creation();
-		//veri = logic.click_skip_btn_Program_creation();
-		//veri = logic.click_skip_btn_Program_creation();
+		veri = logic.click_skip_btn_Program_creation();
 		veri = logic.add_Division_Details_TeamCoach();
-		//veri = logic.addNEW_Division_Details_TeamCoach();
+		veri = logic.copy_Division_Details_TeamCoach();
 		funcs.waitforseconds(5);
 	}// End of Program_TestCase_07.
 	
