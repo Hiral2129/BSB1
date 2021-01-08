@@ -533,9 +533,9 @@ public class Logic extends BSB_AbstractPage {
 		feesanddiscount.get(0).sendKeys("10");
 		feesanddiscount.get(1).sendKeys("15");
 		feesanddiscount.get(2).sendKeys("20");
-		//feesanddiscount.get(3).sendKeys("25");
 		
-		//feesanddiscount1.get(5).sendKeys("6");
+		
+		
 		feesanddiscount1.get(6).sendKeys("11");
 		feesanddiscount1.get(7).sendKeys("16");
 		feesanddiscount1.get(8).sendKeys("9");

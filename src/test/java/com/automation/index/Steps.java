@@ -195,6 +195,7 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.add_Division_Details_TeamCoach();
 		veri = logic.copy_Division_Details_TeamCoach();
 		funcs.waitforseconds(5);
+		
 	}// End of Program_TestCase_07.
 	
 	@Test(priority = 0, enabled = true, groups ="portal")
