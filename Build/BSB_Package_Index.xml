@@ -33,13 +33,13 @@
 		<classes>
 			<class name="com.automation.index.Steps">
 				<methods>					
-			<!-- 	<include name="Program_TestCase_01" /> -->
-			<!-- 	<include name="Program_TestCase_02" /> -->
-				<include name="Program_TestCase_03" />
-				<!-- <include name="Program_TestCase_04" />
-				<include name="Program_TestCase_05" />
-				<include name="Program_TestCase_06" />
-				<include name="Program_TestCase_07" /> -->
+				<!-- <include name="Program_TestCase_01" /> -->
+				<!-- <include name="Program_TestCase_02" />  -->
+				<!--<include name="Program_TestCase_03" /> -->
+				<!--<include name="Program_TestCase_04" /> -->
+				 <include name="Program_TestCase_05" /> 
+			     <include name="Program_TestCase_06" /> 
+				 <include name="Program_TestCase_07" />  
 				</methods>
 			</class>
 		</classes>
