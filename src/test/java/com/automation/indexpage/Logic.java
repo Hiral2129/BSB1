@@ -1145,6 +1145,7 @@ public class Logic extends BSB_AbstractPage {
 		
 		
 		
+		
 		@FindBy(xpath="//a[@id='dnn_dnnUSER_cmdRegister']")private static WebElement home_Register;
 		@FindBy(xpath = "//input[contains(@id,'EmailTextBox')]")private static WebElement email_address;
 		@FindBy(xpath = "//input[contains(@id, 'NewUserNameTextBox')]")private static WebElement new_username;
