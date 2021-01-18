@@ -44,6 +44,7 @@ public class Verify extends BSB_AbstractPage {
 				LogClass.VerificationPass_Extent_Report("-----> Verified BSB home page is open <-----");
 				//LogClass.AssertPass_Extent_Report();
 				Assert.assertTrue(true);
+
 			} else {
 				LogClass.VerificationFailed_Extent_Report("-----> Verified BSB home page is not open <-----");			
 				LogClass.AssertFailed_Extent_Report();

@@ -14,12 +14,6 @@ import com.automation.utility.LogClass;
 import com.automation.utility.funcs;
 import com.relevantcodes.extentreports.ExtentTest;
 //import com.sun.corba.se.spi.orbutil.fsm.Action;
-//Hiral just added the comment to check push
-//Hiral just added the comment to check push
-//Hiral just added the comment to check push
-//Hiral just added the comment to check push
-
-//vipul just added the comment to check push
 public class Steps extends BSB_SeleniumInit {
 
 	
@@ -84,7 +78,7 @@ public class Steps extends BSB_SeleniumInit {
 	@Test(priority = 0, enabled = true, groups ="program")
 	public void Program_TestCase_03() {
 		step = 1;
-		String report_msg;// String for the log in the Report		
+		String report_msg="";// String for the log in the Report		
 		report_msg = "To verify that user is able to create the NGB program[Baseball | PONY Baseball]";
 		LogClass.logExtent(report_msg);
 		veri = logic.geturlforcore();
@@ -203,7 +197,7 @@ public class Steps extends BSB_SeleniumInit {
 	public void Portal_Creation_TestCase_01() {
 		step = 1;
 		String report_msg;// String for the log in the Report		
-		report_msg = "To verify that user is able to create as maany Portals on Any Server";
+		report_msg = "To verify that user is able to create as many Portals on Any Server";
 		LogClass.logExtent(report_msg);
 		veri = logic.production();
 		
@@ -220,7 +214,7 @@ public class Steps extends BSB_SeleniumInit {
 		//List<WebElement> clickonhost = driver.findElements(By.xpath("//span[text()='Host']"));
 		//funcs.clickon_element(driver, clickonhost.get(1));
 		//System.out.println("==> Click on Host");
-		
+		int flag = 0;
 		for(int i=Integer.valueOf(min);i<=Integer.valueOf(max);i++)
 		{
 		
@@ -229,25 +223,27 @@ public class Steps extends BSB_SeleniumInit {
 		funcs.clickon_element(driver, clickonhost_1);
 		System.out.println("==> Click on Host");
 		
-		funcs.waitforseconds(5);
+		funcs.waitforseconds(6);
 		//WebElement site_mmt = driver.findElement(By.xpath("//span[text()='Host']//..//li//a[text()='Site Management']"));
-		WebElement site_mmt = driver.findElement(By.xpath("//span[text()='Host']//..//li//span[text()='Site Management']"));
-		
+		if (flag==0) {WebElement site_mmt = driver.findElement(By.xpath("//span[text()='Host']//..//li//span[text()='Site Management']"));
 		funcs.clickon_element(driver, site_mmt);
-		System.out.println("==> Click on Site Management");
-		
-		funcs.waitforseconds(7);
+		System.out.println("==> Click on Site Management");}
+		else {WebElement site_mmt = driver.findElement(By.xpath("//a[text()='Site Management']"));
+		funcs.clickon_element(driver, site_mmt);
+		System.out.println("==> Click on Site Management");}
+		flag=1;
+		funcs.waitforseconds(5);
 		WebElement add_new_site = driver.findElement(By.xpath("//a[text()='Add New Site']"));
 		funcs.clickon_element(driver, add_new_site);
 		System.out.println("==> Click on Add New Site");
 		
 		
-		funcs.waitforseconds(7);
+		funcs.waitforseconds(8);
 		WebElement click_on_child = driver.findElement(By.xpath("//label[text()='Child']//..//input[2]"));
 		funcs.clickon_element(driver, click_on_child);
 		System.out.println("==> Select the Child");	
 		
-		funcs.waitforseconds(7);
+		funcs.waitforseconds(10);
 		WebElement enter_site_alias = driver.findElement(By.xpath("//input[contains(@id,'Signup_txtPortalAlias')]"));
 		String getsitealiaslink = enter_site_alias.getAttribute("value");
 		System.out.println("Site Alias :"+getsitealiaslink);
@@ -258,18 +254,18 @@ public class Steps extends BSB_SeleniumInit {
 		funcs.senddata(driver, enter_title, BSB_TestData.getURL(12,1)+i);
 		System.out.println("==> Entere Title Name :"+"Demo"+i);
 		
-		funcs.waitforseconds(5);
+		funcs.waitforseconds(6);
 		WebElement click_on_tem = driver.findElement(By.xpath("//input[contains(@id,'Signup_cboTemplate_Input')]"));
 		funcs.jsClick(driver, click_on_tem);
 		click_on_tem.click();
 		System.out.println("==> Click to select the Template");
 		
-		funcs.waitforseconds(5);
+		funcs.waitforseconds(6);
 		WebElement select_tem = driver.findElement(By.xpath("//li[text()='BSB-ClubHomeProfessional']"));
 		funcs.jsClick(driver, select_tem );
 		System.out.println("==> Select the Template :"+select_tem.getText());
 		
-		funcs.waitforseconds(8);
+		funcs.waitforseconds(6);
 		WebElement click_on_create_site = driver.findElement(By.xpath("//a[@title='Create Site']"));
 		//funcs.clickon_element(driver, click_on_create_site);
 		//click_on_create_site.click();
@@ -281,7 +277,7 @@ public class Steps extends BSB_SeleniumInit {
 		funcs.waitforseconds(5);
 		LogClass.makeScreenshot_without_fail(driver, "Demo"+i);
 		
-		funcs.waitforseconds(110);
+		funcs.waitforseconds(75);
 		driver.navigate().refresh();
 		
 		funcs.waitforseconds(2);
