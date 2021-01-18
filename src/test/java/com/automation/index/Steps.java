@@ -14,11 +14,6 @@ import com.automation.utility.LogClass;
 import com.automation.utility.funcs;
 import com.relevantcodes.extentreports.ExtentTest;
 //import com.sun.corba.se.spi.orbutil.fsm.Action;
-//Hiral just added the comment to check push
-//Hiral just added the comment to check push
-//Hiral just added the comment to check push
-//Hiral just added the comment to check push
-//vipul just added the comment to check push
 public class Steps extends BSB_SeleniumInit {
 
 	
@@ -195,10 +190,7 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.add_Team_Staff();
 		veri = logic.click_next_btn_Program_creation();
 		veri = logic.click_next_btn_Program_creation();
-		//veri = logic.click_skip_btn_Program_creation();
-		//veri = logic.click_skip_btn_Program_creation();
 		veri = logic.add_Division_Details_TeamCoach();
-		//veri = logic.addNEW_Division_Details_TeamCoach();
 		funcs.waitforseconds(5);
 	}// End of Program_TestCase_07.
 	
