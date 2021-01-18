@@ -1,7 +1,7 @@
 package com.automation.indexpage;
 
 import java.awt.AWTException;
-import java.sql.Date;
+//import java.sql.Date;
 import java.sql.Time;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -1142,6 +1142,26 @@ public class Logic extends BSB_AbstractPage {
 			return new Verify(driver);
 		}
 
-	
+		
+		@FindBy(xpath="//a[@id='dnn_dnnUSER_cmdRegister']")private static WebElement home_Register;
+		@FindBy(xpath = "//input[contains(@id,'EmailTextBox')]")private static WebElement email_address;
+		@FindBy(xpath = "//input[contains(@id, 'NewUserNameTextBox')]")private static WebElement new_username;
+		
+		public Verify user_registration() {
+			// TODO Auto-generated method stub
+			funcs.clickon_element(driver, home_Register);
+			funcs.waitforseconds(4);
+			LogClass.logExtent("==> Click on home register Button to process registartion");
+			funcs.senddata(driver, email_address, "itw.hiralm@gmail.com");
+			LogClass.logExtent("==> Enter Email Address");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, new_username,"h");
+			LogClass.logExtent("==> Enter Password");
+			funcs.clickon_element(driver, login);
+			LogClass.logExtent("==> Click on login button ");
+			funcs.waitforseconds(5);
+			return new Verify(driver);
+		}	
+		
 	
 }//End of Class

@@ -339,4 +339,17 @@ public class Steps extends BSB_SeleniumInit {
 		//then On developer
 		}// Test_Test_case_for_git_hub End
 	
+	
+	@Test(priority = 0, enabled = true, groups ="User_Registration")
+	public void User_Registartion() {
+		step = 1;
+		String report_msg;// String for the log in the Report		
+		report_msg = "To Verify that the user is able to register";
+		LogClass.logExtent(report_msg);
+		veri = logic.geturlforcore();
+		veri.homepageverify();
+		veri = logic.user_registration();
+		
+	}// End of User_Registartion.
+	
 }// End of Class
