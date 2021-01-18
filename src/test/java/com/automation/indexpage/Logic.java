@@ -1,7 +1,7 @@
 package com.automation.indexpage;
 
 import java.awt.AWTException;
-import java.sql.Date;
+//import java.sql.Date;
 import java.sql.Time;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -526,21 +526,20 @@ public class Logic extends BSB_AbstractPage {
 		return new Verify(driver);
 	}	
 	
-	@FindBy(xpath="//input[@class='BSBInput full-width priceInput']")private static List<WebElement> feesanddiscount_a;
-	@FindBy(xpath="//input[@class=\"BSBInput full-width priceInput\"]//..//input")private static List<WebElement> feesanddiscount1_a;
 	public Verify Add_Special_Discount_or_Fee_TeamCoach() {
 		// TODO Auto-generated method stub
 		funcs.waitforseconds(2);
-		feesanddiscount1_a.get(6).sendKeys("6");
-		feesanddiscount_a.get(0).sendKeys("10");
-		feesanddiscount_a.get(1).sendKeys("15");
-		feesanddiscount_a.get(2).sendKeys("20");
-		feesanddiscount_a.get(3).sendKeys("25");
 		
-		feesanddiscount1_a.get(6).sendKeys("6");
-		feesanddiscount1_a.get(7).sendKeys("11");
-		feesanddiscount1_a.get(8).sendKeys("16");
-		feesanddiscount1_a.get(9).sendKeys("9");
+		feesanddiscount.get(0).sendKeys("10");
+		feesanddiscount.get(1).sendKeys("15");
+		feesanddiscount.get(2).sendKeys("20");
+		
+		
+		
+		feesanddiscount1.get(6).sendKeys("11");
+		feesanddiscount1.get(7).sendKeys("16");
+		feesanddiscount1.get(8).sendKeys("9");
+		feesanddiscount1.get(9).sendKeys("9");
 		
 		click_on_save_setting();
 		
@@ -727,36 +726,9 @@ public class Logic extends BSB_AbstractPage {
 	}
 
 	
-	@FindBy(xpath="//input[contains(@data-bind,': DivisionName')]")private static WebElement division_name1;
-	@FindBy(xpath="//input[contains(@data-bind,'value: OpenRegistration')]")private static List<WebElement> registration_start_dateandtime1;
-	@FindBy(xpath="//input[contains(@data-bind,'value: CloseRegistration')]")private static List<WebElement> registration_close_dateandtime1;
-	@FindBy(xpath="//input[contains(@data-bind,'value: StartDate')]")private static WebElement season_start_date1;
-	@FindBy(xpath="//input[contains(@data-bind,'value: EndDate')]")private static WebElement season_end_date1;
-	@FindBy(xpath="//input[contains(@data-bind,'value: MinAge')]")private static WebElement minage1;
-	@FindBy(xpath="//input[contains(@data-bind,'value: MaxAge')]")private static WebElement maxage1;
-	@FindBy(xpath="//input[@class='BSBInput full-width priceInput']")private static WebElement division_price1;
-	@FindBy(xpath="//span[text()='Select']//..//div//b")private static WebElement click_select_gender1;
-	@FindBy(xpath="//li[text()='Coed']")private static WebElement select_coed1;
-	@FindBy(xpath="//span[text()='Save']")private static WebElement save_btn_div1;
-	@FindBy(xpath="//span[text()='Advanced']")private static WebElement advanced_btn1;
-	@FindBy(xpath="//input[contains(@id,'MaxPlayersTextBox')]")private static WebElement maxplayers1;
-	@FindBy(xpath="//a[text()='Fees & Discounts']")private static WebElement feesanddiscount_advanced_setting1;
-	@FindBy(xpath="//span[text()='No']")private static WebElement deposit_only_yes1;
 	@FindBy(xpath="//input[contains(@id,'txtDepositAmt')]")private static WebElement deposit_amount1;
 	@FindBy(xpath = "//input[contains(@id,'txtTryoutFeeAmt')]") private static WebElement tryoutFee_amount;
-	@FindBy(xpath="//input[contains(@id,'EarlyBirdDeadlineDate')]")private static WebElement earlybird_discount_date1;
-	@FindBy(xpath="//input[contains(@id,'EarlyBirdDeadlineTime')]")private static WebElement earlybird_discount_time1;
-	@FindBy(xpath="//input[contains(@id,'txtEarlyBirdDiscount')]")private static WebElement early_bird_discount_amount1;
-	@FindBy(xpath="//input[contains(@id,'LateFeeDeadlineDate')]")private static WebElement late_fee_start_date1;
-	@FindBy(xpath="//input[contains(@id,'LateFeeDeadlineTime')]")private static WebElement late_fee_start_time1;
-	@FindBy(xpath="//input[contains(@id,'LateFeeAmt')]")private static WebElement late_fee_amount1;
-	@FindBy(xpath="//span[text()='Create New Payment Plan']")private static WebElement Create_New_Payment_Plan_btn1;
-	@FindBy(xpath="//input[contains(@data-bind,'PlanName')]")private static WebElement plan_name1;
-	@FindBy(xpath="//span[text()='Add New']")private static WebElement add_new_btn_payment_installment1;
-	@FindBy(xpath="//input[@name='Amount']")private static List<WebElement> installment_amount1;
-	@FindBy(xpath="//input[contains(@class,'installment-DueInDate')]")private static List<WebElement> installment_date1;
-	@FindBy(xpath="//span[text()='Finish']")private static WebElement finish_btn1;
-	@FindBy(xpath="//textarea")private static WebElement plan_description1;
+	
 	public Verify add_Division_Details_Tryout() {
 		// TODO Auto-generated method stub
 		
@@ -885,36 +857,8 @@ public class Logic extends BSB_AbstractPage {
 		return new Verify(driver);
 	}
 	
-	@FindBy(xpath="//input[contains(@data-bind,': DivisionName')]")private static WebElement division_nameT;
-	@FindBy(xpath="//input[contains(@data-bind,'value: OpenRegistration')]")private static List<WebElement> registration_start_dateandtimeT;
-	@FindBy(xpath="//input[contains(@data-bind,'value: CloseRegistration')]")private static List<WebElement> registration_close_dateandtimeT;
-	@FindBy(xpath="//input[contains(@data-bind,'value: StartDate')]")private static WebElement season_start_dateT;
-	@FindBy(xpath="//input[contains(@data-bind,'value: EndDate')]")private static WebElement season_end_dateT;
-	@FindBy(xpath="//input[contains(@data-bind,'value: MinAge')]")private static WebElement minageT;
-	@FindBy(xpath="//input[contains(@data-bind,'value: MaxAge')]")private static WebElement maxageT;
-	@FindBy(xpath="//input[@class='BSBInput full-width priceInput']")private static WebElement division_priceT;
-	@FindBy(xpath="//span[text()='Select']//..//div//b")private static WebElement click_select_genderT;
-	@FindBy(xpath="//li[text()='Coed']")private static WebElement select_coedT;
-	@FindBy(xpath="//span[text()='Save']")private static WebElement save_btn_divT;
-	@FindBy(xpath="//span[text()='Advanced']")private static WebElement advanced_btnT;
-	@FindBy(xpath="//input[contains(@id,'MaxPlayersTextBox')]")private static WebElement maxplayersT;
-	@FindBy(xpath="//a[text()='Fees & Discounts']")private static WebElement feesanddiscount_advanced_settingT;
-	@FindBy(xpath="//span[text()='No']")private static WebElement deposit_only_yesT;
-	@FindBy(xpath="//input[contains(@id,'txtDepositAmt')]")private static WebElement deposit_amountT;
-	@FindBy(xpath="//input[contains(@id,'EarlyBirdDeadlineDate')]")private static WebElement earlybird_discount_dateT;
-	@FindBy(xpath="//input[contains(@id,'EarlyBirdDeadlineTime')]")private static WebElement earlybird_discount_timeT;
-	@FindBy(xpath="//input[contains(@id,'txtEarlyBirdDiscount')]")private static WebElement early_bird_discount_amountT;
-	@FindBy(xpath="//input[contains(@id,'LateFeeDeadlineDate')]")private static WebElement late_fee_start_dateT;
-	@FindBy(xpath="//input[contains(@id,'LateFeeDeadlineTime')]")private static WebElement late_fee_start_timeT;
-	@FindBy(xpath="//input[contains(@id,'LateFeeAmt')]")private static WebElement late_fee_amountT;
-	@FindBy(xpath="//span[text()='Create New Payment Plan']")private static WebElement Create_New_Payment_Plan_btnT;
-	@FindBy(xpath="//input[contains(@data-bind,'PlanName')]")private static WebElement plan_nameT;
-	@FindBy(xpath="//span[text()='Add New']")private static WebElement add_new_btn_payment_installmentT;
-	@FindBy(xpath="//input[@name='Amount']")private static List<WebElement> installment_amountT;
-	@FindBy(xpath="//input[contains(@class,'installment-DueInDate')]")private static List<WebElement> installment_dateT;
-	@FindBy(xpath="//span[text()='Finish']")private static WebElement finish_btnT;
-	@FindBy(xpath="//textarea")private static WebElement plan_descriptionT;
-	public Verify add_Division_Details_TeamCoach() {
+	
+	   public Verify add_Division_Details_TeamCoach() {
 		// TODO Auto-generated method stub
 		
 		funcs.waitforseconds(1);
@@ -961,29 +905,29 @@ public class Logic extends BSB_AbstractPage {
 		click_on_save_setting();
 		
 		funcs.waitforseconds(8);
-		deposit_only_yesT.click();
+		deposit_only_yes.click();
 		LogClass.logExtent("==> Click on Deposit Only Yes");
 		funcs.waitforseconds(5);
 		
-		funcs.senddata(driver, deposit_amountT, "25");
+		funcs.senddata(driver, deposit_amount, "25");
 		LogClass.logExtent("==> Entered Deposit Amount");
 	
-		funcs.senddata(driver, earlybird_discount_dateT, BSB_TestData.Today_Date());
+		funcs.senddata(driver, earlybird_discount_date, BSB_TestData.Today_Date());
 		LogClass.logExtent("==> Entered Early Bird Discount Date");
 		
-		funcs.senddata(driver,earlybird_discount_timeT, "12:00 PM");
+		funcs.senddata(driver,earlybird_discount_time, "12:00 PM");
 		LogClass.logExtent("==> Entered Early Bird Discount Time");
 		
-		funcs.senddata(driver, early_bird_discount_amountT, "10");
+		funcs.senddata(driver, early_bird_discount_amount, "10");
 		LogClass.logExtent("==> Entered Early Bird Discount Amount");
 		
-		funcs.senddata(driver, late_fee_start_dateT, BSB_TestData.Future_Date_one_month());
+		funcs.senddata(driver, late_fee_start_date, BSB_TestData.Future_Date_one_month());
 		LogClass.logExtent("==> Entered Late Fee Start Date");
 		
-		funcs.senddata(driver, late_fee_start_timeT, "12:00 PM");
+		funcs.senddata(driver, late_fee_start_time, "12:00 PM");
 		LogClass.logExtent("==> Entered Late Fee Start Time");
 		
-		funcs.senddata(driver, late_fee_amountT, "35");
+		funcs.senddata(driver, late_fee_amount, "35");
 		LogClass.logExtent("==> Entered Late Fee Amount");
 		
 		funcs.waitforseconds(5);
@@ -996,18 +940,18 @@ public class Logic extends BSB_AbstractPage {
 		
 		funcs.waitforseconds(5);
 		//funcs.waitforseconds(1);
-		funcs.clickon_element(driver, Create_New_Payment_Plan_btnT);
+		funcs.clickon_element(driver, Create_New_Payment_Plan_btn);
 		LogClass.logExtent("==> Clicked on Create New Payment Plan Button");
 		
-		funcs.senddata(driver, plan_nameT, "Easy Pay");
+		funcs.senddata(driver, plan_name, "Easy Pay");
 		LogClass.logExtent("==> Entered Payment Plan Name");
 		
 		for(int i=0; i<=2;i++) {
-		funcs.clickon_element(driver, add_new_btn_payment_installmentT);
+		funcs.clickon_element(driver, add_new_btn_payment_installment);
 		LogClass.logExtent("==> Clicked on Add New button for the payment installment");
 		funcs.waitforseconds(1);}
 		
-		for(WebElement ele:installment_amountT) {
+		for(WebElement ele:installment_amount) {
 			funcs.senddata(driver, ele, "20");
 		}
 		LogClass.logExtent("==> Entered Installment Amount");
@@ -1031,14 +975,30 @@ public class Logic extends BSB_AbstractPage {
 		funcs.clickon_element(driver, finish_btn);
 		LogClass.logExtent("==> Clicked on Finish button");
 		
-		funcs.waitforseconds(7);
-		funcs.clickon_element(driver, finish_btn);
-		LogClass.logExtent("==> Clicked on Finish button");
-		
 		return new Verify(driver);
 	}
 	
-	
+	@FindBy(xpath="//span[text()='Copy']")private static WebElement copy_btn;
+	@FindBy(xpath="//input[@name='ko_unique_3']")private static WebElement per_player_toggle;
+	public Verify copy_Division_Details_TeamCoach() {
+		// TODO Auto-generated method stub
+		
+				funcs.waitforseconds(1);
+				funcs.clickon_element(driver, copy_btn);
+				LogClass.logExtent("==> Clicked on Copy button");
+				
+				funcs.waitforseconds(3);
+				funcs.clickon_element(driver, per_player_toggle);
+				LogClass.logExtent("==> Clicked on per_player_Toggle");
+				
+				funcs.clickon_element(driver, save_btn_div);
+				LogClass.logExtent("==> Clicked on Save button");
+				
+				funcs.waitforseconds(5);
+				funcs.clickon_element(driver, finish_btn);
+				LogClass.logExtent("==> Clicked on Finish button");
+				return new Verify(driver);
+	}
 	
 	
 	@FindBy(xpath="//i[@class='icn icn-tournament-archive']")private static List<WebElement> archive_button;
@@ -1123,6 +1083,7 @@ public class Logic extends BSB_AbstractPage {
 	}
 
 	//Schedule_ mail
+	
 		@FindBy(xpath = "//a[text()='Email']")private static List<WebElement> email_Menu1;
 		@FindBy(xpath = "//a[text()='Email Statistics']")private static WebElement EmailStatistics;
 		@FindBy(xpath = "//a[text()='Resend']")private static WebElement Resend;
@@ -1181,6 +1142,29 @@ public class Logic extends BSB_AbstractPage {
 			return new Verify(driver);
 		}
 
-	
+		
+		
+		
+		
+		@FindBy(xpath="//a[@id='dnn_dnnUSER_cmdRegister']")private static WebElement home_Register;
+		@FindBy(xpath = "//input[contains(@id,'EmailTextBox')]")private static WebElement email_address;
+		@FindBy(xpath = "//input[contains(@id, 'NewUserNameTextBox')]")private static WebElement new_username;
+		
+		public Verify user_registration() {
+			// TODO Auto-generated method stub
+			funcs.clickon_element(driver, home_Register);
+			funcs.waitforseconds(4);
+			LogClass.logExtent("==> Click on home register Button to process registartion");
+			funcs.senddata(driver, email_address, "itw.hiralm@gmail.com");
+			LogClass.logExtent("==> Enter Email Address");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, new_username,"h");
+			LogClass.logExtent("==> Enter Password");
+			funcs.clickon_element(driver, login);
+			LogClass.logExtent("==> Click on login button ");
+			funcs.waitforseconds(5);
+			return new Verify(driver);
+		}	
+		
 	
 }//End of Class

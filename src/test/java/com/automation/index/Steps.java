@@ -32,6 +32,7 @@ public class Steps extends BSB_SeleniumInit {
 		extent_report_log = test;
 		System.out.println("GetTest Method called");
 	}
+	
 // ===> Program Creation Mudule Test Cases
 //Login Module Test Cases , dependsOnMethods = { "Signin_TestCase_02" }
 	@Test(priority = 0, enabled = true, groups ="program")
@@ -123,7 +124,6 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.select_national_affilation("American Legion Baseball");
 		veri = logic.click_next_btn_Program_creation();
 		veri = logic.click_add_new_question_btn_Program_creation();
-		//veri = logic.click_skip_btn_Program_creation();
 		veri = logic.Add_question_for_Program_creation();
 		veri = logic.click_next_btn_Program_creation();
 		veri = logic.Add_Special_Discount_or_Fee();
@@ -131,7 +131,6 @@ public class Steps extends BSB_SeleniumInit {
 		//veri = logic.click_skip_btn_Program_creation();
 		veri = logic.add_Team_Staff();
 		veri = logic.click_next_btn_Program_creation();
-		//veri = logic.click_skip_btn_Program_creation();
 		veri = logic.step5_Program_creation();
 		veri = logic.add_Division_Details_Tryout();
 		funcs.waitforseconds(5);
@@ -183,15 +182,15 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.click_add_new_question_btn_Program_creation();
 		veri = logic.Add_question_for_Program_creation();
 		veri = logic.click_next_btn_Program_creation();
-		//veri = logic.click_skip_btn_Program_creation();
 		veri = logic.Add_Special_Discount_or_Fee_TeamCoach();
 		veri = logic.click_next_btn_Program_creation();
-		veri = logic.click_skip_btn_Program_creation();
 		veri = logic.add_Team_Staff();
 		veri = logic.click_next_btn_Program_creation();
-		veri = logic.click_next_btn_Program_creation();
+		veri = logic.click_skip_btn_Program_creation();
 		veri = logic.add_Division_Details_TeamCoach();
+		veri = logic.copy_Division_Details_TeamCoach();
 		funcs.waitforseconds(5);
+		
 	}// End of Program_TestCase_07.
 	
 	@Test(priority = 0, enabled = true, groups ="portal")
@@ -336,5 +335,18 @@ public class Steps extends BSB_SeleniumInit {
 		//Hello this function is for the testting purpose how to do merge and manage code from more 
 		//then On developer
 		}// Test_Test_case_for_git_hub End
+	
+	
+	@Test(priority = 0, enabled = true, groups ="User_Registration")
+	public void User_Registartion() {
+		step = 1;
+		String report_msg;// String for the log in the Report		
+		report_msg = "To Verify that the user is able to register";
+		LogClass.logExtent(report_msg);
+		veri = logic.geturlforcore();
+		veri.homepageverify();
+		veri = logic.user_registration();
+		
+	}// End of User_Registartion.
 	
 }// End of Class
