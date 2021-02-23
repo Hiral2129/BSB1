@@ -72,6 +72,7 @@ public class funcs {
 		Actions act = new Actions(driver);
 		act.moveToElement(element).build().perform();
 	}
+	
 
 	//Perform Mouse Hover using javasript executer
 	public static void mouseHoverUsingJS(WebDriver driver, WebElement ele) {

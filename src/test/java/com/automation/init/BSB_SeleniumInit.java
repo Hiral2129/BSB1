@@ -240,10 +240,10 @@ public class BSB_SeleniumInit extends BSB_ExtentManager {
 
 				// Getting first line of the stack trace
 				String str = Utils.stackTrace(exception, true)[0];
-				Scanner scanner = new Scanner(str);
-				String firstLine = scanner.nextLine();
-				log(firstLine);
-				scanner.close();
+				//Scanner scanner = new Scanner(str);
+				//String firstLine = scanner.nextLine();
+				//log(firstLine);
+				//scanner.close();
 			}
 		}
 	}

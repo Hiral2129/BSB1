@@ -142,6 +142,9 @@ public class Steps extends BSB_SeleniumInit {
 		String report_msg;// String for the log in the Report		
 		report_msg = "To verify that user is able to create Non Tryout Program";
 		LogClass.logExtent(report_msg);
+		String testcase_url1;
+		testcase_url1 = "https://stacksports.testrail.net/index.php?/tests/view/1899482&group_by=cases:section_id&group_order=asc&group_id=14344";
+		LogClass.logExtent(testcase_url1);
 		veri = logic.geturlforcore();
 		veri.homepageverify();
 		veri = logic.login_as_admin();
@@ -152,6 +155,7 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.select_national_affilation("American Legion Baseball");
 		veri = logic.click_next_btn_Program_creation();
 		veri = logic.click_add_new_question_btn_Program_creation();
+		LogClass.logExtent((step++)+ ":" +testcase_url1 );
 		veri = logic.Add_question_for_Program_creation();
 		veri = logic.click_next_btn_Program_creation();
 		veri = logic.Add_Special_Discount_or_Fee();
@@ -347,6 +351,7 @@ public class Steps extends BSB_SeleniumInit {
 		veri = logic.geturlforcore();
 		veri.homepageverify();
 		veri = logic.user_registration();
+		veri = logic.participant_Information();
 		
 	}// End of User_Registartion.
 	

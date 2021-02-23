@@ -187,6 +187,7 @@ public class Logic extends BSB_AbstractPage {
 		funcs.waitforseconds(1);
 		funcs.senddata(driver, program_name, BSB_TestData.Non_tryout_program_name(name,3));
 		LogClass.logExtent("==> Enter Program Name");
+		System.out.println(": programname= " +program_name);
 		return new Verify(driver);
 	}	
 	
@@ -1146,25 +1147,150 @@ public class Logic extends BSB_AbstractPage {
 		
 		
 		
-		@FindBy(xpath="//a[@id='dnn_dnnUSER_cmdRegister']")private static WebElement home_Register;
+		@FindBy(xpath = "//a[@id='dnn_dnnUSER_cmdRegister']")private static WebElement home_Register;
 		@FindBy(xpath = "//input[contains(@id,'EmailTextBox')]")private static WebElement email_address;
 		@FindBy(xpath = "//input[contains(@id, 'NewUserNameTextBox')]")private static WebElement new_username;
+		@FindBy(xpath = "//input[contains(@id, 'NewUserPasswordTextBox')]")private static WebElement new_password;
+		@FindBy(xpath = "//input[contains(@id, 'ConfirmPasswordTextBox')]")private static WebElement confirmPassword;
+		@FindBy(xpath = "//a[contains(@id,'CreateNewAccountButton')]")private static WebElement CreateNewAccountButton;
+		@FindBy(xpath = "//span[contains(.,'Select Gender')]")private static WebElement gender;
+		@FindBy(xpath = "//li[contains(.,'Male')]")private static WebElement select_gender; 
+		@FindBy(xpath = "//input[contains(@id,'FirstNameTextBox')]")private static WebElement firstname;
+		@FindBy(xpath = "//input[contains(@id,'LastNameTextBox')]")private static WebElement lastname;
+		@FindBy(xpath = "//span[contains(.,'Select the relationship to your participants')]")private static WebElement click_relationship;
+		@FindBy(xpath = "//li[contains(.,'Mother')]")private static WebElement select_relationship;
+		@FindBy(xpath = "//input[contains(@id,'RegPrimAddress_txtStreet')]")private static WebElement street;
+		@FindBy(xpath = "//*[contains(@id,'RegPrimAddress_txtCity')]")private static WebElement city;
+		@FindBy(xpath = "//span[contains(.,'<Not Specified>')]")private static WebElement select_state;
+		@FindBy(xpath = "//li[contains(.,'Alabama')]")private static WebElement state;
+		@FindBy(xpath = "//input[contains(@id,'RegPrimAddress_txtPostal')]")private static WebElement zipcode;
+		@FindBy(xpath = "//input[contains(@id,'CellPhone_txtAreaCode')]")private static WebElement cellphone_1;
+		@FindBy(xpath = "//input[contains(@id,'CellPhone_txtPrefix')]") private static WebElement cellphone_2;
+		@FindBy(xpath = "//input[contains(@id,'CellPhone_txtLineNumber')]")private static WebElement cellphone_3;
+		@FindBy(xpath = "//input[contains(@id,'Telephone_txtAreaCode')]")private static WebElement telephone_1;
+		@FindBy(xpath = "//input[contains(@id,'Telephone_txtPrefix')]")private static WebElement telephone_2;
+		@FindBy(xpath = "//input[contains(@id,'Telephone_txtLineNumber')]")private static WebElement telephone_3;
+		@FindBy(xpath = "//a[contains(@id,'NextBtn_lnkLink')]")private static WebElement continue_button;
 		
 		public Verify user_registration() {
 			// TODO Auto-generated method stub
 			funcs.clickon_element(driver, home_Register);
 			funcs.waitforseconds(4);
 			LogClass.logExtent("==> Click on home register Button to process registartion");
-			funcs.senddata(driver, email_address, "itw.hiralm@gmail.com");
+			funcs.senddata(driver, email_address,BSB_TestData.Non_tryout_program_name("testuser", 8) + "@nomail.com");
 			LogClass.logExtent("==> Enter Email Address");
 			funcs.waitforseconds(1);
-			funcs.senddata(driver, new_username,"h");
-			LogClass.logExtent("==> Enter Password");
-			funcs.clickon_element(driver, login);
+			funcs.senddata(driver, new_username,BSB_TestData.randomAlphaNumeric(10));
+			LogClass.logExtent("==> Enter username");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, new_password, "sa123456");
+			LogClass.logExtent("==> Enter password");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, confirmPassword, "sa123456");
+			LogClass.logExtent("==> Enter ConfirmPassword");
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver, CreateNewAccountButton);
 			LogClass.logExtent("==> Click on login button ");
 			funcs.waitforseconds(5);
+			funcs.clickon_element(driver, gender);
+			LogClass.logExtent("==> Click on gender drop down ");
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver, select_gender);
+			LogClass.logExtent("==> Click on gender ");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, firstname, "Test12");
+			LogClass.logExtent("==> Enter firstname");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, lastname, "user00");
+			LogClass.logExtent("==> Enter lastname");
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver, click_relationship);
+			LogClass.logExtent("==> Click on select_relationship dropdown ");
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver, select_relationship);
+			LogClass.logExtent("==> Click on select_relationship");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, street, "NJ");
+			LogClass.logExtent("==> Enter streetname");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, city, "NJ");
+			LogClass.logExtent("==> Enter cityname");
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver, select_state);
+			LogClass.logExtent("==> Click on select_state");
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver, state);
+			LogClass.logExtent("==> Click on select_state");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, zipcode, "12345");
+			LogClass.logExtent("==> Enter zipcode");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, cellphone_1, "123");
+			LogClass.logExtent("==> Enter Cellphone");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, cellphone_2, "456");
+			LogClass.logExtent("==> Enter cellphone");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, cellphone_3, "7890");
+			LogClass.logExtent("==> Enter cellphone");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, telephone_1, "789");
+			LogClass.logExtent("==> Enter telephone");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, telephone_2, "789");
+			LogClass.logExtent("==> Enter telephone");
+			funcs.waitforseconds(1);
+			funcs.senddata(driver, telephone_3, "7899");
+			LogClass.logExtent("==> Enter telephone");
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver, continue_button);
+			LogClass.logExtent("==> Click on continue");
+			funcs.waitforseconds(1);
 			return new Verify(driver);
 		}	
 		
+		
+		@FindBy(xpath = "//a[@class='back_img3']")private static WebElement participant_option;
+		@FindBy(xpath = "//span[text()='Month']")private static WebElement month;
+		@FindBy(xpath = "//li[contains(text(),'Jan')]")private static WebElement select_month;
+		@FindBy(xpath = "//span[text()='Day']")private static WebElement day;
+		@FindBy(xpath = "//li[contains(text(),'1')]") private static WebElement select_day;
+		@FindBy(xpath = "//span[text()='Year']")private static WebElement year;
+		@FindBy(xpath = "//li[contains(.,'2008')]")private static WebElement select_year;
+		@FindBy(xpath = "//a[contains(@id,'Register_lnkLink')]") private static WebElement Continue;
+		@FindBy(xpath = "((//span[text()= 'test']//../../../..//div)[5]//table//tr//td//a)[3]") private static WebElement select_division;
+		
+		public Verify participant_Information() {
+			
+			funcs.clickon_element(driver, participant_option);
+			LogClass.logExtent("==> Click on participant_option");
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver, month);
+			LogClass.logExtent("==> Click on month dropdown");
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver, select_month);
+			LogClass.logExtent("==> Click on month ");
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver, day);
+			LogClass.logExtent("==> Click on day ");
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver, select_day);
+			LogClass.logExtent("==> Click on day ");
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver, year);
+			LogClass.logExtent("==> Click on year ");
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver, select_year);
+			LogClass.logExtent("==> Click on year ");
+			funcs.waitforseconds(1);
+			funcs.clickon_element(driver, Continue);
+			LogClass.logExtent("==> Click on continue_button ");
+			funcs.waitforseconds(2);
+			
+			funcs.clickon_element(driver, select_division);
+			LogClass.logExtent("==> Click on division ");
+			funcs.waitforseconds(2);
+			return new Verify(driver);
+		}
 	
 }//End of Class
